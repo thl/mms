@@ -25,3 +25,33 @@
 [submodule "vendor/plugins/globalize2"]
 	path = vendor/plugins/globalize2
 	url = git://github.com/joshmh/globalize2.git
+[submodule "vendor/plugins/acts_as_list"]
+	path = vendor/plugins/acts_as_list
+	url = git://github.com/rails/acts_as_list.git
+[submodule "vendor/plugins/acts_as_tree"]
+	path = vendor/plugins/acts_as_tree
+	url = git://github.com/rails/acts_as_tree.git
+[submodule "vendor/plugins/annotate_models"]
+	path = vendor/plugins/annotate_models
+	url = git://github.com/ctran/annotate_models.git
+[submodule "vendor/plugins/attachment_fu"]
+	path = vendor/plugins/attachment_fu
+	url = git://github.com/technoweenie/attachment_fu.git
+[submodule "vendor/plugins/in_place_editing"]
+	path = vendor/plugins/in_place_editing
+	url = git://github.com/rails/in_place_editing.git
+[submodule "vendor/plugins/open_id_authentication"]
+	path = vendor/plugins/open_id_authentication
+	url = git://github.com/rails/open_id_authentication.git
+[submodule "vendor/plugins/permalink_fu"]
+	path = vendor/plugins/permalink_fu
+	url = git://github.com/technoweenie/permalink_fu.git
+[submodule "vendor/plugins/restful-authentication"]
+	path = vendor/plugins/restful-authentication
+	url = git://github.com/technoweenie/restful-authentication.git
+[submodule "vendor/plugins/upload_progress"]
+	path = vendor/plugins/upload_progress
+	url = git://github.com/rails/upload_progress.git
+[submodule "vendor/plugins/thl_integration"]
+	path = vendor/plugins/thl_integration
+	url = git://github.com/thl/thl_integration.git
