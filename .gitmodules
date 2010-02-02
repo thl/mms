@@ -1,0 +1,27 @@
+[submodule "vendor/plugins/authenticated_system"]
+	path = vendor/plugins/authenticated_system
+	url = git://github.com/thl/authenticated_system.git
+[submodule "vendor/plugins/complex_scripts"]
+	path = vendor/plugins/complex_scripts
+	url = git://github.com/thl/complex_scripts.git
+[submodule "vendor/plugins/mms_engine"]
+	path = vendor/plugins/mms_engine
+	url = git://github.com/thl/mms_engine.git
+[submodule "vendor/plugins/kmaps_integration"]
+	path = vendor/plugins/kmaps_integration
+	url = git://github.com/thl/kmaps_integration.git
+[submodule "vendor/plugins/classic_pagination"]
+	path = vendor/plugins/classic_pagination
+	url = git://github.com/masterkain/classic_pagination.git
+[submodule "vendor/plugins/comatose"]
+	path = vendor/plugins/comatose
+	url = git://github.com/darthapo/comatose.git
+[submodule "vendor/plugins/jrails"]
+	path = vendor/plugins/jrails
+	url = git://github.com/aaronchi/jrails.git
+[submodule "vendor/plugins/tiny_mce"]
+	path = vendor/plugins/tiny_mce
+	url = git://github.com/kete/tiny_mce.git
+[submodule "vendor/plugins/globalize2"]
+	path = vendor/plugins/globalize2
+	url = git://github.com/joshmh/globalize2.git
