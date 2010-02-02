@@ -1,0 +1,101 @@
+<p>
+<% chosen_caption = chosen_caption(@medium)
+   if !chosen_caption.nil? %>
+     <h2><%=  h(chosen_caption.title).s %></h2>
+<% end
+   if @medium.class == Picture %>
+<%=  render :partial => 'pictures/show' %>
+<% elsif @medium.class == Video %>
+<%=  render :partial => 'videos/show' %>
+<% elsif @medium.class == Document %>
+<%=  render :partial => 'documents/show' %>
+<% end %>
+<%=display_if_not_blank 'Media ID'.ts, "#{@medium.id} (#{link_to 'URL for reference'.ts, medium_path(@medium)})" %>
+<% administrative_units = @medium.administrative_units 
+   if !administrative_units.empty? 
+     title = administrative_units.size==1 ? 'Location' : 'Locations' %>
+<%=  display_if_not_blank title.ts, administrative_units.collect {|u| link_to h(u.title).s, media_administrative_locations_path(:administrative_unit_id => u)}.join(', ') %>
+<% end %>  
+<% captions = @medium.captions
+   if !captions.empty? && captions.size>1 %>
+     <p>
+<%   for caption in captions
+       if caption != chosen_caption %>
+<%=      h(caption.title).s %><br/>
+<%     end
+     end %>
+     </p>  
+<% end
+   photographer = @medium.photographer
+   if !photographer.nil? %>
+<%=  display_if_not_blank @medium.class.human_attribute_name('photographer').s, link_to(h(photographer.fullname).s, person_path(photographer)) %>
+<% end
+   quality_type = @medium.quality_type 
+   if !quality_type.nil? %>
+<%=  display_if_not_blank 'Quality Type'.ts, h(quality_type.title).s %>
+<% end %>
+<%=display_if_not_blank 'Recording Note'.ts, h(@medium.recording_note) %>
+<% collections = @medium.collections
+   if !collections.empty?
+     title = collections.size==1 ? 'Collection' : 'Collections' %>
+<%=  display_if_not_blank title.ts, collections.collect {|c| link_to h(c.title).s, collection_path(c)}.join(', ') %>
+<% end
+   ethnicities = @medium.ethnicities
+   if !ethnicities.empty?
+     title = ethnicities.size==1 ? 'Ethnicity' : 'Ethnicities' %>
+<%=  display_if_not_blank title.ts, ethnicities.collect {|e| link_to h(e.title).s, ethnicity_path(e)}.join(', ') %>
+<% end
+   descriptions = @medium.descriptions
+   if !descriptions.empty?
+     title = descriptions.size==1 ? 'Description' : 'Descriptions' %>
+     <p><b><%= title.ts %>:</b></p>
+<%   for description in descriptions %>
+       <p><%= h(description.title).s %></p>
+<%   end
+   end
+   keywords = @medium.keywords
+   if !keywords.empty? %>
+<%=  display_if_not_blank 'Keywords'.ts, keywords.collect{|k| link_to_remote h(k.title).s, :url => media_path(:keyword_id => k), :method => 'get'}.join(", ") %>
+<% end
+   subjects = @medium.subjects
+   if !subjects.empty?
+     title = subjects.size==1 ? 'Subject' : 'Subjects' %>
+<%=  display_if_not_blank title.ts, subjects.collect {|s| link_to h(s.title).s, subject_path(s)}.join(', ') %>
+<% end %>
+<% affiliations = @medium.affiliations
+   copyrights = @medium.copyrights
+   if !affiliations.empty? || !copyrights.empty? %>
+   <p>
+<%   if !affiliations.empty? %>
+       <%= ('This medium was provided by %s.'/affiliations.collect {|c| c.organization.website.blank? ? h(c.organization.title): link_to(h(c.organization.title), c.organization.website)}.join(', ')).s %>
+<%   end
+     if !copyrights.empty? 
+       noun = 'holder'
+       if copyrights.size==1
+         verb = 'is'
+       else
+         verb = 'are'
+         noun = noun.pluralize
+       end %>
+<%=    ("The copyright #{noun} #{verb} %s."/copyrights.collect{|c| "#{c.copyright_holder.website.blank? ? h(c.copyright_holder.title): link_to(h(c.copyright_holder.title), c.copyright_holder.website)} (#{'%s for outside use'/(c.reproduction_type.website.blank? ? h(c.reproduction_type.title).downcase : link_to(h(c.reproduction_type.title).downcase, c.reproduction_type.website))})"}.join(', ')).s %>
+<%   end %>
+   </p>
+<% end %>
+<p>
+<% if !@medium.created_on.nil? %>
+     <b><%= 'Created on'.ts %>:</b>
+<%=h @medium.created_on.strftime '%d/%b/%Y' %><br/>
+<% end
+   if !@medium.updated_on.nil? %>
+     <b><%= 'Updated on'.ts %>:</b>
+<%=h @medium.updated_on.strftime '%d/%b/%Y' %><br/>
+<% end %>
+</p>
+<p>
+<% authorized_only hash_for_edit_medium_path do %>
+<%=  link_to 'Edit catalog record'.ts, edit_medium_path(@medium) %> |
+<% end
+   authorized_only hash_for_medium_path(:action => 'destroy') do %>
+<%=  link_to 'Delete'.ts, medium_path(@medium), :confirm => 'Are you sure?'.te, :method => :delete %>
+<% end %>
+</p>

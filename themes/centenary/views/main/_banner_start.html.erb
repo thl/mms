@@ -1,0 +1,42 @@
+<div id="header_top">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+	
+  	<div id="header">
+  	<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
+  		<div id="header_bot1">
+  			<h1><span lang="dz" class="dz"><%= 'Bhutan 2008'.ts %></span></h1>
+			
+      		<small><div id="div_login">
+			<%= render :partial => 'sessions/show' %>
+      		</div></small>
+			
+		</div>
+  	
+  <div id="header_bot2"></div>
+  <div id="header_bot3"></div>
+  	</td></tr></table>
+  	</div>
+</td></tr>
+</table>
+</div>
+
+<div id="menu">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr height="46">
+	  <td width="1%">&nbsp;</td>
+	  <td width="9%" align="left"><%= link_to 'Home'.ts, permalink_url(@element.permalink) %></td>
+      <td width="10%" align="left"><%= link_to_remote 'Gallery'.ts, :url => media_path(:collection_id => @element, :type => 'Picture'), :method => :get %></td>
+      <td width="10%" align="left"><%= link_to_remote 'Videos'.ts, :url => media_path(:collection_id => @element, :type => 'Video'), :method => :get %></td>
+      <td width="10%" align="left"><%= link_to_remote 'Publications'.ts, :url => media_path(:collection_id => @element, :type => 'Document'), :method => :get %></td>
+	  <td width="10%" align="left"><%= link_to_remote 'Calendar'.ts,:update => 'primary',:url=>comatose_root_path('calendar-centenary') %></td>
+	  <td width="10%" align="left"><a href="http://www.bhutan2008.bt/weblog"><%= 'Blog'.ts %></a></td>
+	  <td width="10%" align="left"><%= link_to_remote 'About NSCCC'.ts,:update => 'primary',:url=>comatose_root_path('about-nsccc') %></td>
+      <td width="9%" align="left"><%= link_to 'NDLB'.ts, root_path %></td>
+	  <td width="9%" align="left"><div id="div_admin-links"><%= render :partial => 'main/admin_links' %></div></td>
+	  <td width="11%" align="left"><span lang="dz" class="dz1"><%= render :partial => 'main/language_options' %></span></td>
+      <td width="1%">&nbsp;</td> 
+	</span></tr>
+
+</table>
+</div>

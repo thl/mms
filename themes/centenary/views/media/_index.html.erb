@@ -1,0 +1,53 @@
+	<div id="links" align="left">
+		<ul>
+			<li>
+				<h2><span lang="dz" class="dz1"><%= 'Bhutan'.ts %></span></h2>
+				<ul>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Location'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-location'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Names'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-names'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'People & Society'.ts,:update => 'primary',:url=>comatose_root_path('people-society'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'National Games'.ts,:update => 'primary',:url=>comatose_root_path('national-games'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'National Symbols'.ts,:update => 'primary',:url=>comatose_root_path('national-symbols'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Currency'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-currency'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Economy'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-economy'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Flora & Fauna'.ts,:update => 'primary',:url=>comatose_root_path('flora-fauna'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Art & Architecture'.ts,:update => 'primary',:url=>comatose_root_path('art-architecture'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Bhutanese Literature'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-literature'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Culture & Tradition'.ts,:update => 'primary',:url=>comatose_root_path('culture-tradition'.t) %></span></li>					
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Religion'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-religion'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Songs'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-songs'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Constitution'.ts,:update => 'primary',:url=>comatose_root_path('constitution-of-bhutan'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Political System'.ts,:update => 'primary',:url=>comatose_root_path('political-system'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Evolution of Democratic Process'.ts,:update => 'primary',:url=>comatose_root_path('democratic-process'.t) %></span></li>					
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Gross National Happiness'.ts,:update => 'primary',:url=>comatose_root_path('gross-national-happiness'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Dzongs'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-dzongs'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Monasteries'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-monasteries'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Chortens'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-chortens'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Tourism'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-tourism'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Industries'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-industry'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Media & Communications'.ts,:update => 'primary',:url=>comatose_root_path('media-comm'.t) %></span></li>
+				</ul>
+				<h2><span lang="dz" class="dz1"><%= 'References'.ts %></span></h2>
+				<ul>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'List'.ts,:update => 'primary',:url=>comatose_root_path('references-web'.t) %></span></li>
+				</ul>
+				<br>
+				<ul>
+					<table width="100%"><tr><td align="center">
+			<a href="http://www.bhutan.gov.bt"><img src="/themes/centenary/images/portal.gif" alt="bhutan-portal"></a>
+			</td></tr></table>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+<ul>
+<% if !@documents.blank?
+     for document in @documents
+       chosen_caption = chosen_caption(document) 
+       if !chosen_caption.nil? %>       
+         <li><%= link_to_remote chosen_caption.title.s, :update => 'primary', :url => medium_path(document), :method => :get %></li>
+<%     end
+     end 
+   end %>
+</ul>

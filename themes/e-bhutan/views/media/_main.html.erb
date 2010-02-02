@@ -1,0 +1,54 @@
+<h2><%= 'Bhutanese Media Archive'.ts %></h2>
+<h3><%= 'Browse'.ts %></h3>
+<table border="0">
+  <tr valign="top">
+    <td>
+      <ul>
+      	<li><h4><%= link_to 'By Location'.ts, media_administrative_locations_path %></h4></li>
+		<li><h4><%= link_to 'By Collection'.ts, collections_path %></h4></li>
+	  </ul>
+	</td>
+    <td>
+      <ul>
+      	<li><h4><%= link_to 'By Subject'.ts, subjects_path %></h4></li>
+		<li><h4><%= link_to 'By Socio-cultural Group'.ts, ethnicities_path %></h4></li>
+      </ul>
+	</td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2">
+      <ul>
+      <li><h4><%= 'By Keywords'.ts %></h4>
+      <p>
+<%      for keyword in @keywords %>
+<%        font_size = (@keyword_font_size[keyword.id]) %>
+          <FONT SIZE= "<%= font_size %>"><%= link_to_remote h(keyword.title).s, :url => media_path(:keyword_id => keyword), :method => 'get' %></FONT>
+<%      end %>
+      </p>
+      </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<p><b><%= 'Media Search'.ts %></b>
+<%= render :partial => 'media_searches/advanced' %>
+</p>
+<% remote_form_for :goto, :url => {:controller => 'media', :action => 'goto'}, :update => 'primary' do |f| %>
+   <p>
+     <label for="goto_media_id"><b><%= 'Goto'.ts %></b>:</label>
+<%=  f.text_field :media_id, :size => 10 %>
+<%=  submit_tag 'Medium ID'.te, language_options %>
+   </p>
+<% end %>
+<p>
+<% authorized_only hash_for_new_picture_path do %>
+<%=  link_to 'New picture'.ts, new_picture_path %> |
+<% end
+   authorized_only hash_for_new_video_path do %>
+<%=  link_to 'New video'.ts, new_video_path %> |
+<% end
+   authorized_only hash_for_new_document_path do %>
+<%=  link_to 'New document'.ts, new_document_path %> |
+<% end %>
+<%= link_to 'Back'.ts, root_path %>
+</p>

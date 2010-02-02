@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="shortcut icon" href="<%= theme_image_path 'logo.ico' %>" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= controller.controller_name.humanize %>: <%= controller.action_name.humanize %></title> 
+
+<script type="text/javascript">
+		<!--
+		window.onload=montre;
+		function montre(id) {
+		var d = document.getElementById(id);
+		for (var i = 1; i<=10; i++) {
+		if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+		}
+		if (d) {d.style.display='block';}
+		}
+		//-->
+</script>
+<%= javascript_include_tag :defaults, 'swfobject' %>
+<%= theme_stylesheet_link_tag 'base', 'adv' %>
+<%= stylesheet_link_tag 'language_support' %>
+</head>
+<body <%= "onload = \"#{@onload}\"" if @onload %>>
+<%= render :partial => 'main/banner_start' %>
+<div id="main">
+  <div id="div_flash-notice"><%= render :partial => 'main/flash_notice' %></div>

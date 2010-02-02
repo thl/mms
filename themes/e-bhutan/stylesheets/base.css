@@ -1,0 +1,171 @@
+/*
+   Main StyleSheet for the 'e-bhutan' theme
+*/
+
+body {
+  color: 	#330000;
+  font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "XenoType Tibetan New","Tibetan Machine Uni"!important;
+  text-align: justify;
+  margin:0px;
+  padding:0px;
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 16px;
+  color: #89594A;
+  font-weight: normal;
+}
+h4>a, h4>a:visited { color: #89594A; }
+
+h3 {
+  font-size: 18px;
+  color : #595B5D;
+  font-weight: normal;
+}
+h3>a, h3>a:visited { color: #595B5D; }
+
+h2 {
+  font-size: 20px;
+  color: #A04E27;
+  font-weight: normal;
+}
+h2>a, h2>a:visited { color: #A04E27; }
+
+h1 {
+  font-size: 22px;
+  color: #413F3D;
+}
+h1>a, h1>a:visited { color: #413F3D; }
+
+pre {
+  background-color:#7D2252 ;
+}
+
+a { color: #2F4F4F; }
+a:visited { color: black; font-style:bold; }
+a:hover, h4>a:hover { color: #C34A2C; }
+
+a.collapsable { text-decoration: none }
+
+.header-links td {
+  color: #C8BBBE;
+  font-size: 12px;
+}
+
+.header-links a { color :white ; }
+.header-links a:visited { color: white; }
+.header-links a:hover { color: #C8BBBE; }
+
+.footer table {
+  background-color:#717D7D;
+  margin-top:20px;
+}
+
+.footer td {
+  color: #000;
+  font-size: 10px;
+}
+
+.media_keywords {
+  font-size: 9px;
+  color :white;
+}
+
+.media_keywords a:hover { color: #C8BBBE; }
+
+.footer a { color : white; }
+.footer a:visited { color: #D8BBAE; }
+.footer a:hover { color: #C8BBBE; }
+
+.selected_branch {
+  background-color: #FFDDB5;
+}
+
+#primary{
+	float: right;
+	width: 45%;
+}
+
+#secondary{
+	width: 55%;
+}
+
+#navigation{
+}
+
+#content-main{
+    width: 60%;
+    float: right;
+}
+
+.clear{ clear:both }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+#div_login {margin-right :10px}
+
+#breadcrumbs {
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px
+}
+
+#main {
+  margin-right :10px; 
+  margin-left :15px
+}

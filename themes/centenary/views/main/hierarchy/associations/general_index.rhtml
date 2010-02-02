@@ -1,0 +1,145 @@
+<div id="content-main"></div>
+<div id="primary">
+<table width="100%" cellspacing="15" cellpadding="10">
+  <tr>
+  	<td valign="top" colspan="3" align="center">
+      <h1><span lang="dz" class="dz"><%= 'Welcome'.ts %></span></h1>
+	  <img src="/themes/centenary/images/2008logoh.JPG"><br>
+	  <p><h3><span lang="dz" class="dz1"><%= 'Random media'.ts %></span></h3></p>
+    </td>
+  </tr>
+  <tr align="center">
+    <td width="25%" height="100" bgcolor="#000000">
+<%    link_options = {:collection_id => @element}
+      link_options[:registered_theme_id] = @element.registered_theme
+      if !@pictures.empty?
+        image = @pictures.first.thumbnail_image
+		width = image.width
+	    width = 100 if width>100
+        link_options[:type] = 'Picture' %>
+<%=     link_to_remote image_tag(image.public_filename, :width => width), :url => media_path(link_options), :method => :get %>
+<%    end %>
+	</td>
+    <td width="25%" height="100" bgcolor="#000000">
+<%    if !@documents.empty?
+        image = @documents.first.thumbnail_image
+		width = image.width
+	    width = 100 if width>100
+        link_options[:type] = 'Document' %>
+<%=     link_to_remote image_tag(image.public_filename, :width => width), :url => media_path(link_options), :method => :get %>
+<%    end %>
+    </td>
+	<td width="25%" height="100" bgcolor="#000000">
+<%    if !@videos.empty?
+        image = @videos.first.thumbnail_image
+		width = image.width
+	    width = 100 if width>100
+        link_options[:type] = 'Video'%>
+<%=     link_to_remote image_tag(image.public_filename, :width => width), :url => media_path(link_options), :method => :get %>
+<%    end %>  		
+  	</td>
+  </tr>
+  <tr align="center">
+    <td width="25%">
+		<b><span lang="dz" class="dz2"><%= 'Pictures'.ts %></span></b>
+	</td>
+    <td width="25%">
+		<b><span lang="dz" class="dz2"><%= 'Publications'.ts %></span></b>
+    </td>
+	<td width="25%">
+		<b><span lang="dz" class="dz2"><%= 'Videos'.ts %></span></b> 		
+  	</td>
+  </tr>
+</table>
+</div>
+<div id="secondary">	
+<%=  render :partial => '/main/hierarchy/associations/index' %>
+</div>
+<div id="mainleft" align="left">	
+<table border="0" cellpadding="10">
+  <tr>
+    <td valign="top">    			
+		<h1><span lang="dz" class="dz2"><%= 'Centenary Events'.ts %></span></h1>
+		<ul class="sidemenu">
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Coronation'.ts,:update => 'primary',:url=>comatose_root_path('coronation-fifth'.t) %></span></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Centenary Celebration'.ts,:update => 'primary',:url=>comatose_root_path('centenary-celebration'.t) %></span></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Democratic Election'.ts,:update => 'primary',:url=>comatose_root_path('democratic-election'.t) %></span></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote '100 years of Monarchy'.ts,:update => 'primary',:url=>comatose_root_path('100-years'.t) %></span></li>
+			<!--<li><a href="#">Centenary Publication</a></li>-->	
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Centenary Souvenirs'.ts,:update => 'primary',:url=>comatose_root_path('centenary-souvenirs'.t) %></span></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Centenary Logo'.ts,:update => 'primary',:url=>comatose_root_path('centenary-logo'.t) %></span></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'Bhutan 100 years Timeline'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-timeline'.t) %></span></li>				
+		</ul>
+		<h1><span lang="dz" class="dz2"><%= 'Monarchs'.ts %></span></h1>
+		<ul class="sidemenu">
+			<li onmousedown="javascript:montre('smenu1');"><span lang="dz" class="dz2"><%= link_to_remote 'Gongsa Ugyen Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('ugyen-wangchuk'.t) %><br><% 'Founding Monarch'.ts %>
+				<ul id="smenu1" onmouseover="javascript:montre('smenu1');" onmouseout="javascript:montre();">
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Growing up in an era of turmoil'.ts,:update => 'primary',:url=>comatose_root_path('ugyen-wangchuk'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Enthronment of the founding monarch'.ts,:update => 'primary',:url=>comatose_root_path('founding-monarch'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Treaty of Punakha'.ts,:update => 'primary',:url=>comatose_root_path('punakha-treaty'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Introduction of western education in 1914'.ts,:update => 'primary',:url=>comatose_root_path('modern-education'.t) %></span></li>
+				</ul>
+			</span></li>
+			<li onmousedown="javascript:montre('smenu2');"><span lang="dz" class="dz2"><%= link_to_remote 'Druk Gyalpo Jigme Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('jigme-wangchuk'.t) %> <br><% 'The Consolidator'.ts %>
+				<ul id="smenu2" onmouseover="javascript:montre('smenu2');" onmouseout="javascript:montre();">
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Preparing to become the consolidator'.ts,:update => 'primary',:url=>comatose_root_path('jigme-wangchuk'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Restructuring the Administrative Mechanism'.ts,:update => 'primary',:url=>comatose_root_path('administrative-mechanism'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Tax Reforms of Druk Gyalpo Jigme Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('tax-reforms'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Indo-Bhutanese Friendship Treaty of 1949'.ts,:update => 'primary',:url=>comatose_root_path('indo-bhutanese'.t) %></span></li>
+				</ul>
+			</span></li>
+			<li onmousedown="javascript:montre('smenu3');"><span lang="dz" class="dz2"><%= link_to_remote 'Druk Gyalpo Jigme Dorji Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('jigme-dorji-wangchuk'.t) %><br><% 'Father of Modern Bhutan'.ts %>
+				<ul id="smenu3" onmouseover="javascript:montre('smenu3');" onmouseout="javascript:montre();">
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Grooming of the Father of Modern Bhutan'.ts,:update => 'primary',:url=>comatose_root_path('jigme-dorji-wangchuk'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Constitutional reforms'.ts,:update => 'primary',:url=>comatose_root_path('constitutional-reforms'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Visit of Nehru and Indira Gandhi'.ts,:update => 'primary',:url=>comatose_root_path('visit-nehru'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Launching Five Year Plans'.ts,:update => 'primary',:url=>comatose_root_path('five-year'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Freedom of Serfs: A milestone in the social reform of Bhutan'.ts,:update => 'primary',:url=>comatose_root_path('freedom-serfs'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Internal reforms: creating a stable society'.ts,:update => 'primary',:url=>comatose_root_path('internal-reforms'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Bhutan and the United Nations Organization'.ts,:update => 'primary',:url=>comatose_root_path('united-nations'.t) %></span></li>
+				</ul>
+			</span></li>
+			<li onmousedown="javascript:montre('smenu4');"><span lang="dz" class="dz2"><%= link_to_remote 'Druk Gyalpo Jigme Singye Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('jigme-singye-wangchuk'.t) %><br><% 'Visionary King'.ts %>
+				<ul id="smenu4" onmouseover="javascript:montre('smenu4');" onmouseout="javascript:montre();">
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Early life of King Jigme Singye Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('jigme-singye-wangchuk'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'The Coronation'.ts,:update => 'primary',:url=>comatose_root_path('the-coronation'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Foreign Relations of Bhutan'.ts,:update => 'primary',:url=>comatose_root_path('foreign-relations'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Empowering the people'.ts,:update => 'primary',:url=>comatose_root_path('empowering-the-people'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'The Constitution of Bhutan'.ts,:update => 'primary',:url=>comatose_root_path('bhutan-constitution'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'At the forefront of action'.ts,:update => 'primary',:url=>comatose_root_path('forefront-of-action'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Major Contributions'.ts,:update => 'primary',:url=>comatose_root_path('4th-achievements'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'The Future'.ts,:update => 'primary',:url=>comatose_root_path('the-future-4th'.t) %></span></li>
+				</ul>
+			</span></li>
+			<li onmousedown="javascript:montre('smenu5');"><span lang="dz" class="dz2"><%= link_to_remote 'Druk Gyalpo Jigme Khesar Namgyel Wangchuck'.ts,:update => 'primary',:url=>comatose_root_path('jigme-khesar-namgyal'.t) %><br><% 'The Peoples King'.ts %>
+				<ul id="smenu5" onmouseover="javascript:montre('smenu5');" onmouseout="javascript:montre();">
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'A Legacy of Two Kings'.ts,:update => 'primary',:url=>comatose_root_path('jigme-khesar-namgyal'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'The Early Years'.ts,:update => 'primary',:url=>comatose_root_path('early-years'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'The Education of a Prince'.ts,:update => 'primary',:url=>comatose_root_path('prince-education'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'A New Era Begins'.ts,:update => 'primary',:url=>comatose_root_path('new-era'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'An Ancient Tradition'.ts,:update => 'primary',:url=>comatose_root_path('ancient-tradition'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Ascension to the Throne'.ts,:update => 'primary',:url=>comatose_root_path('ascension-throne'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Roadmap for the future'.ts,:update => 'primary',:url=>comatose_root_path('roadmap-future'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Royal Vision'.ts,:update => 'primary',:url=>comatose_root_path('royal-visions'.t) %></span></li>
+					<li><span lang="dz" class="dz2"><%= link_to_remote 'Dawn of The Great Eastern Sun'.ts,:update => 'primary',:url=>comatose_root_path('epilogue-bio'.t) %></span></li>
+				</ul>
+			</span></li>							
+		</ul>		
+		<h1><span lang="dz" class="dz2"><%= 'Royalty'.ts %></span></h1>
+		<ul class="sidemenu">
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'The Royal Family'.ts,:update => 'primary',:url=>comatose_root_path('royal-family-genealogy'.t) %></span> <br></li>
+			<li><span lang="dz" class="dz2"><%= link_to_remote 'The Royals & its people'.ts,:update => 'primary',:url=>comatose_root_path('royal-bhutanese'.t) %></span> <br></li>
+		</ul>
+		<!--<p>
+		<h1><%= 'Felicitations'.ts %></h1>
+		<ul class="sidemenu">
+			<li><a href="#">Post</a></li>
+			<li><a href="#">Read Felicitations</a></li>   		
+		</ul>
+		</p>-->
+	</td>
+  </tr>
+</table>
+</div>
+<div style="clear: both;">&nbsp;</div>
+</div>

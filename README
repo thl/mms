@@ -1,0 +1,81 @@
+== Welcome to MMS
+
+The Media Management System is a web application designed to store, catalogue and deliver
+images, videos, and documents.
+
+== Getting started
+
+1. Installing
+
+To install from edge:
+
+svn co https://ndlb.svn.sourceforge.net/svnroot/ndlb/portal/ror/mms/trunk/ mms
+
+To install from stable version:
+
+svn co https://ndlb.svn.sourceforge.net/svnroot/ndlb/portal/ror/mms/tags/stable/ mms
+
+2. The application is designed to run in a cluster. For this reason, the repos does not include the folders
+images, movies and typescripts under public. In a cluster these folders would be shared by way of a mount
+and would be set up individually. If you plan to run the application on a single server, simply create the
+folders:
+
+cd public
+mkdir images
+mkdir movies
+mkdir typescripts
+
+3. Update the config/database.yml file to setup the database correctly.
+
+At this point, you DON'T need to go to your database manager to create such db's. We will do that next within rails.
+Just make sure that the user and password specified in database.yml WILL have access to such db's. For instance,
+in my development machine the rubyuser mysql account has full privileges on %_development. This way I know that rubyuser
+will be able to access any new development db even if it doesn't exist yet!
+
+4. Now lets create the databases from rails. To create the development db simply run (if you want to do this on the
+production db, simply add RAILS_ENV=production to all of the next statements):
+
+rake db:create
+
+5. We are using globalize to provide the multilingual views. To create globalize tables, run:
+
+rake globalize:setup
+
+6. Create the rest of the tables by running the migration:
+
+rake db:migrate
+
+7. Make scripts runnable:
+
+chmod +x script/*
+
+8. Now we have to update the roles and privileges. If you see the first migration under db/migrate/025_create_users.rb
+you will notice that only one user has been created (user 'root', password 'rootdude'). He is a system administrator,
+but for now a system administrator ONLY has privileges to update roles. So run the server:
+
+script/server
+
+And browse to http://localhost:3000
+
+Next login with user 'root'. You will notice that a link to Roles will appear on the right side navigation. Click on it.
+Select system administrator -> edit. Under available roles, click "select all" and the ">" button and then save changes.
+Notice that now you have a lot more links on the right side navigation. As you create new controllers it is a good idea
+that you create roles for the various kinds of expected users that will change data (end users that are just visiting
+won't need an account) and when you create new users associate them with the respective roles, i.e. don't make everybody
+a system administrator!
+
+9. Set up the batch processing and cold-storage folders.
+
+The batch processing folder is meant to be a folder where users upload content (through ftp, scp, etc.) and then run
+an importer action (under admin -> media importation, you have to be logged in to run this) which reads from this folder
+and imports the media into its public/images folder and/or database. The folder should be readable by the rails app and
+writable by the users with upload privileges. The path to the folder (relative to RAILS_ROOT) is under admin -> settings
+-> batch_processing_folder.
+
+The cold-storage folder is meant to be a folder where the original media are to be stored. If you a setting is present,
+when a medium is created (through the media importation or through the web interface) after the generation of the various
+thumbnails for an image or the conversion of the videos to the proper formats, the original high-resolution image/video
+is backed up to the cold-storage folder with the medium id as its new file name (with the original extension). After the
+file is copied to cold-storage, the original medium is deleted from the pubilc folder and is no longer available. The path
+to the folder (relative to RAILS_ROOT) is under admin -> settings -> cold_storage_folder (you may create it if it is not
+present).

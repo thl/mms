@@ -1,0 +1,10 @@
+<!ELEMENT subjects (subject*)>
+<!ELEMENT subject (title+, description, created_on, order)>
+<!ATTLIST subject id CDATA #IMPLIED
+                     parent_id CDATA #IMPLIED
+                     creator_id CDATA #IMPLIED>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title lang CDATA #IMPLIED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT created_on (#PCDATA)>
+<!ELEMENT order (#PCDATA)>

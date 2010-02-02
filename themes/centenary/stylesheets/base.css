@@ -1,0 +1,431 @@
+/*
+   Main StyleSheet for the 'e-bhutan' theme
+*/
+
+span.dz {
+ font-size: 25px;
+ font-family: "Jomolhari", "XenoType Tibetan New", "Tibetan Machine Uni"!important;
+ text-align: left;
+}
+span.dz1 {
+ font-size: 18px;
+ font-family: "Jomolhari", "XenoType Tibetan New", "Tibetan Machine Uni"!important;
+ text-align: left;
+ line-height:25px;
+}
+
+span.dz2 {
+ font-size: 15px;
+ font-family: "Jomolhari", "XenoType Tibetan New", "Tibetan Machine Uni"!important;
+ text-align: left;
+ line-height:20px;
+}
+
+body {
+  color: #666666;
+  font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "XenoType Tibetan New","Tibetan Machine Uni"!important;
+  text-align: left;
+  margin:0;
+  padding:0px;
+  font-size: 14px;
+  line-height: 1.166;
+  
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	color: #F49500;
+}
+
+h1 {
+	font-size:18px;
+}
+h2 {
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+h3 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11px;
+}
+
+a {
+	color: #F49500;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#header_top{
+	padding:  10px 0 0 0;
+	width: 100%;
+	background: url(../images/bgtop1.png) repeat-x;
+}
+
+#header{
+	width: 100%;
+	background: url(../images/bg1.png) repeat-x;
+	height: 229px;
+}
+/**/
+.header-links a { color :white ; }
+.header-links a:visited { color: #F49500; text-decoration: none;}
+.header-links a:hover { color: white; }
+/**/
+#div_login {
+	float: right;
+	vertical-align:top;
+}
+
+#div_login h2 {
+	font-size: small;
+}
+
+#div_login a {
+	color: #FFFFFF;
+	font-size: smaller;
+}
+
+#header_bot1{
+	background: url(../images/banner1.png) no-repeat top left;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	
+}
+
+#header_bot1 h1, #header_bot1 h2 {
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #FFFFFF;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+#header_bot1 h1 {
+	float: left;
+	padding: 120px 0 10px 0px ;
+	font-size: 36px;
+	margin-top: -65px;
+	margin-left: 245px;
+}
+
+#header_bot1 h2 {
+	float: right;
+	text-align:left;
+	padding:  134px 20px 0 0;
+	font-size: 16px;
+	margin-top: 0;
+	margin-right: -200px;
+}
+
+#header_bot2{
+	background: url(../images/bar1.png) repeat-x;
+	width: 100%;
+	height:35px;
+}
+
+#header_bot3{
+	background: url(../images/bgbot1.png) repeat-x;
+	height: 10px;
+}
+
+/* Menu */
+/*new*/
+#menu td { 
+	height: 30px;
+	font-size: 12px;
+	vertical-align: text-top;
+	}
+#menu a { color :white ; }
+#menu a:hover { color: #C8BBBE; }
+/*end new*/
+#menu {
+	background:url(../images/img01.png) repeat-x;
+	width: 100%;
+	margin: 0;
+	margin-top: -83px;
+}
+
+#menu a {
+	text-decoration: none;
+	font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+#menu a:hover {
+	color: #666666;
+}
+
+/* Footer */
+
+#footer {
+	vertical-align:baseline;
+	height: 100px;
+	padding: 20px;
+	background: #2D2D2D url(../images/img07.gif) repeat-x;
+}
+
+#footer p {
+	text-align: center;
+	color: #999999;
+}
+
+.media_keywords {
+  font-size: 9px;
+  color :white;
+}
+
+.media_keywords a:hover { color: #C8BBBE; }
+
+.selected_branch {
+  background-color: #FFDDB5;
+}
+
+/* Content */
+#content-main {
+	width: 100%;
+	text-align: justify;
+	margin: -30px -10px 20px 0;
+	padding: 20px -15px 20px 5px ;
+	background: #FFFFFF url(../images/img04.jpg) repeat-x left bottom ;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+#mainleft {
+	float: left;
+	width: 22%; 
+	margin: 0;	
+	display: inline;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+#mainleft ul.sidemenu {
+	list-style: none;
+	text-align: left;
+	margin: 0 0 7px 0; 
+	padding: 0;
+	text-decoration: none;	
+}
+#mainleft ul.sidemenu li {
+	border-bottom: 1px solid #EFF0F1;	
+	background: url(../images/arrow.gif) no-repeat 3px 6px;	
+	padding: 2px 5px 2px 20px ;
+}
+
+* html body #mainleft ul.sidemenu li { height: 1%; }
+
+#mainleft ul.sidemenu li a {
+	font-weight: bolder;
+	background-image: none;
+	text-decoration: none;	
+}
+
+#mainleft h1, mainleft h2, 
+#mainleft p {
+	padding-left: 0;
+	font: bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+#mainleft a {
+	color: #F49500;
+}
+
+#mainleft a:hover {
+	color: #666666;
+}
+
+ul.sidemenu,
+.sidemenu ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+ul.sidemenu li>ul{
+	display: none;
+	position: absolute;
+	/*margin-top: -40px;*/
+	margin-left: -10px;
+	line-height:16px;
+}
+
+ul.sidemenu li:hover>ul{
+	display : block;
+	background-color: #ffffff;
+	}
+
+.sidemenu ul li a{
+	display: block;
+	padding: 2px 0;
+}
+
+ul.sidemenu,
+.sidemenu ul,
+.sidemenu ul li a{
+	background-color: #ffffff;
+}
+
+ul.sidemenu li:hover,
+.sidemenu ul li a:hover{
+	background-color: #F49500;
+}
+
+#primary {
+	float: left;
+	margin: 15px 0 0 25px; 
+	width: 50%;
+	text-align: justify;
+}
+
+#primary h3{
+	font: bold 16px;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+#secondary{
+	width: 25%;
+	float: right;
+	padding-right:0;
+	margin-right:0;
+}
+
+#secondary h1{
+	text-transform: uppercase;
+}
+
+#links {
+	float: right;
+	width:70%;
+	padding-left: 15px;
+	margin-top: 10px;
+	background: url(../images/img05.gif) repeat-y;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+#links ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "Arial Unicode MS", "Gentium", "Lucida Grande", "Microsoft Sans Serif", "Tahoma", sans-serif, "Jomolhari","XenoType Tibetan New","Tibetan Machine Uni"!important;
+}
+
+#links li ul {
+	padding: 0 0 15px 0;  
+}
+
+#links li li {
+	padding: 5px; 
+	background: url(../images/img06.gif) repeat-x left bottom;
+}
+
+#links li a {
+	display: block;
+	text-decoration: none;
+}
+
+#links li a:hover {
+	text-decoration: underline;
+}
+
+#links li i {
+	font-style: normal;
+	font-size: 9px;
+}
+
+#links li h2 {
+	font: bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+}
+
+#links div
+{	position: absolute;
+	visibility: hidden;
+	background: #FFFFFF;
+	/*width:200px;*/
+}
+
+#links div a
+{	position: relative;
+	display: block;
+	padding: 2px;
+	width: auto;
+	text-align: left;
+	text-decoration: none;
+	color: #666666 ;
+	font-size: 12px;
+	background: url(../images/img06.gif) repeat-x left bottom;}
+
+#links div a:hover
+{	background: #F49500;
+	color: #FFF}
+
+.clear{ clear:both }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+#div_login {margin-right :10px}
+
+#breadcrumbs {
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px
+}

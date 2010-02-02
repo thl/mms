@@ -1,0 +1,48 @@
+<% if @media.empty? %>
+     <h3 align="right"><%= 'No media found'.ts %></h3>
+<% else %>
+     <h3><%= @title %></h3>
+     <table width="100%" border="0" bgcolor="#000000" cellpadding="0px" cellspacing="10px">
+<%     media_matrix = Array.new(3)
+       0.upto(2) { |i| media_matrix[i] = Array.new(3) }
+       i=j=0
+       for medium in @media
+         media_matrix[i][j] = medium
+         i+=1
+         if i==3
+           i=0
+           j+=1
+         end
+       end
+       for row in media_matrix %>
+         <tr align="center" valign="bottom">
+<%       for col in row 
+           next if col.nil? %>
+           <td class="media_keywords">
+<%           chosen_caption = chosen_caption(col) 
+             if !chosen_caption.nil? %>     	
+<%=            chosen_caption.title.s %>
+<%           end %>
+	       </td>
+<%       end %>
+         </tr>
+		 <tr align="center" valign="middle">
+<%       for col in row
+           next if col.nil?
+           image = col.thumbnail_image
+		   width = image.width
+	       width = 100 if width>100 %>
+           <td width="75" height="100"><%= link_to_remote image_tag(image.public_filename, :width => width), :update => 'primary', :url => medium_path(col, :registered_theme_id => @registered_theme), :method => :get %></td>
+<%       end %>
+         </tr>
+<%     end %>
+     </table>
+     <p>
+<%=    link_to_remote('Previous'.ts, :url => media_path(@pagination_prev_url), :method => :get) if @medium_pages.current.previous %>
+<%=    pagination_links_each(@medium_pages, {}) do |n|
+         @pagination_params[:page] = n
+         link_to_remote(n.to_s, :url => media_path(@pagination_params), :method => :get)
+       end %>
+<%=    link_to_remote('Next'.ts, :url => media_path(@pagination_next_url), :method => :get) if @medium_pages.current.next %>
+     </p>
+<% end %>
