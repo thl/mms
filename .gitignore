@@ -4,3 +4,6 @@ config/database.yml
 config/environments/quandu_*.rb
 doc/plugins/*
 public/javascripts/tiny_mce/
+public/images/
+public/movies/
+public/typescripts/
