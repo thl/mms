@@ -8,7 +8,7 @@ var ModelSearcher = {
 	
 	// A script on the same subdomain. When a URL is appended to this string, the resulting URL should return the original URL's content.
 	// The proxy can be bypassed by using service URLs that don't begin with "http" (and are thus on the subdomain and don't need a proxy)
-	proxy: "/thl/utils/proxy/",
+	proxy: "/kmaps_integration/utils/proxy/?proxy_url=",
 	
 	// The id attribute of the div which contains all of DOM elements for this 
 	divId: "",
@@ -119,7 +119,7 @@ var ModelSearcher = {
 				if(ModelSearcher.treeLoaded){
 					jQuery('#'+ModelSearcher.treePopupId).show();
 				}else{
-					ModelSearcher.treeLoading.html(' <img src="http://thlib.org/global/images/ajax-loader.gif" />');
+					ModelSearcher.treeLoading.html(' <img src="/images/ajax-loader.gif" />');
 					jQuery.getJSON(ModelSearcher.treeService, function(data){
 						ModelSearcher.treeHtml = ModelSearcher.createTreeFromArray(data.category);
 						ModelSearcher.loadPopup();
@@ -135,7 +135,7 @@ var ModelSearcher = {
 	},
 	
 	loadPopup: function(){
-		ModelSearcher.treePopup = jQuery().thlPopup({
+		ModelSearcher.treePopup = jQuery().draggablePopup({
 			id: ModelSearcher.treePopupId,
 			header: '',
 			content: '',
@@ -152,7 +152,7 @@ var ModelSearcher = {
 			' style="max-height: 400px; height:auto !important; height: 400px; overflow: auto;">'+
 			ModelSearcher.treeHtml+
 			'</div>'+
-			'<br /><input type="submit" value="Select" /> <input type="button" value="Cancel" onclick="jQuery(this).parents(\'.thl-popup:first\').hide(); return false;" />'+
+			'<br /><input type="submit" value="Select" /> <input type="button" value="Cancel" onclick="jQuery(this).parents(\'.draggable-popup:first\').hide(); return false;" />'+
 			'</form>'+
 			'</div>'
 			;
