@@ -1,5 +1,6 @@
 .DS_Store
 *.tmproj
+*.csv
 config/database.yml
 config/environments/quandu_*.rb
 doc/plugins/*

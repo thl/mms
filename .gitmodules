@@ -55,3 +55,6 @@
 [submodule "vendor/plugins/thl_integration"]
 	path = vendor/plugins/thl_integration
 	url = git://github.com/thl/thl_integration.git
+[submodule "vendor/plugins/attachment_fu_patch"]
+	path = vendor/plugins/attachment_fu_patch
+	url = git://github.com/thl/attachment_fu_patch.git
