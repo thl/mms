@@ -55,3 +55,6 @@
 [submodule "vendor/plugins/attachment_fu_patch"]
 	path = vendor/plugins/attachment_fu_patch
 	url = git://github.com/thl/attachment_fu_patch.git
+[submodule "vendor/plugins/annotate_models"]
+	path = vendor/plugins/annotate_models
+	url = git://github.com/amontano/annotate_models.git
