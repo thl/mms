@@ -19,7 +19,7 @@
 	top:0;
 	opacity:0.6;
 	filter:alpha(opacity=60);
-	background:transparent url(/images/draggable-popup-close.png) no-repeat scroll 0 0;
+	background:transparent url(../images/draggable-popup-close.png) no-repeat scroll 0 0;
 	cursor:pointer;
 }
 .draggable-popup-close:hover {
@@ -40,7 +40,7 @@
 	height: 100%;
 	overflow: hidden;
 	border: 0;
-	background: url(/images/draggable-popup-ajax-loader.gif) no-repeat scroll center center;
+	background: url(../images/draggable-popup-ajax-loader.gif) no-repeat scroll center center;
 }
 .draggable-popup-content > .conx-content {
 	margin: 0;

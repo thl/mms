@@ -31,9 +31,6 @@
 [submodule "vendor/plugins/acts_as_tree"]
 	path = vendor/plugins/acts_as_tree
 	url = git://github.com/rails/acts_as_tree.git
-[submodule "vendor/plugins/annotate_models"]
-	path = vendor/plugins/annotate_models
-	url = git://github.com/ctran/annotate_models.git
 [submodule "vendor/plugins/attachment_fu"]
 	path = vendor/plugins/attachment_fu
 	url = git://github.com/technoweenie/attachment_fu.git
