@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515065558) do
+ActiveRecord::Schema.define(:version => 20100529013954) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -634,7 +634,7 @@ ActiveRecord::Schema.define(:version => 20100515065558) do
   create_table "workflows", :force => true do |t|
     t.integer  "medium_id",          :null => false
     t.string   "original_filename"
-    t.string   "original_medium_id"
+    t.text     "original_medium_id", :null => false
     t.string   "other_id"
     t.string   "notes"
     t.integer  "sequence_order"
@@ -644,5 +644,6 @@ ActiveRecord::Schema.define(:version => 20100515065558) do
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true
+  add_index "workflows", ["original_medium_id"], :name => "original_medium_id"
 
 end
