@@ -64,3 +64,6 @@
 [submodule "vendor/plugins/proxy_engine"]
 	path = vendor/plugins/proxy_engine
 	url = git://github.com/thl/proxy_engine.git
+[submodule "vendor/plugins/places_integration"]
+	path = vendor/plugins/places_integration
+	url = git://github.com/thl/places_integration.git
