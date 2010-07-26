@@ -360,16 +360,6 @@ ActiveRecord::Schema.define(:version => 20100714204209) do
 
   add_index "loan_types", ["title"], :name => "index_loan_types_on_title", :unique => true
 
-  create_table "locations", :force => true do |t|
-    t.integer "medium_id",                  :null => false
-    t.text    "spot_feature"
-    t.text    "notes"
-    t.string  "type",         :limit => 50
-    t.integer "feature_id",                 :null => false
-  end
-
-  add_index "locations", ["medium_id", "feature_id"], :name => "index_locations_on_medium_id_and_feature_id", :unique => true
-
   create_table "media", :force => true do |t|
     t.integer  "photographer_id"
     t.integer  "quality_type_id"
@@ -387,6 +377,16 @@ ActiveRecord::Schema.define(:version => 20100714204209) do
   end
 
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
+
+  create_table "media_administrative_locations", :force => true do |t|
+    t.integer "medium_id",                  :null => false
+    t.text    "spot_feature"
+    t.text    "notes"
+    t.string  "type",         :limit => 50
+    t.integer "feature_id",                 :null => false
+  end
+
+  add_index "media_administrative_locations", ["medium_id"], :name => "index_locations_on_medium_and_unit", :unique => true
 
   create_table "media_category_associations", :force => true do |t|
     t.integer  "medium_id",   :null => false
