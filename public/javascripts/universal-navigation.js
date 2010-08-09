@@ -37,6 +37,7 @@ function UniversalNavigation(){
 	this.setTabUrl = function(tab_id, url){
 		var index = this.getTabIndexById(tab_id);
 		jQuery('#'+this.divId).tabs('url', index, url);
+		jQuery('#'+this.divId+' > ul.ui-tabs-nav > li > a').eq(index).attr('href', url);
 	}
 	
 	this.getTabIndexById = function(tab_id){
@@ -60,12 +61,23 @@ function UniversalNavigation(){
 	}
 	
 	this.loadTabsFor = function(id){
-		var tab = this.getTabById(this.selectedTabId);
-		for(var tab_id in tab.tabs){
-			var url = tab.tabs[tab_id].url.replace(':id', id);
+		var selected_tab = this.getTabById(this.selectedTabId);
+		for(var tab_id in selected_tab.tabs){
+			var other_tab = selected_tab.tabs[tab_id];
+			var url = other_tab.url.replace(/\/$/, '');
+			url += other_tab.entity_path.replace(':id', id);
 			this.setTabUrl(tab_id, url);
 		}
 		return false;
+	}
+	
+	this.resetTabs = function(){
+		var selected_tab = this.getTabById(this.selectedTabId);
+		for(var tab_id in selected_tab.tabs){
+			var other_tab = selected_tab.tabs[tab_id];
+			var url = other_tab.url;
+			this.setTabUrl(tab_id, url);
+		}
 	}
 	
 	this.initSecondaryTabs = function(options){
