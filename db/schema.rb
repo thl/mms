@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100714204209) do
+ActiveRecord::Schema.define(:version => 20100811203819) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -359,6 +359,18 @@ ActiveRecord::Schema.define(:version => 20100714204209) do
   end
 
   add_index "loan_types", ["title"], :name => "index_loan_types_on_title", :unique => true
+
+  create_table "locations", :force => true do |t|
+    t.integer "medium_id",                                                :null => false
+    t.text    "spot_feature"
+    t.text    "notes"
+    t.string  "type",         :limit => 50
+    t.integer "feature_id",                                               :null => false
+    t.decimal "lat",                        :precision => 9, :scale => 6
+    t.decimal "lng",                        :precision => 9, :scale => 6
+  end
+
+  add_index "locations", ["medium_id", "feature_id"], :name => "index_locations_on_medium_id_and_feature_id", :unique => true
 
   create_table "media", :force => true do |t|
     t.integer  "photographer_id"
