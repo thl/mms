@@ -3,18 +3,26 @@
 	padding:0;
 }
 
+.secondary-universal-navigation > .ui-tabs-panel{border-top:0px;}
+#universal_navigation > ul.ui-tabs-nav{margin-left:20px}
 #universal_navigation > ul.ui-tabs-nav a {
-    background-position: 100% -150px;border-bottom-width:0pt;
+    background-position: 100% -150px;
+    border-bottom-width:0pt;
     border-bottom-width:0pt;
     text-transform: uppercase;
+    letter-spacing:0.12em;
     color: #fff;
     font-weight:normal;
+    margin-right:2px;
 }
 #universal_navigation > ul.ui-tabs-nav a span {
 	background-position: 0 -50px;
     text-transform: uppercase;
     color: #fff;
+    padding-bottom:0px;
+    padding-top:7px;
     font-weight:normal;
+    margin-bottom:-3px;
 }
 
 #universal_navigation > ul.ui-tabs-nav .ui-tabs-selected a {
@@ -24,6 +32,8 @@
 #universal_navigation > ul.ui-tabs-nav .ui-tabs-selected a span {
     background-position: 0 0;
     color: #444;
+    font-weight:bold;
+    margin-top:-2px;
 }
 #universal_navigation > ul.ui-tabs-nav {
 	list-style-type: none;
@@ -33,45 +43,54 @@
 
 .secondary-universal-navigation .ui-tabs-nav {
 	padding:0;
-	background-color:#c4c4aa;
+	background-color:#e7e7d8;
 }
 
 .secondary-universal-navigation .ui-tabs-nav a,
 .secondary-universal-navigation .ui-tabs-nav a span {
 	background-image:none;
-	background-color:#c4c4aa;
+	background-color:#e7e7d8;
 	min-height:14px;
 	margin:0;
-	padding-top:0;
-	padding-bottom:0;
+	padding-top:3px;
+	padding-bottom:1px;
 	color:#444;
 	border:0;
 }
 
 .secondary-universal-navigation ul.ui-tabs-nav {
 	list-style-type: none;
+	padding-left:35px;
 }
 
 .secondary-universal-navigation .ui-tabs-nav li {
-	margin:4px 0;
+	margin:5px 0 0px;
 	border-right:1px solid #999;
 }
 
+.secondary-universal-navigation .ui-tabs-nav li:first-child {
+	border-left:1px solid #999;
+}
+
+.secondary-universal-navigation .ui-tabs-nav li.ui-tabs-selected {
+	border-top:1px solid #999;
+}
+
 .secondary-universal-navigation .ui-tabs-nav .ui-tabs-selected a {
-	top:0;
-	background-color:#c4c4aa;
+	background-color:#fff;
 	color:#444;
-	text-decoration:underline;
 }
 
 .secondary-universal-navigation .ui-tabs-nav .ui-tabs-selected a span {
 	color:#444;
-	text-decoration:underline;
+	background-color:#fff;
+	text-decoration:none;
 }
 
 .secondary-universal-navigation .ui-tabs-nav .ui-state-hover a,
 .secondary-universal-navigation .ui-tabs-nav .ui-state-hover a span {
 	color:#333 !important;
+	text-decoration:underline;
 }
 
 /* App-specific */
