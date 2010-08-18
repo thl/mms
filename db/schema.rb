@@ -407,6 +407,14 @@ ActiveRecord::Schema.define(:version => 20100811203819) do
 
   add_index "media_keyword_associations", ["medium_id", "keyword_id"], :name => "index_media_keyword_associations_on_medium_id_and_keyword_id", :unique => true
 
+  create_table "media_publishers", :force => true do |t|
+    t.integer  "publisher_id"
+    t.integer  "medium_id"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "media_source_associations", :force => true do |t|
     t.integer  "medium_id",   :null => false
     t.integer  "source_id",   :null => false
@@ -491,6 +499,14 @@ ActiveRecord::Schema.define(:version => 20100811203819) do
   end
 
   add_index "projects", ["title"], :name => "index_projects_on_title", :unique => true
+
+  create_table "publishers", :force => true do |t|
+    t.string   "title",      :null => false
+    t.integer  "place_id"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "quality_types", :force => true do |t|
     t.string "title", :limit => 10, :null => false
