@@ -1,14 +1,9 @@
 <%= render :partial => 'main/header' %>
 
 <div class="shell-1">
-	<% universal_navigation_tabs :current_tab => :media do %>
-	  <div class="secondary-universal-navigation">
-			<%= secondary_tabs @current_tab_id %>
-			<div id="media_main">
-				<%= yield %>
-			</div>
-		</div>
-	<% end %>
+  <% universal_navigation :media, @current_tab_id, custom_secondary_tabs(@current_tab_id) do %>
+    <%= yield %>
+  <% end %>
 			
 </div>
 
