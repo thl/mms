@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100811203819) do
+ActiveRecord::Schema.define(:version => 20101126154111) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -386,19 +386,10 @@ ActiveRecord::Schema.define(:version => 20100811203819) do
     t.integer  "capture_device_model_id"
     t.string   "partial_taken_on"
     t.integer  "application_filter_id",                  :null => false
+    t.integer  "resource_type_id",                       :null => false
   end
 
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
-
-  create_table "media_administrative_locations", :force => true do |t|
-    t.integer "medium_id",                  :null => false
-    t.text    "spot_feature"
-    t.text    "notes"
-    t.string  "type",         :limit => 50
-    t.integer "feature_id",                 :null => false
-  end
-
-  add_index "media_administrative_locations", ["medium_id"], :name => "index_locations_on_medium_and_unit", :unique => true
 
   create_table "media_category_associations", :force => true do |t|
     t.integer  "medium_id",   :null => false
