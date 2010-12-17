@@ -71,4 +71,3 @@ Rails::Initializer.run do |config|
   # config.active_record.schema_format = :sql  
 end
 OpenID::Util.logger = RAILS_DEFAULT_LOGGER
-ActionController::Base.session = { :domain => ".thlib.org" }
