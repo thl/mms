@@ -12,6 +12,7 @@ app = app[0] ;
 // this state should affect the page's functionality  
 var in_frame = false;
 
+
 // object that handles bookmarking -- works only for IE and Firefox
 var bookmarker = {
 	label: "bookmark" ,		// text for the bookmark link
@@ -57,6 +58,16 @@ var bookmarker = {
 
 var frame_service = {
 
+	activate_links: function() {
+		
+		if ( this.parent_url.length ) {
+			$('a').not('[href^=#]').each( function() {
+				this.href += "?parent_url=" + this.parent_url;
+			});
+		}
+		
+	}
+
 	hide_stuff: function() {
 		// this is necessary for ie6
 		$('body').css({ 'padding': '0px' , 'backgroundImage': 'none' , 'backgroundColor': 'white' , 'textAlign': 'left' }) ;
@@ -67,13 +78,15 @@ var frame_service = {
 	// Based on the environment, get the appropriate hostname of the main THL site. 
 	get_thl_hostname: function(){
 		var service_hostname = window.location.hostname;
+		var h = '';
 		if(service_hostname.indexOf('localhost') == 0){
-			return 'localhost:90';
-		}else if(service_hostname.indexOf('dev') == 0){
-			return 'dev.thlib.org';
-		}else{
-			return 'www.thlib.org';
+			h = 'localhost:90';
+		} else if(service_hostname.indexOf('dev') == 0){
+			h = 'dev.thlib.org';
+		} else{
+			h = 'www.thlib.org';
 		}
+		return h;
 	},
 	
 	// Set the height of the containing iframe.  Since cross-domain JS can't be used due to security constraints, we have to load
@@ -89,16 +102,31 @@ var frame_service = {
 	init: function() {
 		//bookmarker.init() ;
 		
+		function getUrlVars() {
+		    var vars = [], hash;
+		    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		    for(var i = 0; i < hashes.length; i++) {
+		        hash = hashes[i].split('=');
+		        vars.push(hash[0]);
+		        vars[hash[0]] = hash[1];
+		    }
+		    return vars;
+		}
+
+		this.parent_url = getUrlVars()['parent_url'];
+		
+		
 		// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
 		if(top==self){
-			var loc = window.location;
-			var separator = loc.search ? '&' : '?';
-			window.location = loc.protocol+'//'+loc.host+loc.pathname+loc.search+separator+'frame=destroy'+loc.hash;
+			var href = window.location.href;
+			window.location = this.parent_url + "#iframe=" + href;
 		}
 		
 		this.hide_stuff() ;
 		this.set_iframe_height();
 		$('#body-wrapper').css('width', '100%');
+		
+		this.activate_links();
 		
 		// On AJAX success events, the height of the content might've changed, so we need to set the iframe height appropriately
 		jQuery(document).ajaxSuccess(function(event, request, settings) {
