@@ -16,7 +16,7 @@ config.action_controller.perform_caching             = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
-Technoweenie::AttachmentFu.tempfile_path='/tmp'
+# Technoweenie::AttachmentFu.tempfile_path='/tmp'
 
 # Relative path for production server. Probably won't be needed in passenger versions after 2.2.4
 config.action_controller.relative_url_root = '/master/mms'
