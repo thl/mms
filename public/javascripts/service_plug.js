@@ -62,11 +62,12 @@ var frame_service = {
 		
 		if ( this.parent_url.length ) {
 			$('a').not('[href^=#]').each( function() {
-				this.href += "?parent_url=" + this.parent_url;
+				this.href += ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + this.parent_url;
 			});
 		}
 		
-	}
+	},
+
 
 	hide_stuff: function() {
 		// this is necessary for ie6
@@ -119,7 +120,11 @@ var frame_service = {
 		// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
 		if(top==self){
 			var href = window.location.href;
-			window.location = this.parent_url + "#iframe=" + href;
+			if ( this.parent_url.length ) {
+				window.location = this.parent_url + "#iframe=" + href;
+			} else {
+				window.location = href + ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
+			}
 		}
 		
 		this.hide_stuff() ;
