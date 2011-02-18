@@ -118,26 +118,20 @@ var frame_service = {
 		
 		
 		// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
-		/*if(top==self){
+		if(top==self){
 			var href = window.location.href;
 			if ( this.parent_url && this.parent_url.length ) {
 				window.location = this.parent_url + "#iframe=" + href;
 			} else {
 				window.location = href + ( href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
 			}
-		}*/
-		
-		if(top==self){
-			var loc = window.location;
-			var separator = loc.search ? '&' : '?';
-			window.location = loc.protocol+'//'+loc.host+loc.pathname+loc.search+separator+'frame=destroy'+loc.hash;
 		}
-
+		
 		this.hide_stuff() ;
 		this.set_iframe_height();
 		$('#body-wrapper').css('width', '100%');
 		
-		//this.activate_links();
+		this.activate_links();
 		
 		// On AJAX success events, the height of the content might've changed, so we need to set the iframe height appropriately
 		jQuery(document).ajaxSuccess(function(event, request, settings) {
