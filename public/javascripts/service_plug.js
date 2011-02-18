@@ -120,7 +120,7 @@ var frame_service = {
 		// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
 		if(top==self){
 			var href = window.location.href;
-			if ( this.parent_url.length ) {
+			if ( this.parent_url && this.parent_url.length ) {
 				window.location = this.parent_url + "#iframe=" + href;
 			} else {
 				window.location = href + ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
