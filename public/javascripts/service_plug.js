@@ -123,7 +123,7 @@ var frame_service = {
 			if ( this.parent_url && this.parent_url.length ) {
 				window.location = this.parent_url + "#iframe=" + href;
 			} else {
-				window.location = href + ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
+				window.location = href + ( href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
 			}
 		}
 		
