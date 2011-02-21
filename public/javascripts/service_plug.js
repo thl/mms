@@ -2,8 +2,30 @@
 thl plugin scripts -- jev3a@virginia.edu
 
 depends on prototype.js, but not heavily
-
 */
+
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+var parent_url = getUrlVars()['parent_url'];		
+
+// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
+if(top==self){
+	var href = window.location.href;
+	if ( parent_url && parent_url.length ) {
+		window.location = parent_url + "#iframe=" + href;
+	} else {
+		window.location = href + ( href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
+	}
+}
 
 var app = navigator.userAgent.match(/Firefox|Safari|MSIE|Opera?/i) ;
 app = app[0] ;
@@ -60,14 +82,13 @@ var frame_service = {
 
 	activate_links: function() {
 		
-		if ( this.parent_url.length ) {
-			$('a').not('[href^=#]').each( function() {
-				this.href += ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + this.parent_url;
+		if ( parent_url.length ) {
+			$('a').not('[href^=#], [href*=parent_url]').each( function() {
+				this.href += ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + parent_url;
 			});
 		}
 		
 	},
-
 
 	hide_stuff: function() {
 		// this is necessary for ie6
@@ -103,30 +124,6 @@ var frame_service = {
 	init: function() {
 		//bookmarker.init() ;
 		
-		function getUrlVars() {
-		    var vars = [], hash;
-		    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-		    for(var i = 0; i < hashes.length; i++) {
-		        hash = hashes[i].split('=');
-		        vars.push(hash[0]);
-		        vars[hash[0]] = hash[1];
-		    }
-		    return vars;
-		}
-
-		this.parent_url = getUrlVars()['parent_url'];
-		
-		
-		// If this isn't in an iframe, redirect to add a frame=destroy GET param to destroy the relevant session variable
-		if(top==self){
-			var href = window.location.href;
-			if ( this.parent_url && this.parent_url.length ) {
-				window.location = this.parent_url + "#iframe=" + href;
-			} else {
-				window.location = href + ( href.indexOf('?') > -1 ? '&' : '?' ) + "frame=destroy";
-			}
-		}
-		
 		this.hide_stuff() ;
 		this.set_iframe_height();
 		$('#body-wrapper').css('width', '100%');
@@ -136,6 +133,7 @@ var frame_service = {
 		// On AJAX success events, the height of the content might've changed, so we need to set the iframe height appropriately
 		jQuery(document).ajaxSuccess(function(event, request, settings) {
 			frame_service.set_iframe_height();
+			frame_service.activate_links();
 		});
 		
 		// For use in this application to determine alternate behavior when the app is in an iframe
