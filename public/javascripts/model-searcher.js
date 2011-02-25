@@ -58,12 +58,12 @@ function ModelSearcher(){
 	this.init = function(divId, listService, treeService, options){
 		this.listService = listService;
 		this.treeService = treeService;
-		if(options.fieldName)			{ this.fieldName = options.fieldName; }
-		if(options.fieldLabel)			{ this.fieldLabel = options.fieldLabel; }
-		if(options.selectedObjects)		{ this.selectedObjects = options.selectedObjects; }
-		if(options.hasTree)				{ this.hasTree = options.hasTree; }
-		if(options.singleSelectionTree)	{ this.singleSelectionTree = options.singleSelectionTree; }
-		if(options.proxy)				{ this.proxy = options.proxy; }
+		if(typeof(options.fieldName) != "undefined")			{ this.fieldName = options.fieldName; }
+		if(typeof(options.fieldLabel) != "undefined")			{ this.fieldLabel = options.fieldLabel; }
+		if(typeof(options.selectedObjects) != "undefined")		{ this.selectedObjects = options.selectedObjects; }
+		if(typeof(options.hasTree) != "undefined")				{ this.hasTree = options.hasTree; }
+		if(typeof(options.singleSelectionTree) != "undefined")	{ this.singleSelectionTree = options.singleSelectionTree; }
+		if(typeof(options.proxy) != "undefined")				{ this.proxy = options.proxy; }
 		this.divId = divId;
 		this.div = jQuery('#'+divId);
 		this.div.html(
@@ -103,7 +103,7 @@ function ModelSearcher(){
 			this.hiddenIdInput.val(this.selectedObjects[0].id);
 		}
 		if(this.hasTree){
-			this.div.append('<br />Input type above or <a href="#" class="tree-link">select from tree</a>'+
+			this.div.append("<br/><br/>Or select from <a href=\"#\" class=\"tree-link\">knowledge map\'s subcategories</a>." +
 				'<span class="tree-names"></span> <a href="#" class="tree-remove">(remove)</a><span class="tree-loading" style="float:right;"></span>');
 			this.treePopupId = this.divId+"_model_searcher_tree_popup";
 			this.treeLink = this.div.find('.tree-link');
