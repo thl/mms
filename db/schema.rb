@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101209175910) do
+ActiveRecord::Schema.define(:version => 20110228181402) do
 
   create_table "administrative_unit_translations", :force => true do |t|
     t.integer  "administrative_unit_id", :null => false
@@ -212,6 +212,11 @@ ActiveRecord::Schema.define(:version => 20101209175910) do
 
   add_index "dialects", ["title"], :name => "index_dialects_on_title", :unique => true
 
+  create_table "entries", :id => false, :force => true do |t|
+    t.integer "id",    :default => 0, :null => false
+    t.text    "title",                :null => false
+  end
+
   create_table "glossaries", :force => true do |t|
     t.string  "title",                                           :null => false
     t.text    "description"
@@ -237,6 +242,8 @@ ActiveRecord::Schema.define(:version => 20101209175910) do
     t.integer "width"
     t.integer "height"
   end
+
+  add_index "images", ["parent_id", "thumbnail"], :name => "parent_id"
 
   create_table "keyword_translations", :force => true do |t|
     t.integer  "keyword_id", :null => false
@@ -319,11 +326,13 @@ ActiveRecord::Schema.define(:version => 20101209175910) do
   add_index "media_administrative_locations", ["medium_id"], :name => "index_locations_on_medium_and_unit", :unique => true
 
   create_table "media_category_associations", :force => true do |t|
-    t.integer  "medium_id",   :null => false
-    t.integer  "category_id", :null => false
-    t.integer  "root_id",     :null => false
+    t.integer  "medium_id",     :null => false
+    t.integer  "category_id",   :null => false
+    t.integer  "root_id",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "string_value"
+    t.integer  "numeric_value"
   end
 
   add_index "media_category_associations", ["medium_id", "category_id"], :name => "index_media_category_associations_on_medium_id_and_category_id", :unique => true
