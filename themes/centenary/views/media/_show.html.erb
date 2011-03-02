@@ -50,7 +50,7 @@
      title = descriptions.size==1 ? 'Description' : 'Descriptions' %>
      <p><b><%= title.ts %>:</b></p>
 <%   for description in descriptions %>
-       <p><%= h(description.title).s %></p>
+       <p><%= description.title.s %></p>
 <%   end
    end
    keywords = @medium.keywords
