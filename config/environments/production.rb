@@ -19,4 +19,4 @@ config.action_controller.perform_caching             = true
 # Technoweenie::AttachmentFu.tempfile_path='/tmp'
 
 # Relative path for production server. Probably won't be needed in passenger versions after 2.2.4
-config.action_controller.relative_url_root = '/master/mms'
+config.action_controller.relative_url_root = '/mms'
