@@ -62,3 +62,5 @@ div.progressBar div.background {
   height: 18px;
   width: 0%;
 }
+
+#mobj td { padding: 5px; font-family: verdana, arial, sans-serif; color:#404040; font-size:9pt;}
