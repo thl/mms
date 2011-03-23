@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110228181402) do
+ActiveRecord::Schema.define(:version => 20110319012021) do
 
   create_table "administrative_unit_translations", :force => true do |t|
     t.integer  "administrative_unit_id", :null => false
@@ -311,6 +311,7 @@ ActiveRecord::Schema.define(:version => 20110228181402) do
     t.string   "partial_taken_on"
     t.integer  "application_filter_id",                  :null => false
     t.integer  "resource_type_id",                       :null => false
+    t.integer  "rotation"
   end
 
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
