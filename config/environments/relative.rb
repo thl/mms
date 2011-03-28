@@ -18,4 +18,4 @@ config.action_controller.perform_caching             = true
 # config.action_mailer.raise_delivery_errors = false
 
 # Relative path for production server. Probably won't be needed in passenger versions after 2.2.4
-config.action_controller.relative_url_root = '/trunk/mms'
+config.action_controller.relative_url_root = '/mms'
