@@ -1,6 +1,8 @@
 # ForkedNotifier
 # Relies on a method called log_suffix
 module ForkedNotifier
+  include FileUtils
+  
   def background_process(do_forking=true, do_detach=true)
     if RUBY_PLATFORM =~ /(:?mswin|mingw)/ || !do_forking
       Thread.new { yield }
