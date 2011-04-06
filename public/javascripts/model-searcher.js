@@ -52,7 +52,6 @@ function ModelSearcher(){
 	this.treeRemove = null;
 	
 	this.treeHtml = null;
-	this.treeLoaded = false;
 	
 	this.cRowSelector = '#characteristic-row';
 	this.bRowID = 'bin';
@@ -61,7 +60,8 @@ function ModelSearcher(){
 	// See the attribute documentation above for explanations of these arguments
 	this.init = function(divId, listService, treeService, options){
 		var that = this,
-			root_topics = document.getElementById('root_topics');
+			root_topics = document.getElementById('root_topics'),
+			$tRem = jQuery('.tree-remove');
 
 		this.listService = listService;
 		this.treeService = treeService;
@@ -109,8 +109,8 @@ function ModelSearcher(){
 			this.treeLoading = this.div.find('.tree-loading');
 		}
 		
-		jQuery('.tree-remove').unbind('click'); // this and below have to be separate because live can't be chained
-		jQuery('.tree-remove').live('click', function(){
+		$tRem.unbind('click'); // this and below have to be separate because live can't be chained
+		$tRem.live('click', function(){
 			var $selection = jQuery(this).closest('.tree-names'),
 				$target = $selection.siblings().length ? $selection : $selection.closest('tr');
 			
@@ -126,30 +126,33 @@ function ModelSearcher(){
 			return false;
 		});
 		
-		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').show().click(function(){that.activatePopup()});
+		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').unbind('click').show().click(function(){that.activatePopup()});
 	};
 	
 	this.activatePopup = function() {
 		var thisModelSearcher = this;
-		if(thisModelSearcher.treeLoaded){
-			jQuery('#'+thisModelSearcher.treePopupId).show();
+		if(window['activeTree'] == this.treeService ){
+			jQuery('#'+this.treePopupId).show();
 		}else{
-			//thisModelSearcher.treeLoading.html(' <img src="../images/ajax-loader.gif" />');
-			jQuery.getJSON(thisModelSearcher.treeService, function(data){
+			var $test = jQuery('#tree-loader-img'),
+				$img = $test.length ?
+								$test.show() :
+								jQuery("<img id='tree-loader-img' src='/images/loading.gif' align='right' />").insertAfter('#browse_link');
+			jQuery.getJSON(this.treeService, function(data){
 				thisModelSearcher.treeHtml = thisModelSearcher.createTreeFromArray(data.category ? data.category.categories : data.categories);
 				thisModelSearcher.loadPopup();
 				thisModelSearcher.treeHtml = null;
 				data = null;
-				//thisModelSearcher.treeLoading.html('');
-				thisModelSearcher.treeLoaded = true;
+				window['activeTree'] = thisModelSearcher.treeService;
+				$img.hide();
 			});
 		}
 		return false;
 	}
 	
 	this.loadPopup = function(){
-		var that = thisModelSearcher;
-		that.treePopup = jQuery().draggablePopup({
+		var that = this;
+		this.treePopup = jQuery().draggablePopup({
 			id: that.treePopupId,
 			header: '',
 			content: '',
@@ -193,7 +196,7 @@ function ModelSearcher(){
 	};
 	
 	this.addValue = function( ids ) {
-		var that = thisModelSearcher,
+		var that = this,
 			i,
 			names = [],
 			ids = ids || [],
@@ -289,7 +292,8 @@ function ModelSearcher(){
 function reinit() {
 	var el = document.getElementById('root_topics'),
 		id = el.value,
-		label = el.options[el.selectedIndex].text;		
+		label = el.options[el.selectedIndex].text,
+		searcher = undefined;
 
 	if ( id == 'All' ) {
 		all_searcher();
