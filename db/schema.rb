@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110319012021) do
+ActiveRecord::Schema.define(:version => 20110412155958) do
 
   create_table "administrative_unit_translations", :force => true do |t|
     t.integer  "administrative_unit_id", :null => false
@@ -589,15 +589,16 @@ ActiveRecord::Schema.define(:version => 20110319012021) do
   add_index "words", ["title"], :name => "title"
 
   create_table "workflows", :force => true do |t|
-    t.integer  "medium_id",          :null => false
+    t.integer  "medium_id",            :null => false
     t.string   "original_filename"
-    t.text     "original_medium_id", :null => false
+    t.text     "original_medium_id",   :null => false
     t.string   "other_id"
     t.string   "notes"
     t.integer  "sequence_order"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "status_id"
+    t.integer  "processing_status_id"
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true
