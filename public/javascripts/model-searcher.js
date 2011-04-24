@@ -19,7 +19,7 @@ function ModelSearcher(){
 	// The name, label, and style attributes of the hidden field in which the selected ID(s) will be entered
 	this.fieldName = "searcher_id_input";
 	this.fieldLabel = "";
-	this.fieldStyle = "padding:3px";
+	this.fieldStyle = "padding:3px; width: 161px";
 	
 	// Another method of adding objects (instead of using services)
 	this.objectList = null;
@@ -73,6 +73,13 @@ function ModelSearcher(){
 		if(typeof(options.proxy) != "undefined")				{ this.proxy = options.proxy; }
 		this.divId = divId;
 		this.div = jQuery('#'+divId);
+		if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
+			this.div.html(
+						(this.fieldLabel ? '<label for="'+this.fieldName+'">'+this.fieldLabel+'</label>' : '')+
+						'<input type="text" name="searcher_autocomplete" id="searcher_autocomplete" style="'+this.fieldStyle+'" />'+
+						'<input type="hidden" name="'+this.fieldName+'" id="searcher_id_input" />'
+					);
+		}
 		this.autocompleteInput = jQuery('#searcher_autocomplete');
 		this.hiddenIdInput = jQuery('#searcher_id_input');
 
@@ -92,7 +99,7 @@ function ModelSearcher(){
 				formatItem: that.autocompleteFormatItem,
 				formatMatch: that.autocompleteFormatMatch,
 				formatResult: that.autocompleteFormatItem,
-				multiple: true
+				multiple: ( this.getctx == 'kmaps' ? true : false )
 			});
 			that.autocompleteInput.result(that.autocompleteCallback);
 			that.objectList = {};
@@ -107,6 +114,36 @@ function ModelSearcher(){
 		if(this.hasTree){
 			this.treePopupId = this.divId+"_model_searcher_tree_popup";
 			this.treeLoading = this.div.find('.tree-loading');
+			if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
+				this.div.append('<br />Input type above or <a href="#" class="tree-link">select from tree</a>'+
+								'<span class="tree-names"></span> <a href="#" class="tree-remove">(remove)</a><span class="tree-loading" style="float:right;"></span>');
+				this.treeLink = this.div.find('.tree-link');
+				this.treeRemove = this.div.find('.tree-remove');
+				this.treeNames = this.div.find('.tree-names');
+				this.treeRemove.hide();
+				this.treeRemove.click(function(){
+					thisModelSearcher.treeNames.html('');
+					thisModelSearcher.treeRemove.hide();
+					thisModelSearcher.hiddenIdInput.val('');
+					return false;
+				});
+				this.treeLink.click(function(){
+					if(thisModelSearcher.treeLoaded){
+	 					jQuery('#'+thisModelSearcher.treePopupId).show();
+	 				}else{
+						thisModelSearcher.treeLoading.html(' <img src="../images/ajax-loader.gif" />');
+						jQuery.getJSON(thisModelSearcher.treeService, function(data){
+							thisModelSearcher.treeHtml = thisModelSearcher.createTreeFromArray(data.category ? data.category.categories : data.categories);
+							thisModelSearcher.loadPopup();
+							thisModelSearcher.treeHtml = null;
+							data = null;
+							thisModelSearcher.treeLoading.html('');
+							thisModelSearcher.treeLoaded = true;
+						});
+					}
+					return false;
+				});
+			}
 		}
 		
 		$tRem.unbind('click'); // this and below have to be separate because live can't be chained
@@ -128,6 +165,13 @@ function ModelSearcher(){
 		
 		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').unbind('click').show().click(function(){that.activatePopup()});
 	};
+	
+	this.getctx = function() {
+		if ( !this.ctx ) {
+			this.ctx = ( document.getElementById('root_topics') ? 'kmaps' : 'features' );
+		}
+		return this.ctx;
+	}
 	
 	this.activatePopup = function() {
 		var thisModelSearcher = this;
@@ -178,14 +222,26 @@ function ModelSearcher(){
 		that.treePopup.div
 			.find('form:first').submit(function(){
 				var ids = [];
+				var names = [];
 
 				jQuery(this).find(':checkbox:checked').each(function(){
-					var label_name = jQuery(this).siblings('label').attr('name');
+					var $label = jQuery(this).siblings('label');
+					var label_name = $label.attr('name');
 					if(label_name.indexOf('record_') == 0){
 						ids.push(label_name.substring(7));
+						names.push($label.html());
 					}
 				});
-				if (ids.length) that.addValue( ids );
+				if (ids.length) {
+					if ( that.fieldLabel.indexOf('Feature Type') == -1 ) {
+						that.addValue( ids );
+					} else {
+						that.hiddenIdInput.val(ids.join(','));
+						that.autocompleteInput.val('');
+						that.treeNames.html(':<br />'+names.join(', '));
+						that.treeRemove.show();
+					}
+				}
 				jQuery('#'+that.treePopupId).hide();
 				return false;
 			});
@@ -200,6 +256,7 @@ function ModelSearcher(){
 			i,
 			names = [],
 			ids = ids || [],
+			ctx = this.getctx(),
 			test = document.getElementById(that.bRowID),
 			$bRow = test ? $(test) : jQuery("<tr><td></td><td colspan='2' style='padding-top:1px; padding-bottom:4px' id='" + that.bRowID + "'></td></tr>").insertAfter(jQuery(that.cRowSelector)).find('#' + that.bRowID);
 
@@ -213,9 +270,9 @@ function ModelSearcher(){
 				);
 			}
 		}
-		that.hiddenIdInput[0].value += ',' + ids.join(',');
+		that.hiddenIdInput[0].value += ( ctx == 'kmaps' ? ',' : '') + ids.join(',');
 		$bRow.append(names.join(''));
-		that.autocompleteInput.val('');
+		if (ctx == 'kmaps') that.autocompleteInput.val('');
 		this.checkAnnotationState();
 	}
 	
@@ -291,9 +348,14 @@ function ModelSearcher(){
 
 function reinit() {
 	var el = document.getElementById('root_topics'),
-		id = el.value,
-		label = el.options[el.selectedIndex].text,
 		searcher = undefined;
+		
+	if (el) {
+		var	id = el.value,
+			label = el.options[el.selectedIndex].text;
+	} else {
+		var id = label = '';
+	}
 
 	if ( id == 'All' ) {
 		all_searcher();
