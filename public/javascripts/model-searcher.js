@@ -92,7 +92,7 @@ function ModelSearcher(){
 				formatItem: that.autocompleteFormatItem,
 				formatMatch: that.autocompleteFormatMatch,
 				formatResult: that.autocompleteFormatItem,
-				multiple: true
+				multiple: ( this.getctx == 'kmaps' ? true : false )
 			});
 			that.autocompleteInput.result(that.autocompleteCallback);
 			that.objectList = {};
@@ -128,6 +128,13 @@ function ModelSearcher(){
 		
 		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').unbind('click').show().click(function(){that.activatePopup()});
 	};
+	
+	this.getctx = function() {
+		if ( !this.ctx ) {
+			this.ctx = ( document.getElementById('root_topics') ? 'kmaps' : 'features' );
+		}
+		return this.ctx;
+	}
 	
 	this.activatePopup = function() {
 		var thisModelSearcher = this;
@@ -200,6 +207,7 @@ function ModelSearcher(){
 			i,
 			names = [],
 			ids = ids || [],
+			ctx = this.getctx(),
 			test = document.getElementById(that.bRowID),
 			$bRow = test ? $(test) : jQuery("<tr><td></td><td colspan='2' style='padding-top:1px; padding-bottom:4px' id='" + that.bRowID + "'></td></tr>").insertAfter(jQuery(that.cRowSelector)).find('#' + that.bRowID);
 
@@ -213,9 +221,9 @@ function ModelSearcher(){
 				);
 			}
 		}
-		that.hiddenIdInput[0].value += ',' + ids.join(',');
+		that.hiddenIdInput[0].value += ( ctx == 'kmaps' ? ',' : '') + ids.join(',');
 		$bRow.append(names.join(''));
-		that.autocompleteInput.val('');
+		if (ctx == 'kmaps') that.autocompleteInput.val('');
 		this.checkAnnotationState();
 	}
 	
@@ -291,9 +299,14 @@ function ModelSearcher(){
 
 function reinit() {
 	var el = document.getElementById('root_topics'),
-		id = el.value,
-		label = el.options[el.selectedIndex].text,
 		searcher = undefined;
+		
+	if (el) {
+		var	id = el.value,
+			label = el.options[el.selectedIndex].text;
+	} else {
+		var id = label = '';
+	}
 
 	if ( id == 'All' ) {
 		all_searcher();
