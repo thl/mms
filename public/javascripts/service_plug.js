@@ -84,16 +84,34 @@ var frame_service = {
 
 	activate_links: function() {
 		
+		// this is a way to add the parent_url arg to dynamically generated links at the click moment
+		
 		jQuery('a').live('contextmenu click', function(event) {
+			href = frame_service.rewrite_links(this.href);
+			this.href = href;
 			if ( event.which == 3 ) {
-				href = this.href;
-				if ( parent_url.length && href.indexOf('#') != 0 && href.indexOf(parent_url) == -1 ) {
-					this.href += ( href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + parent_url;
-				}
+				return true;
+			} else {
+				window.location.href = href;
+				return false;
 			}
-			return true;
 		});
 		
+		// all links on the page get the parent_url by default 
+		
+		if ( parent_url.length ) {
+			jQuery('a').each( function() {
+				this.href = frame_service.rewrite_links(this.href);
+			});
+		}
+		
+	},
+	
+	rewrite_links: function(href) {
+		if ( parent_url.length && href.indexOf('#') != 0 && href.indexOf(parent_url) == -1 ) {
+			href += ( href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + parent_url;
+		}
+		return href
 	},
 
 	hide_stuff: function() {
