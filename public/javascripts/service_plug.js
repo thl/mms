@@ -2,6 +2,8 @@
 thl plugin scripts -- jev3a@virginia.edu
 
 depends on prototype.js, but not heavily
+
+TODO: this needs to be cleaned up quite a bit, namespaced, and scoped
 */
 
 function getUrlVars() {
@@ -82,12 +84,34 @@ var frame_service = {
 
 	activate_links: function() {
 		
+		// this is a way to add the parent_url arg to dynamically generated links at the click moment
+		
+		jQuery('a').live('contextmenu click', function(event) {
+			href = frame_service.rewrite_links(this.href);
+			this.href = href;
+			if ( event.which == 3 ) {
+				return true;
+			} else {
+				window.location.href = href;
+				return false;
+			}
+		});
+		
+		// all links on the page get the parent_url by default 
+		
 		if ( parent_url.length ) {
-			$('a').not('[href^=#], [href*=parent_url]').each( function() {
-				this.href += ( this.href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + parent_url;
+			jQuery('a').each( function() {
+				this.href = frame_service.rewrite_links(this.href);
 			});
 		}
 		
+	},
+	
+	rewrite_links: function(href) {
+		if ( parent_url.length && href.indexOf('#') != 0 && href.indexOf(parent_url) == -1 ) {
+			href += ( href.indexOf('?') > -1 ? '&' : '?' ) + "parent_url=" + parent_url;
+		}
+		return href
 	},
 
 	hide_stuff: function() {
@@ -140,4 +164,4 @@ var frame_service = {
 		in_frame = true;
 	}
 
-}
+	}
