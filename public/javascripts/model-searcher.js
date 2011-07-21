@@ -25,7 +25,7 @@ function ModelSearcher(){
 	this.objectList = null;
 	
 	// A JS array of the object(s) which should be selected in the form [{id: '2594', name: 'animals'}]
-	this.selectedObjects = null;
+	this.selectedObjects = [];
 	
 	// The jQuery-wrapped DOM element of the hidden input which stores the selected ID(s)
 	this.hiddenIdInput = null;
