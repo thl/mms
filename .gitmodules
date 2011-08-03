@@ -76,3 +76,6 @@
 [submodule "vendor/plugins/spawn"]
 	path = vendor/plugins/spawn
 	url = git://github.com/tra/spawn.git
+[submodule "vendor/plugins/dictionary_integration"]
+	path = vendor/plugins/dictionary_integration
+	url = git://github.com/thl/dictionary_integration.git
