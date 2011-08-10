@@ -91,7 +91,7 @@ function ModelSearcher(){
 		window[varname].init(divId, listService, treeService, options);
 	};
 	
-	this.init = function(divId, listService, treeService, options){
+	this.init = function(divId, listService, treeService, options) {
 		var that = this,
 			root_topics = document.getElementById('root_topics'),
 			div = jQuery('#'+divId);
