@@ -17,7 +17,7 @@ function ModelSearcher(){
 	this.div = null;
 	
 	// The name, label, and style attributes of the hidden field in which the selected ID(s) will be entered
-	this.fieldName = "searcher_id_input";
+	this.hiddenFieldName = "searcher_id_input";
 	this.fieldLabel = "";
 	this.fieldStyle = "padding:3px; width: 161px";
 	
@@ -25,7 +25,7 @@ function ModelSearcher(){
 	this.objectList = null;
 	
 	// A JS array of the object(s) which should be selected in the form [{id: '2594', name: 'animals'}]
-	this.selectedObjects = null;
+	this.selectedObjects = [];
 	
 	// The jQuery-wrapped DOM element of the hidden input which stores the selected ID(s)
 	this.hiddenIdInput = null;
@@ -35,6 +35,13 @@ function ModelSearcher(){
 	
 	// Whether or not a tree (and the accompanying tree link) should be used 
 	this.hasTree = true;
+	
+	// Whether we are building this interface for category selection (editing interface) or searching (public interface)
+	this.searcher = false;
+	
+	// ID of category to use as starting point for topic filter and/or auto-complete
+	this.selectedRoot = null;
+	this.selectedRootOriginal = null;
 	
 	// Whether the user can select only one category from the tree (if present) or select multiple categories
 	this.singleSelectionTree = false;
@@ -53,18 +60,49 @@ function ModelSearcher(){
 	
 	this.treeHtml = null;
 	
-	this.cRowSelector = '#characteristic-row';
-	this.bRowID = 'bin';
-	this.binItemTemplate = '<span id="bin_item_{id}" class="tree-names" style="line-height:19px;white-space:nowrap;padding:2px 3px 2px 2px; color:#404040; background-color:#f1f1f1; border:1pt #ccc solid;margin-right:3px;font-size:7pt"><a href="#" class="tree-remove"><img src="/images/delete.png" height=16 width=16 border=0 alt="x" style="display:inline;position:relative;top:4px;left:-2px"/></a>{content}</span> ';
-	
 	// See the attribute documentation above for explanations of these arguments
-	this.init = function(divId, listService, treeService, options){
+	this.reinit = function(divId, options) {
+		var el = document.getElementById('root_topics'),
+			selectedRoot = options['selectedRoot'],
+			varname = options['varname'],
+			listService, treeService;
+			
+		if ( !this.selectedRootOriginal ) this.selectedRootOriginal = selectedRoot;
+
+		if (!selectedRoot) {
+			var	id = el.value,
+				label = el.options[el.selectedIndex].text;
+		} else if (selectedRoot && selectedRoot != 'All') {
+			var id = selectedRoot;
+		} else {
+			var id = label = '';
+		}
+
+		if ( id != 'All' ) {
+			options['hasTree'] = true;
+			options['fieldLabel'] = label;
+			listService = options['list_url_topic'].replace('{id}', id);
+			treeService = options['all_url_topic'].replace('{id}', id);
+	    } else {
+	       	listService = options['list_url_root'];
+			treeService = options['all_url_root'];
+		}
+
+		window[varname].init(divId, listService, treeService, options);
+	};
+	
+	this.init = function(divId, listService, treeService, options) {
 		var that = this,
 			root_topics = document.getElementById('root_topics'),
-			$tRem = jQuery('.tree-remove');
+			div = jQuery('#'+divId);
 
+		this.varname = options['varname'];
+		this.cRowSelector = '#' + this.varname + '_characteristic-row';
+		this.bRowID = this.varname + '_bin';
+		this.binItemTemplate = '<span id="' + this.varname + '_bin_item_{id}" class="tree-names" style="line-height:19px;white-space:nowrap;padding:2px 3px 2px 2px; color:#404040; background-color:#f1f1f1; border:1pt #ccc solid;margin-right:3px;font-size:7pt"><a href="#" class="tree-remove"><img src="/images/delete.png" height=16 width=16 border=0 alt="x" style="display:inline;position:relative;top:4px;left:-2px"/></a>{content}</span> ';
 		this.listService = listService;
 		this.treeService = treeService;
+		if(typeof(options.searcher) != "undefined")				{ this.searcher = options.searcher; }		
 		if(typeof(options.fieldName) != "undefined")			{ this.fieldName = options.fieldName; }
 		if(typeof(options.fieldLabel) != "undefined")			{ this.fieldLabel = options.fieldLabel; }
 		if(typeof(options.selectedObjects) != "undefined")		{ this.selectedObjects = options.selectedObjects; }
@@ -72,16 +110,17 @@ function ModelSearcher(){
 		if(typeof(options.singleSelectionTree) != "undefined")	{ this.singleSelectionTree = options.singleSelectionTree; }
 		if(typeof(options.proxy) != "undefined")				{ this.proxy = options.proxy; }
 		this.divId = divId;
-		this.div = jQuery('#'+divId);
+		this.table = jQuery('tr[id^=' + this.varname + ']').first().closest('.mobj');
+		this.div = div.length ? div : this.table.wrap('<div />').parent().attr('id',this.divId);
+
 		if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
 			this.div.html(
-						(this.fieldLabel ? '<label for="'+this.fieldName+'">'+this.fieldLabel+'</label>' : '')+
-						'<input type="text" name="searcher_autocomplete" id="searcher_autocomplete" style="'+this.fieldStyle+'" />'+
-						'<input type="hidden" name="'+this.fieldName+'" id="searcher_id_input" />'
-					);
+						(this.fieldLabel ? '<label for="'+this.fieldName +'_' + this.varname + '">'+this.fieldLabel+'</label>' : '') +
+						'<input type="text" name="searcher_autocomplete" id="searcher_autocomplete_' + this.varname + '" style="'+this.fieldStyle+'" />'+
+						'<input type="hidden" name="'+this.fieldName+'" id="' + this.hiddenFieldName + '_' + this.varname + '" />');
 		}
-		this.autocompleteInput = jQuery('#searcher_autocomplete');
-		this.hiddenIdInput = jQuery('#searcher_id_input');
+		this.autocompleteInput = jQuery('#searcher_autocomplete_' + this.varname);
+		this.hiddenIdInput = jQuery('#' + this.hiddenFieldName + '_' + this.varname);
 
 		// Request the service through a proxy if it's not local
 		if(this.listService.substr(0,4) == 'http'){
@@ -99,7 +138,7 @@ function ModelSearcher(){
 				formatItem: that.autocompleteFormatItem,
 				formatMatch: that.autocompleteFormatMatch,
 				formatResult: that.autocompleteFormatItem,
-				multiple: ( this.getctx == 'kmaps' ? true : false )
+				multiple: !this.searcher
 			});
 			that.autocompleteInput.result(that.autocompleteCallback);
 			that.objectList = {};
@@ -111,10 +150,11 @@ function ModelSearcher(){
 			this.autocompleteInput.val(this.selectedObjects[0].name);
 			this.hiddenIdInput.val(this.selectedObjects[0].id);
 		}
+
 		if(this.hasTree){
-			this.treePopupId = this.divId+"_model_searcher_tree_popup";
+			this.treePopupId = this.varname + "_model_searcher_tree_popup";
 			this.treeLoading = this.div.find('.tree-loading');
-			if ( this.fieldLabel.indexOf('Feature Type') > -1 ) {
+			if ( this.searcher ) {
 				this.div.append('<br />Input type above or <a href="#" class="tree-link">select from tree</a>'+
 								'<span class="tree-names"></span> <a href="#" class="tree-remove">(remove)</a><span class="tree-loading" style="float:right;"></span>');
 				this.treeLink = this.div.find('.tree-link');
@@ -128,6 +168,7 @@ function ModelSearcher(){
 					return false;
 				});
 				this.treeLink.click(function(){
+					jQuery('.draggable-popup').hide();
 					if(thisModelSearcher.treeLoaded){
 	 					jQuery('#'+thisModelSearcher.treePopupId).show();
 	 				}else{
@@ -146,13 +187,13 @@ function ModelSearcher(){
 			}
 		}
 		
-		$tRem.unbind('click'); // this and below have to be separate because live can't be chained
-		$tRem.live('click', function(){
+		jQuery('.tree-remove', this.div).unbind('click'); // this and below have to be separate because live can't be chained
+		this.table.delegate('#' + this.divId + ' .tree-remove', 'click', function(){
 			var $selection = jQuery(this).closest('.tree-names'),
 				$target = $selection.siblings().length ? $selection : $selection.closest('tr');
 			
 			$selection.fadeOut( function(){
-				var id = this.id.replace('bin_item_',''),
+				var id = this.id.replace(that.varname + '_bin_item_',''),
 					regex = new RegExp('(^|,)' + id + '(,|$)'),
 					val = that.hiddenIdInput[0].value;
 					
@@ -163,31 +204,24 @@ function ModelSearcher(){
 			return false;
 		});
 		
-		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link').unbind('click').show().click(function(){that.activatePopup()});
+		if ( root_topics && root_topics.value != 'All' ) jQuery('#browse_link_' + that.varname).unbind('click').show().click(function(){that.activatePopup()});
 	};
 	
-	this.getctx = function() {
-		if ( !this.ctx ) {
-			this.ctx = ( document.getElementById('root_topics') ? 'kmaps' : 'features' );
-		}
-		return this.ctx;
-	}
-	
 	this.activatePopup = function() {
-		var thisModelSearcher = this;
+		var that = this;
 		if(window['activeTree'] == this.treeService ){
 			jQuery('#'+this.treePopupId).show();
 		}else{
 			var $test = jQuery('#tree-loader-img'),
 				$img = $test.length ?
 								$test.show() :
-								jQuery("<img id='tree-loader-img' src='/images/loading.gif' align='right' />").insertAfter('#browse_link');
+								jQuery("<img id='tree-loader-img' src='/images/loading.gif' align='right' />").insertAfter('#browse_link_' + that.varname);
 			jQuery.getJSON(this.treeService, function(data){
-				thisModelSearcher.treeHtml = thisModelSearcher.createTreeFromArray(data.category ? data.category.categories : data.categories);
-				thisModelSearcher.loadPopup();
-				thisModelSearcher.treeHtml = null;
+				that.treeHtml = that.createTreeFromArray(data.category ? data.category.categories : data.categories);
+				that.loadPopup();
+				that.treeHtml = null;
 				data = null;
-				window['activeTree'] = thisModelSearcher.treeService;
+				window['activeTree'] = that.treeService;
 				$img.hide();
 			});
 		}
@@ -219,32 +253,31 @@ function ModelSearcher(){
 			;
 		that.treePopup.setContent(content);
 		that.treePopup.div.checkTree({ onExpand: function( $parent ) {$parent.siblings().find('.expanded').click()}});
-		that.treePopup.div
-			.find('form:first').submit(function(){
-				var ids = [];
-				var names = [];
+		that.treePopup.div.find('form:first').submit(function(){
+			var ids = [];
+			var names = [];
 
-				jQuery(this).find(':checkbox:checked').each(function(){
-					var $label = jQuery(this).siblings('label');
-					var label_name = $label.attr('name');
-					if(label_name.indexOf('record_') == 0){
-						ids.push(label_name.substring(7));
-						names.push($label.html());
-					}
-				});
-				if (ids.length) {
-					if ( that.fieldLabel.indexOf('Feature Type') == -1 ) {
-						that.addValue( ids );
-					} else {
-						that.hiddenIdInput.val(ids.join(','));
-						that.autocompleteInput.val('');
-						that.treeNames.html(':<br />'+names.join(', '));
-						that.treeRemove.show();
-					}
+			jQuery(this).find(':checkbox:checked').each(function(){
+				var $label = jQuery(this).siblings('label');
+				var label_name = $label.attr('name');
+				if(label_name.indexOf('record_') == 0){
+					ids.push(label_name.substring(7));
+					names.push($label.html());
 				}
-				jQuery('#'+that.treePopupId).hide();
-				return false;
 			});
+			if (ids.length) {
+				if ( that.fieldLabel.indexOf('Feature Type') == -1 ) {
+					that.addValue( ids );
+				} else {
+					that.hiddenIdInput.val(ids.join(','));
+					that.autocompleteInput.val('');
+					that.treeNames.html(':<br />'+names.join(', '));
+					that.treeRemove.show();
+				}
+			}
+			jQuery('#'+that.treePopupId).hide();
+			return false;
+		});
 
 		// For large trees, keeping this in memory can cause performance issues, so we'll set it to null
 		// and use thisModelSearcher.treePopupId when we need it.
@@ -256,12 +289,11 @@ function ModelSearcher(){
 			i,
 			names = [],
 			ids = ids || [],
-			ctx = this.getctx(),
 			test = document.getElementById(that.bRowID),
 			$bRow = test ? $(test) : jQuery("<tr><td></td><td colspan='2' style='padding-top:1px; padding-bottom:4px' id='" + that.bRowID + "'></td></tr>").insertAfter(jQuery(that.cRowSelector)).find('#' + that.bRowID);
 
 		for(i in ids){
-			if ( !document.getElementById('bin_item_' + ids[i]) ) {
+			if ( !document.getElementById(that.varname + '_bin_item_' + ids[i]) ) {
 				that.selectedObjects.push(that.objectList[ids[i]]);
 				names.push(
 					that.binItemTemplate
@@ -270,17 +302,17 @@ function ModelSearcher(){
 				);
 			}
 		}
-		that.hiddenIdInput[0].value += ( ctx == 'kmaps' ? ',' : '') + ids.join(',');
+		that.hiddenIdInput[0].value += ( this.searcher ? '' : ',') + ids.join(',');
 		$bRow.append(names.join(''));
-		if (ctx == 'kmaps') that.autocompleteInput.val('');
+		if (!this.searcher) that.autocompleteInput.val('');
 		this.checkAnnotationState();
 	}
 	
 	this.checkAnnotationState = function() {
-		if ( jQuery('.tree-names').length > 1 ) {
-			jQuery('#mobj').find('input[id*=string_value], input[id*=numeric_value]').attr('disabled', 'disabled').closest('tr').fadeOut();
+		if ( jQuery('.tree-names', this.div).length > 1 ) {
+			jQuery('.annotation', this.div).find('input').attr('disabled', 'disabled').closest('tr').fadeOut();
 		} else {
-			jQuery('.annotation').fadeIn().find('#media_category_association_string_value, #media_category_association_numeric_value').removeAttr('disabled');
+			jQuery('.annotation', this.div).fadeIn().find('input').removeAttr('disabled');
 		}
 	}
 	
@@ -314,7 +346,7 @@ function ModelSearcher(){
 		}
 		
 		//thisModelSearcher.treeNames.html('');
-		// thisModelSearcher.treeRemove.hide();
+		//thisModelSearcher.treeRemove.hide();
 		return false;
 	};
 	
@@ -344,25 +376,4 @@ function ModelSearcher(){
 		return html;
 	}
 
-};
-
-function reinit() {
-	var el = document.getElementById('root_topics'),
-		searcher = undefined;
-		
-	if (el) {
-		var	id = el.value,
-			label = el.options[el.selectedIndex].text;
-	} else {
-		var id = label = '';
-	}
-
-	if ( id == 'All' ) {
-		all_searcher();
-	} else {
-		searcher = new ModelSearcher();
-		tmb_options['hasTree'] = true;
-		tmb_options['fieldLabel'] = label;
-		searcher.init( tmb_div, list_url.replace('{id}', id), all_url.replace('{id}', id), tmb_options);
-	}
 };
