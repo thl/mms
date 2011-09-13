@@ -252,7 +252,7 @@ module ActionView
       #   link_to_remote "Delete this post",
       #     { :update => "posts", :url => { :action => "destroy", :id => post.id } },
       #     :href => url_for(:action => "destroy", :id => post.id)
-      def link_to_remote(name, options = {}, html_options = {})
+      def link_to_remote(name, options = {}, html_options = nil)
         link_to_function(name, remote_function(options), html_options || options.delete(:html))
       end
 
@@ -393,7 +393,7 @@ module ActionView
 
         concat(form_remote_tag(options))
         fields_for(object_name, *(args << options), &proc)
-        concat('</form>')
+        concat('</form>'.html_safe)
       end
       alias_method :form_remote_for, :remote_form_for
 
@@ -1026,7 +1026,7 @@ module ActionView
       #     page.hide 'spinner'
       #   end
       def update_page(&block)
-        JavaScriptGenerator.new(@template, &block).to_s
+        JavaScriptGenerator.new(@template, &block).to_s.html_safe
       end
 
       # Works like update_page but wraps the generated JavaScript in a <script>
