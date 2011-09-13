@@ -112,7 +112,7 @@ var frame_service = {
                 newarg = ( href.indexOf('?') > -1 ? '&' : '?' ) + arg + ( href.indexOf('#') > -1 ? '#' : ''),
 			    newlink = ( pieces.length > 1 ? pieces.join(newarg) : pieces[0] + newarg);
 		}
-		return newlink;
+		return newlink || href;
 	},
 
 	hide_stuff: function() {
