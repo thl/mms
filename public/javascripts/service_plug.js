@@ -90,8 +90,10 @@ var frame_service = {
 			if ( event.which == 3 ) {
 				return true;
 			} else {
-				window.location.href = href;
-				return false;
+				if ( !this.onclick ) {
+					window.location.href = href;
+					return false;
+				}
 			}
 		});
 		
