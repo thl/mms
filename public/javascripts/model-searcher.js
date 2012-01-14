@@ -197,6 +197,7 @@ function ModelSearcher(){
 		jQuery('.tree-remove', bRow).unbind('click'); // this and below have to be separate because live can't be chained
 		bRow.delegate('.tree-remove', 'click', function(){
 			var $selection = jQuery(this).closest('.tree-names'),
+				$row = $selection.closest('td'),
 				$target = $selection.siblings().length ? $selection : $selection.closest('tr');
 			
 			$selection.fadeOut( function(){
@@ -209,7 +210,7 @@ function ModelSearcher(){
 				} else
 				{	/* This doesn't work in safari in unpredictable cases!!!
 				    jQuery('input#' + that.hiddenFieldName + '_' + that.varname + '[value=' + id + ']').remove(); */
-					bRow.find('input#[value=' + id + ']').remove();
+					$row.find('input#[value=' + id + ']').remove();
 				}
 				that.checkAnnotationState();
 			});
@@ -219,7 +220,7 @@ function ModelSearcher(){
 		/* if ( root_topics && root_topics.value != 'All' ) {
 			jQuery('#browse_link_' + that.varname).unbind('click').show().click(function() { that.activatePopup() });
 		}*/
-		jQuery('#browse_link_' + that.varname).unbind('click').click(function() { that.activatePopup() });
+		jQuery('#browse_link_' + that.varname).unbind('click').click(function(e) { that.activatePopup(); e.preventDefault(); });
 	};
 	
 	this.activatePopup = function() {
