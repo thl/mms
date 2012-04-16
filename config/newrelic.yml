@@ -218,7 +218,7 @@ test:
 # incurring any user-visible performance degradation.
 production:
   <<: *default_settings
-  app_name: MMS (Production)
+  app_name: MMS (Local)
   monitor_mode: true
 
 quandu_production:
