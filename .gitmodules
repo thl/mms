@@ -85,3 +85,6 @@
 [submodule "vendor/plugins/mms_integration"]
 	path = vendor/plugins/mms_integration
 	url = git://github.com/thl/mms_integration.git
+[submodule "vendor/plugins/rails_upgrade"]
+	path = vendor/plugins/rails_upgrade
+	url = git://github.com/amontano/rails_upgrade.git
