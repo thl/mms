@@ -10,42 +10,21 @@
 [submodule "vendor/plugins/kmaps_integration"]
 	path = vendor/plugins/kmaps_integration
 	url = git://github.com/thl/kmaps_integration.git
-[submodule "vendor/plugins/classic_pagination"]
-	path = vendor/plugins/classic_pagination
-	url = git://github.com/masterkain/classic_pagination.git
 [submodule "vendor/plugins/comatose"]
 	path = vendor/plugins/comatose
 	url = git://github.com/darthapo/comatose.git
-[submodule "vendor/plugins/jrails"]
-	path = vendor/plugins/jrails
-	url = git://github.com/aaronchi/jrails.git
 [submodule "vendor/plugins/tiny_mce"]
 	path = vendor/plugins/tiny_mce
 	url = git://github.com/kete/tiny_mce.git
 [submodule "vendor/plugins/globalize2"]
 	path = vendor/plugins/globalize2
 	url = git://github.com/joshmh/globalize2.git
-[submodule "vendor/plugins/acts_as_list"]
-	path = vendor/plugins/acts_as_list
-	url = git://github.com/rails/acts_as_list.git
-[submodule "vendor/plugins/acts_as_tree"]
-	path = vendor/plugins/acts_as_tree
-	url = git://github.com/rails/acts_as_tree.git
 [submodule "vendor/plugins/attachment_fu"]
 	path = vendor/plugins/attachment_fu
 	url = git://github.com/technoweenie/attachment_fu.git
-[submodule "vendor/plugins/in_place_editing"]
-	path = vendor/plugins/in_place_editing
-	url = git://github.com/rails/in_place_editing.git
-[submodule "vendor/plugins/open_id_authentication"]
-	path = vendor/plugins/open_id_authentication
-	url = git://github.com/rails/open_id_authentication.git
 [submodule "vendor/plugins/permalink_fu"]
 	path = vendor/plugins/permalink_fu
 	url = git://github.com/technoweenie/permalink_fu.git
-[submodule "vendor/plugins/restful-authentication"]
-	path = vendor/plugins/restful-authentication
-	url = git://github.com/technoweenie/restful-authentication.git
 [submodule "vendor/plugins/upload_progress"]
 	path = vendor/plugins/upload_progress
 	url = git://github.com/rails/upload_progress.git
@@ -79,9 +58,6 @@
 [submodule "vendor/plugins/dictionary_integration"]
 	path = vendor/plugins/dictionary_integration
 	url = git://github.com/thl/dictionary_integration.git
-[submodule "vendor/plugins/newrelic_rpm"]
-	path = vendor/plugins/newrelic_rpm
-	url = git://github.com/newrelic/rpm.git
 [submodule "vendor/plugins/mms_integration"]
 	path = vendor/plugins/mms_integration
 	url = git://github.com/thl/mms_integration.git

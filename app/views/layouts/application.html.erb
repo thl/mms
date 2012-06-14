@@ -1,17 +1,8 @@
 <%= render :partial => 'main/header' %>
-
 <div class="shell-1">
-  <% if @current_tab_id == :dictionary_search 
-	   primary_tab = :himalayan_search
-     else 
-	   primary_tab = :media
-     end %>
-
-	<% universal_navigation primary_tab, @current_tab_id, custom_secondary_tabs(@current_tab_id) do %>
-
-    <%= yield %>
-  <% end %>
-			
+<% primary_tab = @current_tab_id == :dictionary_search ? :himalayan_search : :media %>
+<%= universal_navigation primary_tab, @current_tab_id, custom_secondary_tabs(@current_tab_id) do %>
+<%= yield %>
+<% end %>		
 </div>
-
 <%= footer %>
