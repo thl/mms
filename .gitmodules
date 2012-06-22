@@ -13,9 +13,6 @@
 [submodule "vendor/plugins/comatose"]
 	path = vendor/plugins/comatose
 	url = git://github.com/darthapo/comatose.git
-[submodule "vendor/plugins/globalize2"]
-	path = vendor/plugins/globalize2
-	url = git://github.com/joshmh/globalize2.git
 [submodule "vendor/plugins/attachment_fu"]
 	path = vendor/plugins/attachment_fu
 	url = git://github.com/technoweenie/attachment_fu.git
@@ -52,9 +49,6 @@
 [submodule "vendor/plugins/dictionary_integration"]
 	path = vendor/plugins/dictionary_integration
 	url = git://github.com/thl/dictionary_integration.git
-[submodule "vendor/plugins/mms_integration"]
-	path = vendor/plugins/mms_integration
-	url = git://github.com/thl/mms_integration.git
 [submodule "vendor/plugins/rails_upgrade"]
 	path = vendor/plugins/rails_upgrade
 	url = git://github.com/amontano/rails_upgrade.git
