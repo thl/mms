@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime :remember_token_expires_at
     end
     add_index :users, :login, :unique => true    
-    User.create :login => 'root', :password => 'rootdude', :password_confirmation => 'rootdude', :email => 'root@root'
+    AuthenticatedSystem::User.create :login => 'root', :password => 'rootdude', :password_confirmation => 'rootdude', :email => 'root@root'
   end
 
   def self.down

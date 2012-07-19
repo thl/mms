@@ -5,8 +5,8 @@ class CreateRoles < ActiveRecord::Migration
       t.column :description, :text
     end
     add_index :roles, :title, :unique => true
-    role = Role.create :title => 'System Administrator'
-    user = User.find(1)
+    role = AuthenticatedSystem::Role.create :title => 'System Administrator'
+    user = AuthenticatedSystem::User.find(1)
     role.users << user
   end
 

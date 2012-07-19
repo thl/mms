@@ -49,7 +49,7 @@ module ForkedNotifier
     users = Array.new
     Dir.glob(Rails.root.join('log', "active_*_#{log_suffix}.log")) do |log|
       tag, user_id, rest = File.basename(log).split('_')
-      users << User.find(user_id)
+      users << AuthenticatedSystem::User.find(user_id)
     end
     users
   end
@@ -59,7 +59,7 @@ module ForkedNotifier
     Dir.glob(Rails.root.join('log', "*_#{log_suffix}.log")) do |log|
       tag = File.basename(log).split('_').first
       next if tag=='active'
-      users << User.find(tag)
+      users << AuthenticatedSystem::User.find(tag)
     end
     users
   end
