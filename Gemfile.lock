@@ -30,6 +30,8 @@ GEM
     activesupport (3.0.12)
     acts_as_list (0.1.6)
     acts_as_tree (0.2.0)
+    acts_as_versioned (0.6.0)
+      activerecord (~> 3.0.0.beta4)
     arel (2.0.10)
     builder (2.1.2)
     cgi_multipart_eof_fix (2.5.0)
@@ -119,6 +121,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_list
   acts_as_tree (= 0.2.0)
+  acts_as_versioned
   dynamic_form
   globalize3
   hpricot (>= 0.8.6)

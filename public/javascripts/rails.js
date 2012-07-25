@@ -147,7 +147,7 @@ jQuery(function ($) {
     });
 
     var jqueryVersion = $().jquery;
-    if (!( (jqueryVersion === '1.4') || (jqueryVersion === '1.4.1') || (jqueryVersion === '1.4.2') || (jqueryVersion === '1.4.4') )){
+    if (!( (jqueryVersion === '1.4') || (jqueryVersion === '1.4.1') || (jqueryVersion === '1.4.2') || (jqueryVersion === '1.4.3') || (jqueryVersion === '1.4.4') )){
       alert('This rails.js does not support the jQuery version you are using. Please read documentation.')
     }
 

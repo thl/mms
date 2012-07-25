@@ -33,7 +33,7 @@
 <p><b><%= 'Media Search'.ts %></b>
 <%= render :partial => 'media_searches/advanced' %>
 </p>
-<% remote_form_for :goto, :url => {:controller => 'media', :action => 'goto'}, :update => 'primary' do |f| %>
+<%= form_for :goto, :url => goto_media_path, :remote => true do |f| %>
    <p>
      <label for="goto_media_id"><b><%= 'Goto'.ts %></b>:</label>
 <%=  f.text_field :media_id, :size => 10 %>
