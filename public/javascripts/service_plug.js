@@ -90,9 +90,9 @@ var frame_service = {
 			if ( event.which == 3 ) {
 				return true;
 			} else {
-				if ( !this.onclick ) {
-					window.location.href = href;
-					return false;
+				if (!this.onclick && !$(this).closest('.pagination').length) { // or you may want it to be !$(this).closest('#NodeSearchResults').length
+				  window.location.href = href;
+				  return false;
 				}
 			}
 		});
