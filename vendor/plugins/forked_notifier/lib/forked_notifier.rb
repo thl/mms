@@ -47,19 +47,19 @@ module ForkedNotifier
   
   def users_with_active_forks
     users = Array.new
-    Dir.glob(File.join(RAILS_ROOT, 'log', "active_*_#{log_suffix}.log")) do |log|
+    Dir.glob(Rails.root.join('log', "active_*_#{log_suffix}.log")) do |log|
       tag, user_id, rest = File.basename(log).split('_')
-      users << User.find(user_id)
+      users << AuthenticatedSystem::User.find(user_id)
     end
     users
   end
   
   def users_with_forks
     users = Array.new
-    Dir.glob(File.join(RAILS_ROOT, 'log', "*_#{log_suffix}.log")) do |log|
+    Dir.glob(Rails.root.join('log', "*_#{log_suffix}.log")) do |log|
       tag = File.basename(log).split('_').first
       next if tag=='active'
-      users << User.find(tag)
+      users << AuthenticatedSystem::User.find(tag)
     end
     users
   end
@@ -110,10 +110,10 @@ module ForkedNotifier
   private
   
   def log_filename(user_id = current_user.id)
-    File.expand_path(File.join(RAILS_ROOT, 'log', "#{user_id}_#{log_suffix}.log"))
+    File.expand_path(Rails.root.join('log', "#{user_id}_#{log_suffix}.log"))
   end
 
   def active_filename(user_id = current_user.id)
-    File.expand_path(File.join(RAILS_ROOT, 'log', "active_#{user_id}_#{log_suffix}.log"))
+    File.expand_path(Rails.root.join('log', "active_#{user_id}_#{log_suffix}.log"))
   end
 end

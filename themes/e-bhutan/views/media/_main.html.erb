@@ -33,7 +33,7 @@
 <p><b><%= 'Media Search'.ts %></b>
 <%= render :partial => 'media_searches/advanced' %>
 </p>
-<% remote_form_for :goto, :url => {:controller => 'media', :action => 'goto'}, :update => 'primary' do |f| %>
+<%= form_for :goto, :url => goto_media_path, :remote => true do |f| %>
    <p>
      <label for="goto_media_id"><b><%= 'Goto'.ts %></b>:</label>
 <%=  f.text_field :media_id, :size => 10 %>
@@ -41,13 +41,13 @@
    </p>
 <% end %>
 <p>
-<% authorized_only hash_for_new_picture_path do %>
+<% if authorized? hash_for_new_picture_path %>
 <%=  link_to 'New picture'.ts, new_picture_path %> |
 <% end
-   authorized_only hash_for_new_video_path do %>
+   if authorized? hash_for_new_video_path %>
 <%=  link_to 'New video'.ts, new_video_path %> |
 <% end
-   authorized_only hash_for_new_document_path do %>
+   if authorized? hash_for_new_document_path %>
 <%=  link_to 'New document'.ts, new_document_path %> |
 <% end %>
 <%= link_to 'Back'.ts, root_path %>

@@ -1,15 +1,24 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of Active Record to incrementally modify your database, and
-# then regenerate this schema definition.
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your database schema. If you need
-# to create the application database on another system, you should be using db:schema:load, not running
-# all the migrations from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110412155958) do
+ActiveRecord::Schema.define(:version => 20120725224716) do
+
+  create_table "administrative_levels", :force => true do |t|
+    t.string  "title",      :limit => 100, :null => false
+    t.integer "country_id",                :null => false
+    t.integer "level",                     :null => false
+  end
+
+  add_index "administrative_levels", ["title", "country_id"], :name => "index_administrative_levels_on_title_and_country_id", :unique => true
 
   create_table "administrative_unit_translations", :force => true do |t|
     t.integer  "administrative_unit_id", :null => false
@@ -18,6 +27,20 @@ ActiveRecord::Schema.define(:version => 20110412155958) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "administrative_units", :force => true do |t|
+    t.string   "title",                   :limit => 100,                    :null => false
+    t.integer  "administrative_level_id",                                   :null => false
+    t.integer  "parent_id"
+    t.text     "description"
+    t.integer  "creator_id"
+    t.datetime "created_on"
+    t.integer  "order"
+    t.boolean  "is_problematic",                         :default => false, :null => false
+  end
+
+  add_index "administrative_units", ["title", "administrative_level_id", "parent_id"], :name => "index_units_on_title_and_level_and_parent", :unique => true
+  add_index "administrative_units", ["title"], :name => "title"
 
   create_table "affiliations", :force => true do |t|
     t.integer "medium_id",       :null => false
@@ -116,6 +139,24 @@ ActiveRecord::Schema.define(:version => 20110412155958) do
     t.datetime "updated_at"
   end
 
+  create_table "comatose_page_versions", :force => true do |t|
+    t.integer  "comatose_page_id"
+    t.integer  "version"
+    t.integer  "parent_id"
+    t.text     "full_path"
+    t.string   "title"
+    t.string   "slug"
+    t.string   "keywords"
+    t.text     "body"
+    t.string   "filter_type",      :limit => 25, :default => "Textile"
+    t.string   "author"
+    t.integer  "position",                       :default => 0
+    t.datetime "updated_on"
+    t.datetime "created_on"
+  end
+
+  add_index "comatose_page_versions", ["comatose_page_id"], :name => "index_comatose_page_versions_on_comatose_page_id"
+
   create_table "comatose_pages", :force => true do |t|
     t.integer  "parent_id"
     t.text     "full_path"
@@ -146,6 +187,12 @@ ActiveRecord::Schema.define(:version => 20110412155958) do
   end
 
   add_index "copyrights", ["medium_id"], :name => "index_copyrights_on_medium_id", :unique => true
+
+  create_table "countries", :force => true do |t|
+    t.string "title", :limit => 100, :null => false
+  end
+
+  add_index "countries", ["title"], :name => "index_countries_on_title", :unique => true
 
   create_table "country_translations", :force => true do |t|
     t.integer  "country_id", :null => false
@@ -216,6 +263,59 @@ ActiveRecord::Schema.define(:version => 20110412155958) do
     t.integer "id",    :default => 0, :null => false
     t.text    "title",                :null => false
   end
+
+  create_table "globalize_countries", :force => true do |t|
+    t.string "code",                   :limit => 2
+    t.string "english_name"
+    t.string "date_format"
+    t.string "currency_format"
+    t.string "currency_code",          :limit => 3
+    t.string "thousands_sep",          :limit => 2
+    t.string "decimal_sep",            :limit => 2
+    t.string "currency_decimal_sep",   :limit => 2
+    t.string "number_grouping_scheme"
+  end
+
+  add_index "globalize_countries", ["code"], :name => "index_globalize_countries_on_code"
+
+  create_table "globalize_languages", :force => true do |t|
+    t.string  "iso_639_1",             :limit => 2
+    t.string  "iso_639_2",             :limit => 3
+    t.string  "iso_639_3",             :limit => 3
+    t.string  "rfc_3066"
+    t.string  "english_name"
+    t.string  "english_name_locale"
+    t.string  "english_name_modifier"
+    t.string  "native_name"
+    t.string  "native_name_locale"
+    t.string  "native_name_modifier"
+    t.boolean "macro_language"
+    t.string  "direction"
+    t.string  "pluralization"
+    t.string  "scope",                 :limit => 1
+  end
+
+  add_index "globalize_languages", ["iso_639_1"], :name => "index_globalize_languages_on_iso_639_1"
+  add_index "globalize_languages", ["iso_639_2"], :name => "index_globalize_languages_on_iso_639_2"
+  add_index "globalize_languages", ["iso_639_3"], :name => "index_globalize_languages_on_iso_639_3"
+  add_index "globalize_languages", ["rfc_3066"], :name => "index_globalize_languages_on_rfc_3066"
+
+  create_table "globalize_translations", :force => true do |t|
+    t.string  "type"
+    t.string  "tr_key"
+    t.string  "table_name"
+    t.integer "item_id"
+    t.string  "facet"
+    t.boolean "built_in"
+    t.integer "language_id"
+    t.integer "pluralization_index"
+    t.text    "text"
+    t.string  "namespace"
+    t.integer "user_id"
+  end
+
+  add_index "globalize_translations", ["table_name", "item_id", "language_id"], :name => "globalize_translations_table_name_and_item_and_language"
+  add_index "globalize_translations", ["tr_key", "language_id"], :name => "index_globalize_translations_on_tr_key_and_language_id"
 
   create_table "glossaries", :force => true do |t|
     t.string  "title",                                           :null => false
@@ -317,14 +417,14 @@ ActiveRecord::Schema.define(:version => 20110412155958) do
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
 
   create_table "media_administrative_locations", :force => true do |t|
-    t.integer "medium_id",                  :null => false
+    t.integer "medium_id",                            :null => false
+    t.integer "administrative_unit_id",               :null => false
     t.text    "spot_feature"
     t.text    "notes"
-    t.string  "type",         :limit => 50
-    t.integer "feature_id",                 :null => false
+    t.string  "type",                   :limit => 50
   end
 
-  add_index "media_administrative_locations", ["medium_id"], :name => "index_locations_on_medium_and_unit", :unique => true
+  add_index "media_administrative_locations", ["medium_id", "administrative_unit_id"], :name => "index_locations_on_medium_and_unit", :unique => true
 
   create_table "media_category_associations", :force => true do |t|
     t.integer  "medium_id",     :null => false

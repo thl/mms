@@ -28,7 +28,7 @@
 <% end
    photographer = @medium.photographer
    if !photographer.nil? %>
-<%=  display_if_not_blank @medium.class.human_attribute_name('photographer').s, link_to(h(photographer.fullname).s, person_path(photographer)) %>
+<%=  display_if_not_blank @medium.class.human_attribute_name('photographer').s, link_to(h(photographer.fullname).s, authenticated_system_person_path(photographer)) %>
 <% end
    quality_type = @medium.quality_type 
    if !quality_type.nil? %>
@@ -92,10 +92,10 @@
 <% end %>
 </p>
 <p>
-<% authorized_only hash_for_edit_medium_path do %>
+<% if authorized? hash_for_edit_medium_path %>
 <%=  link_to 'Edit catalog record'.ts, edit_medium_path(@medium) %> |
 <% end
-   authorized_only hash_for_medium_path(:action => 'destroy') do %>
+   if authorized?(hash_for_medium_path(:action => 'destroy')) %>
 <%=  link_to 'Delete'.ts, medium_path(@medium), :confirm => 'Are you sure?'.te, :method => :delete %>
 <% end %>
 </p>
