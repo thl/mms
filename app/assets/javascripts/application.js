@@ -15,6 +15,6 @@
 //= require jquery_ujs
 //= require tinymce
 //
+//= require mms_engine/application
 //= require universal_navigation/application
 //= require thl_integration/application
-//= require mms_engine/application

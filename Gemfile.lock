@@ -35,10 +35,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 42e372f915b5901a653a1150d7b446dd8b858337
-  tag: v2.0.5
+  revision: 917533d60c0a512f5ccb46c23e2980aeb1fd6dcb
+  tag: v2.0.6
   specs:
-    authenticated_system (2.0.5)
+    authenticated_system (2.0.6)
       rails (~> 3.2.8)
 
 GIT
@@ -60,18 +60,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: 3d6cfc95b1ca318a7de097b152bc3590f3ea37a3
-  tag: v2.0.1
+  revision: 64b1c2d182183bb33eb484b37d004de59d9a04f2
+  tag: v2.0.2
   specs:
-    kmaps_integration (2.0.1)
+    kmaps_integration (2.0.2)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: c9267e4be7d4a1b5771743cc82a89d658cf05830
-  tag: v2.0.1
+  revision: 4a4004c0630384f042056a9e95d69e97ccdd22ef
+  tag: v2.0.2
   specs:
-    mms_engine (2.0.1)
+    mms_engine (2.0.2)
       rails (~> 3.2.9)
       rmagick
 
@@ -277,7 +277,7 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.0.0)!
-  authenticated_system (= 2.0.5)!
+  authenticated_system (= 2.0.6)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
   complex_scripts (= 2.0.2)!
@@ -288,9 +288,9 @@ DEPENDENCIES
   in_place_editing
   jquery-rails
   json
-  kmaps_integration (= 2.0.1)!
+  kmaps_integration (= 2.0.2)!
   memcache-client
-  mms_engine (= 2.0.1)!
+  mms_engine (= 2.0.2)!
   mongrel
   mysql2
   newrelic_rpm
