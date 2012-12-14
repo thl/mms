@@ -43,10 +43,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: 1bf73396137832f48853e332bc0ce89dee7e0e66
-  tag: v2.0.2
+  revision: ef26152b095945346d245feab0bced4c26e7837e
+  tag: v2.0.3
   specs:
-    complex_scripts (2.0.2)
+    complex_scripts (2.0.3)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
 
@@ -68,10 +68,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 4a4004c0630384f042056a9e95d69e97ccdd22ef
-  tag: v2.0.2
+  revision: 5fd270dfd979252587b0a6b0f5109b16408077c8
+  tag: v2.0.3
   specs:
-    mms_engine (2.0.2)
+    mms_engine (2.0.3)
       rails (~> 3.2.9)
       rmagick
 
@@ -93,10 +93,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 5357ee9a4118b7376f9c6cb21ba6d9ef8cdf5b9a
-  tag: v2.0.3
+  revision: 62dbcd96645c45c4a9d03faff6aade4d4c84b120
+  tag: v2.0.4
   specs:
-    thl_integration (2.0.3)
+    thl_integration (2.0.4)
       rails (~> 3.2.8)
 
 GIT
@@ -280,7 +280,7 @@ DEPENDENCIES
   authenticated_system (= 2.0.6)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
-  complex_scripts (= 2.0.2)!
+  complex_scripts (= 2.0.3)!
   dictionary_integration (= 2.0.0)!
   dynamic_form
   globalize3
@@ -290,7 +290,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.2)!
   memcache-client
-  mms_engine (= 2.0.2)!
+  mms_engine (= 2.0.3)!
   mongrel
   mysql2
   newrelic_rpm
@@ -307,7 +307,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spawn (= 2.0.0)!
   therubyracer
-  thl_integration (= 2.0.3)!
+  thl_integration (= 2.0.4)!
   tinymce-rails (= 3.5.6)
   uglifier (>= 1.0.3)
   universal_navigation (= 2.0.1)!
