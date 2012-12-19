@@ -60,18 +60,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: 64b1c2d182183bb33eb484b37d004de59d9a04f2
-  tag: v2.0.2
+  revision: b415f9adba21bb70a8812c31662e10777e6efe38
+  tag: v2.0.4
   specs:
-    kmaps_integration (2.0.2)
+    kmaps_integration (2.0.4)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 5fd270dfd979252587b0a6b0f5109b16408077c8
-  tag: v2.0.3
+  revision: 4b1c92c343593ab5a4752fd2f2589aaf6b0ec734
+  tag: v2.0.4
   specs:
-    mms_engine (2.0.3)
+    mms_engine (2.0.4)
       rails (~> 3.2.9)
       rmagick
 
@@ -288,9 +288,9 @@ DEPENDENCIES
   in_place_editing
   jquery-rails
   json
-  kmaps_integration (= 2.0.2)!
+  kmaps_integration (= 2.0.4)!
   memcache-client
-  mms_engine (= 2.0.3)!
+  mms_engine (= 2.0.4)!
   mongrel
   mysql2
   newrelic_rpm
