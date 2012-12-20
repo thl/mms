@@ -48,7 +48,7 @@ gem 'authenticated_system',       '2.0.6', :git => 'git://github.com/thl/authent
 gem 'complex_scripts',            '2.0.3', :git => 'git://github.com/thl/complex_scripts.git',            :tag => 'v2.0.3' #:path => '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.0.0', :git => 'git://github.com/thl/dictionary_integration.git',     :tag => 'v2.0.0' #:path => '../engines/dictionary_integration'
 gem 'kmaps_integration',          '2.0.4', :git => 'git://github.com/thl/kmaps_integration.git',          :tag => 'v2.0.4' #:path => '../engines/kmaps_integration'
-gem 'mms_engine',                 '2.0.5', :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.0.5' #:path => '../engines/mms_engine'
+gem 'mms_engine',                 '2.0.6', :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.0.6' #:path => '../engines/mms_engine'
 gem 'attachment_fu_patch',        '2.0.1', :git => 'git://github.com/thl/attachment_fu_patch.git',        :tag => 'v2.0.1' #:path => '../engines/attachment_fu_patch'
 gem 'places_integration',         '2.0.0', :git => 'git://github.com/thl/places_integration.git',         :tag => 'v2.0.0' #:path => '../engines/places_integration'
 gem 'proxy_engine',               '2.0.0', :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.0' #:path => '../engines/proxy_engine'
