@@ -12,6 +12,12 @@ GIT
     passiverecord (0.2)
 
 GIT
+  remote: git://github.com/kartofflly/spawn.git
+  revision: 9096752c05b6eb8f5d8e0c24ad74bde4fea583ee
+  specs:
+    spawn (1.0.1)
+
+GIT
   remote: git://github.com/niciliketo/comatose.git
   revision: 191a2353decae1681a86fb0eb6cc5f9bb09c1cf9
   specs:
@@ -27,10 +33,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/attachment_fu_patch.git
-  revision: c3a65a6bf309c597a13a32bff6736e3ea9cec8dc
-  tag: v2.0.0
+  revision: c1869a4c494ed688c3ed4e1eea1139452f778a95
+  tag: v2.0.1
   specs:
-    attachment_fu_patch (2.0.0)
+    attachment_fu_patch (2.0.1)
       rails (~> 3.2.8)
 
 GIT
@@ -68,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 4b1c92c343593ab5a4752fd2f2589aaf6b0ec734
-  tag: v2.0.4
+  revision: 29e702dab6efe4b621f61808059a9f752be01421
+  tag: v2.0.5
   specs:
-    mms_engine (2.0.4)
+    mms_engine (2.0.5)
       rails (~> 3.2.9)
       rmagick
 
@@ -106,12 +112,6 @@ GIT
   specs:
     universal_navigation (2.0.1)
       rails (~> 3.2.8)
-
-GIT
-  remote: git://github.com/tra/spawn.git
-  revision: 68a399e2161df751bd4fb3ff0ee37e17acecfb8e
-  specs:
-    spawn (2.0.0)
 
 GEM
   remote: http://rubygems.org/
@@ -276,7 +276,7 @@ DEPENDENCIES
   acts_as_tree (= 0.2.0)
   acts_as_versioned
   annotate
-  attachment_fu_patch (= 2.0.0)!
+  attachment_fu_patch (= 2.0.1)!
   authenticated_system (= 2.0.6)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
@@ -290,7 +290,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.4)!
   memcache-client
-  mms_engine (= 2.0.4)!
+  mms_engine (= 2.0.5)!
   mongrel
   mysql2
   newrelic_rpm
@@ -305,7 +305,7 @@ DEPENDENCIES
   restful-authentication (= 2.0.0.beta1)!
   ruby-debug
   sass-rails (~> 3.2.3)
-  spawn (= 2.0.0)!
+  spawn (= 1.0.1)!
   therubyracer
   thl_integration (= 2.0.4)!
   tinymce-rails (= 3.5.6)
