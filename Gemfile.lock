@@ -74,19 +74,19 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 42ce5941a846e9ecc4b8c2752351a3445a80279f
-  tag: v2.0.6
+  revision: 48c70bb07241816d628a01def7a114b1eba6063e
+  tag: v2.1.0
   specs:
-    mms_engine (2.0.6)
+    mms_engine (2.1.0)
       rails (~> 3.2.9)
       rmagick
 
 GIT
   remote: git://github.com/thl/places_integration.git
-  revision: 3bb3d15e17cf534adc1d53ff62f7f4d3666d29f8
-  tag: v2.0.0
+  revision: 06a9c4bd6b8a8e725081aca52d93d1f36df18e8a
+  tag: v2.0.1
   specs:
-    places_integration (2.0.0)
+    places_integration (2.0.1)
       rails (~> 3.2.8)
 
 GIT
@@ -290,14 +290,14 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.4)!
   memcache-client
-  mms_engine (= 2.0.6)!
+  mms_engine (= 2.1.0)!
   mongrel
   mysql2
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
   permalink_fu
-  places_integration (= 2.0.0)!
+  places_integration (= 2.0.1)!
   pothoven-attachment_fu
   proxy_engine (= 2.0.0)!
   rack-openid
