@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 48c70bb07241816d628a01def7a114b1eba6063e
-  tag: v2.1.0
+  revision: df5ad00d7cab0311c611690943a745626ef949d0
+  tag: v2.1.1
   specs:
-    mms_engine (2.1.0)
+    mms_engine (2.1.1)
       rails (~> 3.2.9)
       rmagick
 
@@ -290,7 +290,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.4)!
   memcache-client
-  mms_engine (= 2.1.0)!
+  mms_engine (= 2.1.1)!
   mongrel
   mysql2
   newrelic_rpm
