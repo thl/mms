@@ -41,10 +41,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 917533d60c0a512f5ccb46c23e2980aeb1fd6dcb
-  tag: v2.0.6
+  revision: b5fa56151316d468b2ba82f333da229dc52be732
+  tag: v2.0.9
   specs:
-    authenticated_system (2.0.6)
+    authenticated_system (2.0.9)
       rails (~> 3.2.8)
 
 GIT
@@ -63,6 +63,14 @@ GIT
   specs:
     dictionary_integration (2.0.0)
       rails (~> 3.2.9)
+
+GIT
+  remote: git://github.com/thl/interface_utils.git
+  revision: 43d3c7dc1001f249ea8291229ebbe80d5b32b20f
+  tag: v2.0.0
+  specs:
+    interface_utils (2.0.0)
+      rails (~> 3.2.11)
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
@@ -99,18 +107,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 62dbcd96645c45c4a9d03faff6aade4d4c84b120
-  tag: v2.0.4
+  revision: 917a401dd094a22b46f6f941b2afb0567d411ad8
+  tag: v2.0.5
   specs:
-    thl_integration (2.0.4)
+    thl_integration (2.0.5)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/universal_navigation.git
-  revision: 0da592f1241dc1b79182ae808bb5678aa707ffbc
-  tag: v2.0.1
+  revision: c49a3029c9c30c145c62dbc012cda8ad5b8401e9
+  tag: v2.0.2
   specs:
-    universal_navigation (2.0.1)
+    universal_navigation (2.0.2)
       rails (~> 3.2.8)
 
 GEM
@@ -277,7 +285,7 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.0.1)!
-  authenticated_system (= 2.0.6)!
+  authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
   complex_scripts (= 2.0.3)!
@@ -286,6 +294,7 @@ DEPENDENCIES
   globalize3
   hpricot (>= 0.8.6)
   in_place_editing
+  interface_utils (= 2.0.0)!
   jquery-rails
   json
   kmaps_integration (= 2.0.4)!
@@ -306,9 +315,9 @@ DEPENDENCIES
   ruby-debug
   sass-rails (~> 3.2.3)
   spawn (= 1.0.1)!
-  therubyracer
-  thl_integration (= 2.0.4)!
+  therubyracer (= 0.10.2)
+  thl_integration (= 2.0.5)!
   tinymce-rails (= 3.5.6)
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.1)!
+  universal_navigation (= 2.0.2)!
   will_paginate (~> 3.0)
