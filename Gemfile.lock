@@ -24,6 +24,14 @@ GIT
     comatose (2.0.5)
 
 GIT
+  remote: git://github.com/thl/active_resource_extensions.git
+  revision: 27a01a973f3fbf4d43b5e44ccf76d0ba13fd12d3
+  tag: v2.0.1
+  specs:
+    active_resource_extensions (2.0.1)
+      rails (~> 3.2.8)
+
+GIT
   remote: git://github.com/thl/attachment_fu_patch.git
   revision: c1869a4c494ed688c3ed4e1eea1139452f778a95
   tag: v2.0.1
@@ -49,12 +57,37 @@ GIT
       rails (~> 3.2.8)
 
 GIT
+  remote: git://github.com/thl/dictionary_integration.git
+  revision: 82e543c5700f6ec3cab5146ead06d32ac6635a98
+  tag: v2.0.1
+  specs:
+    dictionary_integration (2.0.1)
+      rails (~> 3.2.9)
+
+GIT
   remote: git://github.com/thl/interface_utils.git
   revision: 43d3c7dc1001f249ea8291229ebbe80d5b32b20f
   tag: v2.0.0
   specs:
     interface_utils (2.0.0)
       rails (~> 3.2.11)
+
+GIT
+  remote: git://github.com/thl/kmaps_integration.git
+  revision: 994f8a1cb2091358891efd6f61ad9564c274bf9c
+  tag: v2.0.5
+  specs:
+    kmaps_integration (2.0.5)
+      rails (~> 3.2.9)
+
+GIT
+  remote: git://github.com/thl/mms_engine.git
+  revision: f3d4ab73845ee1543dfeeb474cd110172dc6cd08
+  tag: v2.1.4
+  specs:
+    mms_engine (2.1.4)
+      rails (~> 3.2.9)
+      rmagick
 
 GIT
   remote: git://github.com/thl/places_integration.git
@@ -87,31 +120,6 @@ GIT
   specs:
     universal_navigation (2.0.2)
       rails (~> 3.2.8)
-
-PATH
-  remote: ../engines/active_resource_extensions
-  specs:
-    active_resource_extensions (2.0.1)
-      rails (~> 3.2.8)
-
-PATH
-  remote: ../engines/dictionary_integration
-  specs:
-    dictionary_integration (2.0.1)
-      rails (~> 3.2.9)
-
-PATH
-  remote: ../engines/kmaps_integration
-  specs:
-    kmaps_integration (2.0.5)
-      rails (~> 3.2.9)
-
-PATH
-  remote: ../engines/mms_engine
-  specs:
-    mms_engine (2.1.4)
-      rails (~> 3.2.9)
-      rmagick
 
 GEM
   remote: http://rubygems.org/
