@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725224716) do
+ActiveRecord::Schema.define(:version => 20130213044816) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -675,6 +675,7 @@ ActiveRecord::Schema.define(:version => 20120725224716) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.string   "shibboleth_id"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
