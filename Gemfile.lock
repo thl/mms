@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: 994f8a1cb2091358891efd6f61ad9564c274bf9c
-  tag: v2.0.5
+  revision: 5b227d294743c826723e510e60333918de765f34
+  tag: v2.0.6
   specs:
-    kmaps_integration (2.0.5)
+    kmaps_integration (2.0.6)
       rails (~> 3.2.9)
 
 GIT
@@ -297,7 +297,7 @@ DEPENDENCIES
   interface_utils (= 2.0.0)!
   jquery-rails
   json
-  kmaps_integration (= 2.0.5)!
+  kmaps_integration (= 2.0.6)!
   memcache-client
   mms_engine (= 2.1.4)!
   mongrel
