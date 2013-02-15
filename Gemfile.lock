@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: f3d4ab73845ee1543dfeeb474cd110172dc6cd08
-  tag: v2.1.4
+  revision: 8ad593c970e63898a171cc760eb9c9028d1a442c
+  tag: v2.1.5
   specs:
-    mms_engine (2.1.4)
+    mms_engine (2.1.5)
       rails (~> 3.2.9)
       rmagick
 
@@ -115,10 +115,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/universal_navigation.git
-  revision: c49a3029c9c30c145c62dbc012cda8ad5b8401e9
-  tag: v2.0.2
+  revision: d02e7b9d6f682f21527fa759107227586395245b
+  tag: v2.0.3
   specs:
-    universal_navigation (2.0.2)
+    universal_navigation (2.0.3)
       rails (~> 3.2.8)
 
 GEM
@@ -299,7 +299,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.6)!
   memcache-client
-  mms_engine (= 2.1.4)!
+  mms_engine (= 2.1.5)!
   mongrel
   mysql2
   newrelic_rpm
@@ -319,5 +319,5 @@ DEPENDENCIES
   thl_integration (= 2.0.5)!
   tinymce-rails (= 3.5.6)
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.2)!
+  universal_navigation (= 2.0.3)!
   will_paginate (~> 3.0)
