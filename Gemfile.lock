@@ -25,10 +25,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: 27a01a973f3fbf4d43b5e44ccf76d0ba13fd12d3
-  tag: v2.0.1
+  revision: 9f5735a1c4eb1226307d608271332b6820da2f17
+  tag: v2.0.2
   specs:
-    active_resource_extensions (2.0.1)
+    active_resource_extensions (2.0.2)
       rails (~> 3.2.8)
 
 GIT
@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/kmaps_integration.git
-  revision: 5b227d294743c826723e510e60333918de765f34
-  tag: v2.0.6
+  revision: 0598a0df17f51f7b2b9410c76345a2c312299a4f
+  tag: v2.0.7
   specs:
-    kmaps_integration (2.0.6)
+    kmaps_integration (2.0.7)
       rails (~> 3.2.9)
 
 GIT
@@ -196,7 +196,6 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcache-client (1.8.5)
     mime-types (1.19)
     mongrel (1.1.5)
       cgi_multipart_eof_fix (>= 2.4)
@@ -279,7 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.1)!
+  active_resource_extensions (= 2.0.2)!
   acts_as_list
   acts_as_tree (= 0.2.0)
   acts_as_versioned
@@ -297,8 +296,7 @@ DEPENDENCIES
   interface_utils (= 2.0.0)!
   jquery-rails
   json
-  kmaps_integration (= 2.0.6)!
-  memcache-client
+  kmaps_integration (= 2.0.7)!
   mms_engine (= 2.1.8)!
   mongrel
   mysql2

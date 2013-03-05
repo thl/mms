@@ -23,7 +23,6 @@ gem 'hpricot', '>= 0.8.6'
 gem 'rack-openid', :require => 'rack/openid'
 gem 'jquery-rails' #, '0.2.7' # compatible with jquery 1.4.4
 gem 'tinymce-rails', '3.5.6' # compatible with ruby 1.8.7
-gem 'memcache-client'
 gem 'newrelic_rpm'
 gem 'open_id_authentication'
 gem 'acts_as_tree', '0.2.0' # compatible with ruby 1.8.7
@@ -43,13 +42,13 @@ gem 'restful-authentication',     '2.0.0.beta1',  :git => 'git://github.com/Sati
 gem 'comatose',                   '2.0.5',        :git => 'git://github.com/niciliketo/comatose.git'
 gem 'spawn',                      '1.0.1',        :git => 'git://github.com/kartofflly/spawn.git'
 
-gem 'active_resource_extensions', '2.0.1',        :git => 'git://github.com/thl/active_resource_extensions.git', :tag => 'v2.0.1' #:path => '../engines/active_resource_extensions'
+gem 'active_resource_extensions', '2.0.2',        :git => 'git://github.com/thl/active_resource_extensions.git', :tag => 'v2.0.2' #:path => '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.0.1',        :git => 'git://github.com/thl/attachment_fu_patch.git',        :tag => 'v2.0.1' #:path => '../engines/attachment_fu_patch'
 gem 'authenticated_system',       '2.0.9',        :git => 'git://github.com/thl/authenticated_system.git',       :tag => 'v2.0.9' #:path => '../engines/authenticated_system'
 gem 'complex_scripts',            '2.0.4',        :git => 'git://github.com/thl/complex_scripts.git',            :tag => 'v2.0.4' #:path => '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.0.1',        :git => 'git://github.com/thl/dictionary_integration.git',     :tag => 'v2.0.1' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.0.0',        :git => 'git://github.com/thl/interface_utils.git',            :tag => 'v2.0.0' #:path => '../engines/interface_utils'
-gem 'kmaps_integration',          '2.0.6',        :git => 'git://github.com/thl/kmaps_integration.git',          :tag => 'v2.0.6' #:path => '../engines/kmaps_integration'
+gem 'kmaps_integration',          '2.0.7',        :git => 'git://github.com/thl/kmaps_integration.git',          :tag => 'v2.0.7' #:path => '../engines/kmaps_integration'
 gem 'mms_engine',                 '2.1.8',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.1.8' #:path => '../engines/mms_engine'
 gem 'places_integration',         '2.0.2',        :git => 'git://github.com/thl/places_integration.git',         :tag => 'v2.0.2' #:path => '../engines/places_integration'
 gem 'proxy_engine',               '2.0.0',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.0' #:path => '../engines/proxy_engine'
