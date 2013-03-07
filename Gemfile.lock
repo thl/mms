@@ -25,10 +25,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: d4acc2151ef5606097ca98f72bbb6661cc2047d2
-  tag: v2.0.3
+  revision: 43dc5b39e53e45b51e9b12ab30d9bccb18be859a
+  tag: v2.0.4
   specs:
-    active_resource_extensions (2.0.3)
+    active_resource_extensions (2.0.4)
       rails (~> 3.2.8)
 
 GIT
@@ -278,7 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.3)!
+  active_resource_extensions (= 2.0.4)!
   acts_as_list
   acts_as_tree (= 0.2.0)
   acts_as_versioned
