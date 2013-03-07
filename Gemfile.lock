@@ -25,10 +25,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: 9f5735a1c4eb1226307d608271332b6820da2f17
-  tag: v2.0.2
+  revision: d4acc2151ef5606097ca98f72bbb6661cc2047d2
+  tag: v2.0.3
   specs:
-    active_resource_extensions (2.0.2)
+    active_resource_extensions (2.0.3)
       rails (~> 3.2.8)
 
 GIT
@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: d6d930a263389f3595b344888e2ada06e9e6cec9
-  tag: v2.1.8
+  revision: af0bccca1fc7d3129199b72d2686023123d07d2b
+  tag: v2.1.9
   specs:
-    mms_engine (2.1.8)
+    mms_engine (2.1.9)
       rails (~> 3.2.9)
       rmagick
 
@@ -278,7 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.2)!
+  active_resource_extensions (= 2.0.3)!
   acts_as_list
   acts_as_tree (= 0.2.0)
   acts_as_versioned
@@ -297,7 +297,7 @@ DEPENDENCIES
   jquery-rails
   json
   kmaps_integration (= 2.0.7)!
-  mms_engine (= 2.1.8)!
+  mms_engine (= 2.1.9)!
   mongrel
   mysql2
   newrelic_rpm
