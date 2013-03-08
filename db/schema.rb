@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213044816) do
+ActiveRecord::Schema.define(:version => 20130308190637) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -463,6 +463,13 @@ ActiveRecord::Schema.define(:version => 20130213044816) do
 
   add_index "media_source_associations", ["medium_id", "source_id"], :name => "index_media_source_associations_on_medium_id_and_source_id", :unique => true
 
+  create_table "metadata_sources", :force => true do |t|
+    t.integer  "creator_id"
+    t.string   "filename"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "movies", :force => true do |t|
     t.string  "content_type"
     t.string  "filename"
@@ -700,6 +707,7 @@ ActiveRecord::Schema.define(:version => 20130213044816) do
     t.datetime "updated_at"
     t.integer  "status_id"
     t.integer  "processing_status_id"
+    t.integer  "metadata_source_id"
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true
