@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308190637) do
+ActiveRecord::Schema.define(:version => 20130313222530) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -465,7 +465,7 @@ ActiveRecord::Schema.define(:version => 20130308190637) do
 
   create_table "metadata_sources", :force => true do |t|
     t.integer  "creator_id"
-    t.string   "filename"
+    t.string   "filename",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -708,6 +708,7 @@ ActiveRecord::Schema.define(:version => 20130308190637) do
     t.integer  "status_id"
     t.integer  "processing_status_id"
     t.integer  "metadata_source_id"
+    t.text     "original_path"
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true

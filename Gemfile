@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -51,7 +51,7 @@ gem 'complex_scripts',            '2.0.4',        :git => 'git://github.com/thl/
 gem 'dictionary_integration',     '2.0.1',        :git => 'git://github.com/thl/dictionary_integration.git',     :tag => 'v2.0.1' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.0.0',        :git => 'git://github.com/thl/interface_utils.git',            :tag => 'v2.0.0' #:path => '../engines/interface_utils'
 gem 'kmaps_integration',          '2.0.7',        :git => 'git://github.com/thl/kmaps_integration.git',          :tag => 'v2.0.7' #:path => '../engines/kmaps_integration'
-gem 'mms_engine',                 '2.2.1',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.2.1' #:path => '../engines/mms_engine'
+gem 'mms_engine',                 '2.2.2',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.2.2' #:path => '../engines/mms_engine'
 gem 'places_integration',         '2.0.2',        :git => 'git://github.com/thl/places_integration.git',         :tag => 'v2.0.2' #:path => '../engines/places_integration'
 gem 'proxy_engine',               '2.0.0',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.0' #:path => '../engines/proxy_engine'
 gem 'thl_integration',            '2.0.5',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.0.5' #:path => '../engines/thl_integration'
