@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313222530) do
+ActiveRecord::Schema.define(:version => 20130327032004) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -200,6 +200,11 @@ ActiveRecord::Schema.define(:version => 20130313222530) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "creators_metadata_sources", :id => false, :force => true do |t|
+    t.integer "creator_id",         :null => false
+    t.integer "metadata_source_id", :null => false
   end
 
   create_table "cumulative_media_category_associations", :force => true do |t|
@@ -464,7 +469,6 @@ ActiveRecord::Schema.define(:version => 20130313222530) do
   add_index "media_source_associations", ["medium_id", "source_id"], :name => "index_media_source_associations_on_medium_id_and_source_id", :unique => true
 
   create_table "metadata_sources", :force => true do |t|
-    t.integer  "creator_id"
     t.string   "filename",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
