@@ -25,10 +25,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: 43dc5b39e53e45b51e9b12ab30d9bccb18be859a
-  tag: v2.0.4
+  revision: a8d01dca2a40dfb32b85758871b5076303d932a4
+  tag: v2.0.5
   specs:
-    active_resource_extensions (2.0.4)
+    active_resource_extensions (2.0.5)
       rails (~> 3.2.8)
 
 GIT
@@ -212,7 +212,7 @@ GEM
       railties (~> 3.0)
     permalink_fu (1.0.0)
     polyglot (0.3.3)
-    pothoven-attachment_fu (3.2.4)
+    pothoven-attachment_fu (3.2.8)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -278,7 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.4)!
+  active_resource_extensions (= 2.0.5)!
   acts_as_list
   acts_as_tree (= 0.2.0)
   acts_as_versioned
