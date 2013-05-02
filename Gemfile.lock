@@ -49,10 +49,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: 75f33cea7824f0f69c485065413d38a391c259b0
-  tag: v2.0.4
+  revision: 5fb428926719d60b507e4a36998112f71deb2221
+  tag: v2.0.5
   specs:
-    complex_scripts (2.0.4)
+    complex_scripts (2.0.5)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
 
@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 650c7a8e31ff58ae25a2d180c0816aff599f143b
-  tag: v2.3.6
+  revision: a0eeabd3514d0f09dd03a137e56922bd90fe9226
+  tag: v2.3.7
   specs:
-    mms_engine (2.3.6)
+    mms_engine (2.3.7)
       rails (= 3.2.13)
       rmagick
 
@@ -287,7 +287,7 @@ DEPENDENCIES
   authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
-  complex_scripts (= 2.0.4)!
+  complex_scripts (= 2.0.5)!
   dictionary_integration (= 2.0.1)!
   dynamic_form
   globalize3
@@ -298,7 +298,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.7)!
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.3.6)!
+  mms_engine (= 2.3.7)!
   mongrel
   mysql2
   newrelic_rpm
