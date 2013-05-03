@@ -33,10 +33,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/attachment_fu_patch.git
-  revision: db29b14152db98ec19defe56cbfa70c0d75b8608
-  tag: v2.0.3
+  revision: 21851ed98112ed369bca7ad9a22007afe455354b
+  tag: v2.0.4
   specs:
-    attachment_fu_patch (2.0.3)
+    attachment_fu_patch (2.0.4)
       rails (~> 3.2.8)
 
 GIT
@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: a0eeabd3514d0f09dd03a137e56922bd90fe9226
-  tag: v2.3.7
+  revision: f8346f526c8a03ff720e5ff44ae16aa5fbe9d35c
+  tag: v2.3.8
   specs:
-    mms_engine (2.3.7)
+    mms_engine (2.3.8)
       rails (= 3.2.13)
       rmagick
 
@@ -283,7 +283,7 @@ DEPENDENCIES
   acts_as_tree (= 0.2.0)
   acts_as_versioned
   annotate
-  attachment_fu_patch (= 2.0.3)!
+  attachment_fu_patch (= 2.0.4)!
   authenticated_system (= 2.0.9)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
@@ -298,7 +298,7 @@ DEPENDENCIES
   json
   kmaps_integration (= 2.0.7)!
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.3.7)!
+  mms_engine (= 2.3.8)!
   mongrel
   mysql2
   newrelic_rpm
