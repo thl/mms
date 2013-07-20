@@ -25,10 +25,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: a8d01dca2a40dfb32b85758871b5076303d932a4
-  tag: v2.0.5
+  revision: 92ed56da9c07119f60fba4ecc59e52f8a4c796fe
+  tag: v2.0.7
   specs:
-    active_resource_extensions (2.0.5)
+    active_resource_extensions (2.0.7)
       rails (~> 3.2.8)
 
 GIT
@@ -41,10 +41,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 328b373de7339f191b27de2bb87bc6bf2d97fee8
-  tag: v2.1.0
+  revision: 79554750f8069f1642cea5d2ac1ec402a0bdac0f
+  tag: v2.1.1
   specs:
-    authenticated_system (2.1.0)
+    authenticated_system (2.1.1)
       rails (~> 3.2.8)
 
 GIT
@@ -66,27 +66,27 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 1880ef35da900202bebf96dee496c1e3391a4c65
-  tag: v2.0.2
+  revision: 961ae0cae81f080110968a9478c212e94fec1ca8
+  tag: v2.0.5
   specs:
-    interface_utils (2.0.2)
+    interface_utils (2.0.5)
       rails (~> 3.2.11)
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 556c53ee81d87aab30eba0692742aec883b55f97
-  tag: v2.4.1
+  revision: f7230d66751e53f768edba3d8446cd7e3ef7baca
+  tag: v2.4.2
   specs:
-    mms_engine (2.4.1)
+    mms_engine (2.4.2)
       rails (= 3.2.13)
       rmagick
 
 GIT
   remote: git://github.com/thl/places_integration.git
-  revision: c9528a5d702741a5f14d3787909b8e9b38fa1cf2
-  tag: v2.0.4
+  revision: 60583eebf555063cfa30c1395378fd3276f2ae9a
+  tag: v2.0.5
   specs:
-    places_integration (2.0.4)
+    places_integration (2.0.5)
       rails (~> 3.2.8)
 
 GIT
@@ -99,26 +99,26 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 41a4b6e08970224dbffe470d0896a1d04e8b8790
-  tag: v2.0.6
+  revision: f48ad8a4cec6b607bb3a5ba26681537c1d304003
+  tag: v2.0.7
   specs:
-    thl_integration (2.0.6)
+    thl_integration (2.0.7)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/topical_map_integration.git
-  revision: 47524931a42a700da2e5af76e7d3388c88cc10d0
-  tag: v3.0.0
+  revision: 9dfc53014f1375db46fe2cf1fbef60f291947e44
+  tag: v3.0.2
   specs:
-    topical_map_integration (3.0.0)
+    topical_map_integration (3.0.2)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/universal_navigation.git
-  revision: 46278c0fce258e8b7061180b3d85910d13a2bc61
-  tag: v2.0.5
+  revision: 1f75bdf3731e98f32f06ad6198cc4c92be2e9cac
+  tag: v2.0.9
   specs:
-    universal_navigation (2.0.5)
+    universal_navigation (2.0.9)
       rails (~> 3.2.8)
 
 GEM
@@ -278,13 +278,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_resource_extensions (= 2.0.5)!
+  active_resource_extensions (= 2.0.7)!
   acts_as_list
   acts_as_tree (= 0.2.0)
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.0.4)!
-  authenticated_system (= 2.1.0)!
+  authenticated_system (= 2.1.1)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
   complex_scripts (= 2.0.7)!
@@ -293,18 +293,18 @@ DEPENDENCIES
   globalize3
   hpricot (>= 0.8.6)
   in_place_editing
-  interface_utils (= 2.0.2)!
+  interface_utils (= 2.0.5)!
   jquery-rails
   json
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.4.1)!
+  mms_engine (= 2.4.2)!
   mongrel
   mysql2
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
   permalink_fu
-  places_integration (= 2.0.4)!
+  places_integration (= 2.0.5)!
   pothoven-attachment_fu
   proxy_engine (= 2.0.1)!
   rack-openid
@@ -314,9 +314,9 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spawn (= 1.0.1)!
   therubyracer
-  thl_integration (= 2.0.6)!
+  thl_integration (= 2.0.7)!
   tinymce-rails (= 3.5.6)
-  topical_map_integration (= 3.0.0)!
+  topical_map_integration (= 3.0.2)!
   uglifier (>= 1.0.3)
-  universal_navigation (= 2.0.5)!
+  universal_navigation (= 2.0.9)!
   will_paginate (~> 3.0)
