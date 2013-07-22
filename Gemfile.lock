@@ -73,6 +73,15 @@ GIT
       rails (~> 3.2.11)
 
 GIT
+  remote: git://github.com/thl/mms_engine.git
+  revision: 6776ee3a27f4abc2756e63677efadab554449205
+  tag: v2.4.4
+  specs:
+    mms_engine (2.4.4)
+      rails (= 3.2.13)
+      rmagick
+
+GIT
   remote: git://github.com/thl/places_integration.git
   revision: 60583eebf555063cfa30c1395378fd3276f2ae9a
   tag: v2.0.5
@@ -111,13 +120,6 @@ GIT
   specs:
     universal_navigation (2.0.9)
       rails (~> 3.2.8)
-
-PATH
-  remote: ../engines/mms_engine
-  specs:
-    mms_engine (2.4.3)
-      rails (= 3.2.13)
-      rmagick
 
 GEM
   remote: http://rubygems.org/
@@ -295,7 +297,7 @@ DEPENDENCIES
   jquery-rails
   json
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.4.3)!
+  mms_engine (= 2.4.4)!
   mongrel
   mysql2
   newrelic_rpm
