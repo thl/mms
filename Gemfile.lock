@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: f7230d66751e53f768edba3d8446cd7e3ef7baca
-  tag: v2.4.2
+  revision: fad4dc074af1ef224afa1469fba474fd2d72432a
+  tag: v2.4.3
   specs:
-    mms_engine (2.4.2)
+    mms_engine (2.4.3)
       rails (= 3.2.13)
       rmagick
 
@@ -297,7 +297,7 @@ DEPENDENCIES
   jquery-rails
   json
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.4.2)!
+  mms_engine (= 2.4.3)!
   mongrel
   mysql2
   newrelic_rpm
