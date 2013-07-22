@@ -73,15 +73,6 @@ GIT
       rails (~> 3.2.11)
 
 GIT
-  remote: git://github.com/thl/mms_engine.git
-  revision: fad4dc074af1ef224afa1469fba474fd2d72432a
-  tag: v2.4.3
-  specs:
-    mms_engine (2.4.3)
-      rails (= 3.2.13)
-      rmagick
-
-GIT
   remote: git://github.com/thl/places_integration.git
   revision: 60583eebf555063cfa30c1395378fd3276f2ae9a
   tag: v2.0.5
@@ -120,6 +111,13 @@ GIT
   specs:
     universal_navigation (2.0.9)
       rails (~> 3.2.8)
+
+PATH
+  remote: ../engines/mms_engine
+  specs:
+    mms_engine (2.4.3)
+      rails (= 3.2.13)
+      rmagick
 
 GEM
   remote: http://rubygems.org/
