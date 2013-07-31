@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327032004) do
+ActiveRecord::Schema.define(:version => 20130729212628) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -408,7 +408,7 @@ ActiveRecord::Schema.define(:version => 20130327032004) do
     t.datetime "updated_on"
     t.text     "recording_note"
     t.text     "private_note"
-    t.string   "type",                     :limit => 10, :null => false
+    t.string   "type",                     :limit => 20, :null => false
     t.integer  "attachment_id"
     t.datetime "taken_on"
     t.integer  "recording_orientation_id"
@@ -690,6 +690,14 @@ ActiveRecord::Schema.define(:version => 20130327032004) do
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+
+  create_table "web_addresses", :force => true do |t|
+    t.string   "url",                :null => false
+    t.integer  "parent_resource_id"
+    t.integer  "online_resource_id", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "words", :force => true do |t|
     t.text    "title",       :null => false
