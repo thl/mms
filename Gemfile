@@ -46,15 +46,15 @@ gem 'spawn',                      '1.0.1',        :git => 'git://github.com/kart
 
 gem 'active_resource_extensions', '2.0.7',        :git => 'git://github.com/thl/active_resource_extensions.git', :tag => 'v2.0.7' #:path => '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.0.4',        :git => 'git://github.com/thl/attachment_fu_patch.git',        :tag => 'v2.0.4' #:path => '../engines/attachment_fu_patch'
-gem 'authenticated_system',       '2.1.1',        :git => 'git://github.com/thl/authenticated_system.git',       :tag => 'v2.1.1' #:path => '../engines/authenticated_system'
+gem 'authenticated_system',       '2.1.2',        :git => 'git://github.com/thl/authenticated_system.git',       :tag => 'v2.1.2' #:path => '../engines/authenticated_system'
 gem 'complex_scripts',            '2.0.7',        :git => 'git://github.com/thl/complex_scripts.git',            :tag => 'v2.0.7' #:path => '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.0.2',        :git => 'git://github.com/thl/dictionary_integration.git',     :tag => 'v2.0.2' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.0.5',        :git => 'git://github.com/thl/interface_utils.git',            :tag => 'v2.0.5' #:path => '../engines/interface_utils'
-gem 'topical_map_integration',    '3.0.2',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.0.2' #:path => '../engines/topical_map_integration'
-gem 'mms_engine',                 '2.5.1',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.5.1' #:path => '../engines/mms_engine'
+gem 'topical_map_integration',    '3.0.3',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.0.3' #:path => '../engines/topical_map_integration'
+gem 'mms_engine',                 '2.5.2',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.5.2' #:path => '../engines/mms_engine'
 gem 'places_integration',         '2.0.5',        :git => 'git://github.com/thl/places_integration.git',         :tag => 'v2.0.5' #:path => '../engines/places_integration'
-gem 'proxy_engine',               '2.0.1',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.1' #:path => '../engines/proxy_engine'
-gem 'thl_integration',            '2.0.7',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.0.7' #:path => '../engines/thl_integration'
+gem 'proxy_engine',               '2.0.2',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.2' #:path => '../engines/proxy_engine'
+gem 'thl_integration',            '2.0.8',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.0.8' #:path => '../engines/thl_integration'
 gem 'universal_navigation',       '2.0.9',        :git => 'git://github.com/thl/universal_navigation.git',       :tag => 'v2.0.9' #:path => '../engines/universal_navigation'
 
 # To use ActiveModel has_secure_password

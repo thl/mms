@@ -41,10 +41,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 79554750f8069f1642cea5d2ac1ec402a0bdac0f
-  tag: v2.1.1
+  revision: 84807aae0e32975490c165748f5e9f1c415e572c
+  tag: v2.1.2
   specs:
-    authenticated_system (2.1.1)
+    authenticated_system (2.1.2)
       rails (~> 3.2.8)
 
 GIT
@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: a596b7e08a3f87beb56ca885b9a13e4133114111
-  tag: v2.5.1
+  revision: 4f62e8d90486fea5d23b9581e9b7fb9bd4fab62c
+  tag: v2.5.2
   specs:
-    mms_engine (2.5.1)
+    mms_engine (2.5.2)
       rails (= 3.2.13)
       rmagick
 
@@ -91,26 +91,26 @@ GIT
 
 GIT
   remote: git://github.com/thl/proxy_engine.git
-  revision: 0ce77bc3b327701a140a738431bd2cc1f40cf6d2
-  tag: v2.0.1
+  revision: 33a81f65f9b66ffc9f2e62ce77fa9db922c7cc85
+  tag: v2.0.2
   specs:
-    proxy_engine (2.0.1)
+    proxy_engine (2.0.2)
       rails (~> 3.2.9)
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: f48ad8a4cec6b607bb3a5ba26681537c1d304003
-  tag: v2.0.7
+  revision: 679b902e8019e9735d055ed43ee1a59f165333db
+  tag: v2.0.8
   specs:
-    thl_integration (2.0.7)
+    thl_integration (2.0.8)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/topical_map_integration.git
-  revision: 9dfc53014f1375db46fe2cf1fbef60f291947e44
-  tag: v3.0.2
+  revision: 613cd5362b00445e5bf4aab64b26fcb03ca1df45
+  tag: v3.0.3
   specs:
-    topical_map_integration (3.0.2)
+    topical_map_integration (3.0.3)
       rails (~> 3.2.9)
 
 GIT
@@ -284,7 +284,7 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.0.4)!
-  authenticated_system (= 2.1.1)!
+  authenticated_system (= 2.1.2)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
   complex_scripts (= 2.0.7)!
@@ -297,7 +297,7 @@ DEPENDENCIES
   jquery-rails
   json
   libv8 (= 3.3.10.2)
-  mms_engine (= 2.5.1)!
+  mms_engine (= 2.5.2)!
   mongrel
   mysql2
   newrelic_rpm
@@ -306,7 +306,7 @@ DEPENDENCIES
   permalink_fu
   places_integration (= 2.0.5)!
   pothoven-attachment_fu
-  proxy_engine (= 2.0.1)!
+  proxy_engine (= 2.0.2)!
   rack-openid
   rails (= 3.2.13)
   restful-authentication (= 2.0.0.beta1)!
@@ -314,9 +314,9 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spawn (= 1.0.1)!
   therubyracer
-  thl_integration (= 2.0.7)!
+  thl_integration (= 2.0.8)!
   tinymce-rails (= 3.5.6)
-  topical_map_integration (= 3.0.2)!
+  topical_map_integration (= 3.0.3)!
   uglifier (>= 1.0.3)
   universal_navigation (= 2.0.9)!
   will_paginate (~> 3.0)
