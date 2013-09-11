@@ -44,7 +44,7 @@ gem 'restful-authentication',     '2.0.0.beta1',  :git => 'git://github.com/Sati
 gem 'comatose',                   '2.0.5',        :git => 'git://github.com/niciliketo/comatose.git'
 gem 'spawn',                      '1.0.1',        :git => 'git://github.com/kartofflly/spawn.git'
 
-gem 'active_resource_extensions', '2.0.7',        :git => 'git://github.com/thl/active_resource_extensions.git', :tag => 'v2.0.7' #:path => '../engines/active_resource_extensions'
+gem 'active_resource_extensions', '2.0.8',        :git => 'git://github.com/thl/active_resource_extensions.git', :tag => 'v2.0.8' #:path => '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.0.4',        :git => 'git://github.com/thl/attachment_fu_patch.git',        :tag => 'v2.0.4' #:path => '../engines/attachment_fu_patch'
 gem 'authenticated_system',       '2.1.2',        :git => 'git://github.com/thl/authenticated_system.git',       :tag => 'v2.1.2' #:path => '../engines/authenticated_system'
 gem 'complex_scripts',            '2.0.7',        :git => 'git://github.com/thl/complex_scripts.git',            :tag => 'v2.0.7' #:path => '../engines/complex_scripts'
