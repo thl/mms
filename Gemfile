@@ -54,7 +54,7 @@ gem 'topical_map_integration',    '3.0.4',        :git => 'git://github.com/thl/
 gem 'mms_engine',                 '2.6.0',        :git => 'git://github.com/thl/mms_engine.git',                 :tag => 'v2.6.0' #:path => '../engines/mms_engine'
 gem 'places_integration',         '2.0.6',        :git => 'git://github.com/thl/places_integration.git',         :tag => 'v2.0.6' #:path => '../engines/places_integration'
 gem 'proxy_engine',               '2.0.2',        :git => 'git://github.com/thl/proxy_engine.git',               :tag => 'v2.0.2' #:path => '../engines/proxy_engine'
-gem 'thl_integration',            '2.0.9',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.0.9' #:path => '../engines/thl_integration'
+gem 'thl_integration',            '2.1.0',        :git => 'git://github.com/thl/thl_integration.git',            :tag => 'v2.1.0' #:path => '../engines/thl_integration'
 gem 'universal_navigation',       '2.0.9',        :git => 'git://github.com/thl/universal_navigation.git',       :tag => 'v2.0.9' #:path => '../engines/universal_navigation'
 
 # To use ActiveModel has_secure_password

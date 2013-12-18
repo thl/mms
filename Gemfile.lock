@@ -99,10 +99,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 17be64bf69236d86ac9482380c58c96590bd8692
-  tag: v2.0.9
+  revision: 8c96cac69281d705a3a0513b781c28c9fb88e92a
+  tag: v2.1.0
   specs:
-    thl_integration (2.0.9)
+    thl_integration (2.1.0)
       rails (~> 3.2.8)
 
 GIT
@@ -314,7 +314,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spawn (= 1.0.1)!
   therubyracer
-  thl_integration (= 2.0.9)!
+  thl_integration (= 2.1.0)!
   tinymce-rails (= 3.5.6)
   topical_map_integration (= 3.0.4)!
   uglifier (>= 1.0.3)
