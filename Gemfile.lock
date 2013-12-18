@@ -41,18 +41,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 84807aae0e32975490c165748f5e9f1c415e572c
-  tag: v2.1.2
+  revision: 7f7521a29d856fb0d3958bc645970a6ed0907bb0
+  tag: v2.1.5
   specs:
-    authenticated_system (2.1.2)
+    authenticated_system (2.1.5)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: a531e71fa205aefa88739d1de8f24ace679fc4f1
-  tag: v2.0.7
+  revision: f1f8a6dc0e9375d3f026058109e752e1f5cf5411
+  tag: v2.1.0
   specs:
-    complex_scripts (2.0.7)
+    complex_scripts (2.1.0)
       passiverecord (= 0.2)
       rails (~> 3.2.8)
 
@@ -66,10 +66,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 961ae0cae81f080110968a9478c212e94fec1ca8
-  tag: v2.0.5
+  revision: 698ba1ae6d9c65fa6effdefae169ab0386a8a0d2
+  tag: v2.0.6
   specs:
-    interface_utils (2.0.5)
+    interface_utils (2.0.6)
       rails (~> 3.2.11)
 
 GIT
@@ -83,10 +83,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/places_integration.git
-  revision: 60583eebf555063cfa30c1395378fd3276f2ae9a
-  tag: v2.0.5
+  revision: e7b0a5011e28aeddeb2eb311f6e9cd4a70509485
+  tag: v2.0.6
   specs:
-    places_integration (2.0.5)
+    places_integration (2.0.6)
       rails (~> 3.2.8)
 
 GIT
@@ -99,18 +99,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: 679b902e8019e9735d055ed43ee1a59f165333db
-  tag: v2.0.8
+  revision: 17be64bf69236d86ac9482380c58c96590bd8692
+  tag: v2.0.9
   specs:
-    thl_integration (2.0.8)
+    thl_integration (2.0.9)
       rails (~> 3.2.8)
 
 GIT
   remote: git://github.com/thl/topical_map_integration.git
-  revision: 613cd5362b00445e5bf4aab64b26fcb03ca1df45
-  tag: v3.0.3
+  revision: 50626c5f8f5ca6eef388e6467e0ae44ef5220d36
+  tag: v3.0.4
   specs:
-    topical_map_integration (3.0.3)
+    topical_map_integration (3.0.4)
       rails (~> 3.2.9)
 
 GIT
@@ -284,16 +284,16 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.0.4)!
-  authenticated_system (= 2.1.2)!
+  authenticated_system (= 2.1.5)!
   coffee-rails (~> 3.2.1)
   comatose (= 2.0.5)!
-  complex_scripts (= 2.0.7)!
+  complex_scripts (= 2.1.0)!
   dictionary_integration (= 2.0.2)!
   dynamic_form
   globalize3
   hpricot (>= 0.8.6)
   in_place_editing
-  interface_utils (= 2.0.5)!
+  interface_utils (= 2.0.6)!
   jquery-rails
   json
   libv8 (= 3.3.10.2)
@@ -304,7 +304,7 @@ DEPENDENCIES
   open_id_authentication
   passiverecord (= 0.2)!
   permalink_fu
-  places_integration (= 2.0.5)!
+  places_integration (= 2.0.6)!
   pothoven-attachment_fu
   proxy_engine (= 2.0.2)!
   rack-openid
@@ -314,9 +314,9 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spawn (= 1.0.1)!
   therubyracer
-  thl_integration (= 2.0.8)!
+  thl_integration (= 2.0.9)!
   tinymce-rails (= 3.5.6)
-  topical_map_integration (= 3.0.3)!
+  topical_map_integration (= 3.0.4)!
   uglifier (>= 1.0.3)
   universal_navigation (= 2.0.9)!
   will_paginate (~> 3.0)
