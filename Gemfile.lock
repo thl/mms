@@ -41,10 +41,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 76ded3ab3dca227ee0b92ebc5bc9e8636a8ca513
-  tag: v2.2.2
+  revision: 3c1b4242439d99dc318c0ea5bc3d055b384432cf
+  tag: v2.2.3
   specs:
-    authenticated_system (2.2.2)
+    authenticated_system (2.2.3)
       rails (~> 3.2.8)
 
 GIT
@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: dda1e0d6910bc90cdfcf9ffc83cefbf042ecfdcd
-  tag: v2.7.2
+  revision: be7062029b6fe015b0e2ec9a02b97be071f2d756
+  tag: v2.7.3
   specs:
-    mms_engine (2.7.2)
+    mms_engine (2.7.3)
       rails (= 3.2.13)
       rmagick
 
@@ -272,7 +272,7 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.1.0)!
-  authenticated_system (= 2.2.2)!
+  authenticated_system (= 2.2.3)!
   coffee-rails
   comatose (= 2.0.9)!
   complex_scripts (= 2.2.2)!
@@ -285,7 +285,7 @@ DEPENDENCIES
   interface_utils (= 2.1.3)!
   jquery-rails
   libv8
-  mms_engine (= 2.7.2)!
+  mms_engine (= 2.7.3)!
   mysql2
   newrelic_rpm
   open_id_authentication
