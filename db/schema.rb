@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729212628) do
+ActiveRecord::Schema.define(:version => 20140623224944) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -215,6 +216,15 @@ ActiveRecord::Schema.define(:version => 20130729212628) do
   end
 
   add_index "cumulative_media_category_associations", ["category_id", "medium_id"], :name => "by_category_medium", :unique => true
+
+  create_table "cumulative_media_location_associations", :force => true do |t|
+    t.integer  "medium_id",  :null => false
+    t.integer  "feature_id", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "cumulative_media_location_associations", ["feature_id", "medium_id"], :name => "by_medium_location", :unique => true
 
   create_table "definitions", :force => true do |t|
     t.integer "definiendum_id",       :null => false
