@@ -51,10 +51,10 @@ gem 'complex_scripts',            '2.2.2',        :git => 'git://github.com/thl/
 gem 'dictionary_integration',     '2.1.1',        :git => 'git://github.com/thl/dictionary_integration.git',      :tag => 'v2.1.1' #:path => '../engines/dictionary_integration'
 gem 'interface_utils',            '2.1.4',        :git => 'git://github.com/thl/interface_utils.git',             :tag => 'v2.1.4' #:path => '../engines/interface_utils'
 #gem 'topical_map_integration',    '3.1.0',        :git => 'git://github.com/thl/topical_map_integration.git',    :tag => 'v3.1.0' #:path => '../engines/topical_map_integration'
-gem 'mms_engine',                 '2.7.5',        :git => 'git://github.com/thl/mms_engine.git',                  :tag => 'v2.7.5' #:path => '../engines/mms_engine'
+gem 'mms_engine',                 '2.7.6',        :git => 'git://github.com/thl/mms_engine.git',                  :tag => 'v2.7.6' #:path => '../engines/mms_engine'
 gem 'places_integration',         '2.1.1',        :git => 'git://github.com/thl/places_integration.git',          :tag => 'v2.1.1' #:path => '../engines/places_integration'
 gem 'proxy_engine',               '2.1.0',        :git => 'git://github.com/thl/proxy_engine.git',                :tag => 'v2.1.0' #:path => '../engines/proxy_engine'
-gem 'subjects_integration',       '0.1.0',        :git => 'git://github.com/shanti-uva/subjects_integration.git', :tag => 'v0.1.0' #:path => '../engines/subjects_integration'
+gem 'subjects_integration',       '0.1.0',        :git => 'git://github.com/shanti-uva/subjects_integration.git', :tag => 'v0.1.0' #:path => '../../shanti/engines/subjects_integration'
 gem 'thl_integration',            '2.2.1',        :git => 'git://github.com/thl/thl_integration.git',             :tag => 'v2.2.1' #:path => '../engines/thl_integration'
 gem 'universal_navigation',       '2.1.0',        :git => 'git://github.com/thl/universal_navigation.git',        :tag => 'v2.1.0' #:path => '../engines/universal_navigation'
 

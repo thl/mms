@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: e6549f781f5077cb384ea50e94a72f4ab5b605ba
-  tag: v2.7.5
+  revision: 7f10c23bb88836094c9ad6cda3b70991814c0070
+  tag: v2.7.6
   specs:
-    mms_engine (2.7.5)
+    mms_engine (2.7.6)
       rails (= 3.2.13)
       rmagick
 
@@ -234,7 +234,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
-    rmagick (2.13.2)
+    rmagick (2.13.3)
     ruby-openid (2.5.0)
     sass (3.3.4)
     sass-rails (3.2.6)
@@ -285,7 +285,7 @@ DEPENDENCIES
   interface_utils (= 2.1.4)!
   jquery-rails
   libv8
-  mms_engine (= 2.7.5)!
+  mms_engine (= 2.7.6)!
   mysql2
   newrelic_rpm
   open_id_authentication
