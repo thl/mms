@@ -5,6 +5,12 @@ GIT
     passiverecord (0.2)
 
 GIT
+  remote: git://github.com/niciliketo/comatose.git
+  revision: 705fede99e0cf92012042e737b492216e0e357f2
+  specs:
+    comatose (2.0.9)
+
+GIT
   remote: git://github.com/raszi/restful-authentication.git
   revision: 0f7d50512bf47a63e53ea05cd5a7b2161732448f
   branch: rails4
@@ -38,10 +44,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 73be708ef8bfe056be4042542ab9903736de5b49
-  tag: v2.2.8
+  revision: 2c849ff9118dbd3117d9bf8db679c0e06438abd9
+  tag: v2.2.9
   specs:
-    authenticated_system (2.2.8)
+    authenticated_system (2.2.9)
       rails (~> 4.0)
 
 GIT
@@ -71,10 +77,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 237bd64d1d29780cf4d2e2a422340239a517c2af
-  tag: v2.7.7
+  revision: 8256382e1f007a1bdd89280419e3f22e954dba01
+  tag: v2.7.8
   specs:
-    mms_engine (2.7.7)
+    mms_engine (2.7.8)
       rails (~> 4.0)
       rmagick
 
@@ -287,9 +293,10 @@ DEPENDENCIES
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.1.1)!
-  authenticated_system (= 2.2.8)!
+  authenticated_system (= 2.2.9)!
   byebug
   coffee-rails (~> 4.0.0)
+  comatose (= 2.0.9)!
   complex_scripts (= 2.2.6)!
   dictionary_integration (= 2.1.2)!
   dynamic_form
@@ -300,7 +307,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
-  mms_engine (= 2.7.7)!
+  mms_engine (= 2.7.8)!
   mysql2
   newrelic_rpm
   open_id_authentication
