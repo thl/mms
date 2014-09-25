@@ -62,7 +62,7 @@ gem 'activeresource', require: 'active_resource'
 
 gem 'passiverecord',              '0.2',          :github => 'ambethia/passiverecord'
 gem 'restful-authentication',     '2.0.0.beta1',  :github => 'raszi/restful-authentication', :branch => 'rails4'
-gem 'comatose',                   '2.0.9',        :github => 'niciliketo/comatose'
+#gem 'comatose',                   '2.0.9',        :github => 'niciliketo/comatose'
 
 gem 'active_resource_extensions', '2.1.4',        :github => 'thl/active_resource_extensions',  :tag => 'v2.1.4' #:path => '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.1.1',        :github => 'thl/attachment_fu_patch',         :tag => 'v2.1.1' #:path => '../engines/attachment_fu_patch'

@@ -5,12 +5,6 @@ GIT
     passiverecord (0.2)
 
 GIT
-  remote: git://github.com/niciliketo/comatose.git
-  revision: 705fede99e0cf92012042e737b492216e0e357f2
-  specs:
-    comatose (2.0.9)
-
-GIT
   remote: git://github.com/raszi/restful-authentication.git
   revision: 0f7d50512bf47a63e53ea05cd5a7b2161732448f
   branch: rails4
@@ -296,7 +290,6 @@ DEPENDENCIES
   authenticated_system (= 2.2.9)!
   byebug
   coffee-rails (~> 4.0.0)
-  comatose (= 2.0.9)!
   complex_scripts (= 2.2.6)!
   dictionary_integration (= 2.1.2)!
   dynamic_form
