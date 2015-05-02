@@ -55,10 +55,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
-  revision: 00ddbd699ec6bda894ab1d409c895e3126676b91
-  tag: v2.1.2
+  revision: 0eb3f7452455e1c4fcd835f7d888f5bb644d21b7
+  tag: v2.1.3
   specs:
-    dictionary_integration (2.1.2)
+    dictionary_integration (2.1.3)
       rails (~> 4.0)
 
 GIT
@@ -291,7 +291,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.0.0)
   complex_scripts (= 2.2.6)!
-  dictionary_integration (= 2.1.2)!
+  dictionary_integration (= 2.1.3)!
   dynamic_form
   globalize
   hpricot
