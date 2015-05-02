@@ -72,9 +72,9 @@ gem 'dictionary_integration',     '2.1.3',        github: 'thl/dictionary_integr
 gem 'interface_utils',            '2.1.9',        github: 'thl/interface_utils',             tag: 'v2.1.9' #path: '../../../thl-legacy/thl/engines/interface_utils'
 #gem 'topical_map_integration',    '3.1.0',        :github: 'thl/topical_map_integration',    tag: 'v3.1.0' #path: '../engines/topical_map_integration'
 gem 'mms_engine',                 '2.9.0',        github: 'thl/mms_engine',                  tag: 'v2.9.0' #path: '../engines/mms_engine'
-gem 'places_integration',         '2.1.3',        github: 'thl/places_integration',          tag: 'v2.1.3' #path: '../engines/places_integration'
+gem 'places_integration',         '2.1.5',        github: 'thl/places_integration',          tag: 'v2.1.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.2',        github: 'thl/proxy_engine',                tag: 'v2.1.2' #path: '../engines/proxy_engine'
-gem 'subjects_integration',       '0.1.5',        github: 'shanti-uva/subjects_integration', tag: 'v0.1.5' #path: '../../shanti/engines/subjects_integration'
+gem 'subjects_integration',       '0.1.6',        github: 'shanti-uva/subjects_integration', tag: 'v0.1.6' #path: '../../shanti/engines/subjects_integration'
 gem 'thl_integration',            '2.2.2',        github: 'thl/thl_integration',             tag: 'v2.2.2' #path: '../engines/thl_integration'
 gem 'universal_navigation',       '2.1.2',        github: 'thl/universal_navigation',        tag: 'v2.1.2' #path: '../engines/universal_navigation'
 
