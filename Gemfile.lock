@@ -63,10 +63,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: eda0b7a77730c70c80391dc7866e0491edb2305f
-  tag: v2.1.8
+  revision: 9b4deb0ba27d31d78735ac5ff9308598e0ba4e7a
+  tag: v2.1.9
   specs:
-    interface_utils (2.1.8)
+    interface_utils (2.1.9)
       rails (~> 4.0)
 
 GIT
@@ -296,7 +296,7 @@ DEPENDENCIES
   globalize
   hpricot
   in_place_editing
-  interface_utils (= 2.1.8)!
+  interface_utils (= 2.1.9)!
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
