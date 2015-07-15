@@ -63,18 +63,18 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 9b4deb0ba27d31d78735ac5ff9308598e0ba4e7a
-  tag: v2.1.9
+  revision: 5564db2bc1e116a08e4876ef22d98ece37c01289
+  tag: v2.1.10
   specs:
-    interface_utils (2.1.9)
+    interface_utils (2.1.10)
       rails (~> 4.0)
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: eb48bde8cc53b55e0348b6dd26586bb55627925b
-  tag: v2.9.0
+  revision: 9a95612c8c2317d1cfca4bb3263ea98ee23ea479
+  tag: v2.9.1
   specs:
-    mms_engine (2.9.0)
+    mms_engine (2.9.1)
       rails (~> 4.0)
       rmagick
 
@@ -231,7 +231,7 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     ref (1.0.5)
-    rmagick (2.14.0)
+    rmagick (2.15.2)
     ruby-openid (2.5.0)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -296,11 +296,11 @@ DEPENDENCIES
   globalize
   hpricot
   in_place_editing
-  interface_utils (= 2.1.9)!
+  interface_utils (= 2.1.10)!
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
-  mms_engine (= 2.9.0)!
+  mms_engine (= 2.9.1)!
   mysql2
   newrelic_rpm
   open_id_authentication
