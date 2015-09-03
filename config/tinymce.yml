@@ -1,0 +1,23 @@
+# Here you can specify default options for TinyMCE across all controllers
+#
+# theme: advanced
+theme: modern
+width: 550px
+height: 220px
+menubar: false
+toolbar:
+    - fullscreen | bold italic underline strikethrough | undo redo | link unlink formatselect code # template
+    - cut copy paste | pastetext paste_word_valid_elements | bullist numlist outdent indent | removeformat charmap | alignleft aligncenter alignright alignjustify
+plugins:
+    - link
+    - code
+    - contextmenu
+    - paste
+    - media
+    - fullscreen
+    - template
+    - noneditable
+    - charmap
+templates:
+    url: /templates/templates.js
+block_formats: Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3;Header 4=h4;Header 5=h5;Header 6=h6

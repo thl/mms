@@ -70,15 +70,6 @@ GIT
       rails (~> 4.0)
 
 GIT
-  remote: git://github.com/thl/mms_engine.git
-  revision: 3979a11cc99d68f91961055dbd3e1f8dd8da439d
-  tag: v2.9.2
-  specs:
-    mms_engine (2.9.2)
-      rails (~> 4.0)
-      rmagick
-
-GIT
   remote: git://github.com/thl/places_integration.git
   revision: 57abea4c5a72da487ff67319425023413f64cbb4
   tag: v2.1.5
@@ -109,6 +100,13 @@ GIT
   specs:
     universal_navigation (2.1.2)
       rails (~> 4.0)
+
+PATH
+  remote: ../engines/mms_engine
+  specs:
+    mms_engine (2.9.3)
+      rails (~> 4.0)
+      rmagick
 
 GEM
   remote: http://rubygems.org/
@@ -300,7 +298,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
-  mms_engine (= 2.9.2)!
+  mms_engine (= 2.9.3)!
   mysql2
   newrelic_rpm
   open_id_authentication
