@@ -7,7 +7,7 @@ height: 220px
 menubar: false
 toolbar:
     - fullscreen | bold italic underline strikethrough | undo redo | link unlink formatselect code # template
-    - cut copy paste | pastetext paste_word_valid_elements | bullist numlist outdent indent | removeformat charmap | alignleft aligncenter alignright alignjustify
+    - cut copy paste pastetext | bullist numlist outdent indent | removeformat charmap | alignleft aligncenter alignright alignjustify
 plugins:
     - link
     - code
