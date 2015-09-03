@@ -70,6 +70,15 @@ GIT
       rails (~> 4.0)
 
 GIT
+  remote: git://github.com/thl/mms_engine.git
+  revision: 9d390796f84fd7c7908ee03642f1353d9befcdad
+  tag: v2.9.3
+  specs:
+    mms_engine (2.9.3)
+      rails (~> 4.0)
+      rmagick
+
+GIT
   remote: git://github.com/thl/places_integration.git
   revision: 57abea4c5a72da487ff67319425023413f64cbb4
   tag: v2.1.5
@@ -100,13 +109,6 @@ GIT
   specs:
     universal_navigation (2.1.2)
       rails (~> 4.0)
-
-PATH
-  remote: ../engines/mms_engine
-  specs:
-    mms_engine (2.9.3)
-      rails (~> 4.0)
-      rmagick
 
 GEM
   remote: http://rubygems.org/
@@ -229,7 +231,7 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     ref (1.0.5)
-    rmagick (2.15.3)
+    rmagick (2.15.4)
     ruby-openid (2.5.0)
     sass (3.2.19)
     sass-rails (4.0.3)
