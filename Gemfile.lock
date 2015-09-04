@@ -21,10 +21,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: bbc43dbcf9c581d2229dc849590ac280929da8a7
-  tag: v2.1.5
+  revision: 554db24e80710348068e4d38e0e72bd66d59c280
+  tag: v2.1.6
   specs:
-    active_resource_extensions (2.1.5)
+    active_resource_extensions (2.1.6)
       activeresource
       rails (~> 4.0)
 
@@ -38,10 +38,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 2c849ff9118dbd3117d9bf8db679c0e06438abd9
-  tag: v2.2.9
+  revision: 8c65d17805b5e01ada8119bdbf5ce69d3bab8366
+  tag: v2.3.3
   specs:
-    authenticated_system (2.2.9)
+    authenticated_system (2.3.3)
       rails (~> 4.0)
 
 GIT
@@ -71,10 +71,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 0049a79c298cadd98da54744019635b0d4bf9e33
-  tag: v2.9.4
+  revision: 2eb327e31e1d976ec52158cda28784962bb256c5
+  tag: v2.9.5
   specs:
-    mms_engine (2.9.4)
+    mms_engine (2.9.5)
       rails (~> 4.0)
       rmagick
 
@@ -280,14 +280,14 @@ PLATFORMS
 DEPENDENCIES
   actionpack-action_caching
   actionpack-page_caching
-  active_resource_extensions (= 2.1.5)!
+  active_resource_extensions (= 2.1.6)!
   activeresource
   acts_as_list
   acts_as_tree
   acts_as_versioned
   annotate
   attachment_fu_patch (= 2.1.2)!
-  authenticated_system (= 2.2.9)!
+  authenticated_system (= 2.3.3)!
   byebug
   coffee-rails (~> 4.0.0)
   complex_scripts (= 2.2.6)!
@@ -300,7 +300,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
-  mms_engine (= 2.9.4)!
+  mms_engine (= 2.9.5)!
   mysql2
   newrelic_rpm
   open_id_authentication
