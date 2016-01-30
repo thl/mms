@@ -71,10 +71,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 75962799fc0e8418626a967363c70f96eb8bc8be
-  tag: v2.9.9
+  revision: d637c5d11b5f620c3e12db2bac773c5c8b869dac
+  tag: v3.0.0
   specs:
-    mms_engine (2.9.9)
+    mms_engine (3.0.0)
       rails (~> 4.0)
       rmagick
 
@@ -300,7 +300,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   memcache-client
-  mms_engine (= 2.9.9)!
+  mms_engine (= 3.0.0)!
   mysql2
   newrelic_rpm
   open_id_authentication
