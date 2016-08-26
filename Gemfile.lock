@@ -83,10 +83,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 0f2557525ad91c002f507c489bc2cf93458ad23f
-  tag: v3.0.7
+  revision: f7b05bce76d60d1c38121528a2cd5311bb2cdc29
+  tag: v3.0.8
   specs:
-    mms_engine (3.0.7)
+    mms_engine (3.0.8)
       acts_as_list
       acts_as_versioned
       annotate
@@ -96,7 +96,7 @@ GIT
       in_place_editing
       jbuilder (~> 2.0)
       memcache-client
-      mysql2
+      mysql2 (= 0.3.18)
       newrelic_rpm
       permalink_fu
       rails (~> 4.1.5)
@@ -332,9 +332,8 @@ DEPENDENCIES
   globalize
   interface_utils (= 2.1.10)!
   jquery-rails
-  mms_engine (= 3.0.7)!
+  mms_engine (= 3.0.8)!
   mms_integration (= 2.2.6)!
-  mysql2 (= 0.3.18)
   open_id_authentication
   passiverecord (= 0.2)!
   places_integration (= 2.1.5)!
