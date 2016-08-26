@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead:
 # gem 'rails', github: 'rails/rails'
+gem 'mysql2'
 # gem 'json'
 
 # Use SCSS for stylesheets

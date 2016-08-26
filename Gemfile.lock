@@ -334,6 +334,7 @@ DEPENDENCIES
   jquery-rails
   mms_engine (= 3.0.7)!
   mms_integration (= 2.2.6)!
+  mysql2
   open_id_authentication
   passiverecord (= 0.2)!
   places_integration (= 2.1.5)!
