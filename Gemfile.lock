@@ -234,7 +234,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.9.0)
     multi_json (1.10.1)
-    mysql2 (0.4.4)
+    mysql2 (0.3.18)
     newrelic_rpm (3.16.2.321)
     open_id_authentication (1.2.0)
       rack-openid (~> 1.3)
@@ -334,7 +334,7 @@ DEPENDENCIES
   jquery-rails
   mms_engine (= 3.0.7)!
   mms_integration (= 2.2.6)!
-  mysql2
+  mysql2 (= 0.3.18)
   open_id_authentication
   passiverecord (= 0.2)!
   places_integration (= 2.1.5)!
