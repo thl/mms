@@ -17,6 +17,7 @@
 *.txt
 config/database.yml
 config/environments/quandu_*.rb
+config/flare.yml
 doc/plugins/*
 public/categories
 public/documents
