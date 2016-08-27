@@ -49,10 +49,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: 8c65d17805b5e01ada8119bdbf5ce69d3bab8366
-  tag: v2.3.3
+  revision: ca2e653f1b017f5cc9a03c4acab027098422e8d0
+  tag: v2.3.4
   specs:
-    authenticated_system (2.3.3)
+    authenticated_system (2.3.4)
       rails (~> 4.0)
 
 GIT
@@ -323,7 +323,7 @@ DEPENDENCIES
   activeresource
   acts_as_tree
   attachment_fu_patch (= 2.1.3)!
-  authenticated_system (= 2.3.3)!
+  authenticated_system (= 2.3.4)!
   byebug
   complex_scripts (= 2.2.7)!
   dictionary_integration (= 2.1.3)!

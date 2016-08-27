@@ -38,7 +38,7 @@ gem 'restful-authentication',     '2.0.0.beta1',  github: 'raszi/restful-authent
 
 gem 'active_resource_extensions', '2.1.7',        github: 'thl/active_resource_extensions',  tag: 'v2.1.7' #path: '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.1.3',        github: 'thl/attachment_fu_patch',         tag: 'v2.1.3' #path: '../engines/attachment_fu_patch'
-gem 'authenticated_system',       '2.3.3',        github: 'thl/authenticated_system',        tag: 'v2.3.3' #path: '../engines/authenticated_system'
+gem 'authenticated_system',       '2.3.4',        github: 'thl/authenticated_system',        tag: 'v2.3.4' #path: '../engines/authenticated_system'
 gem 'complex_scripts',            '2.2.7',        github: 'thl/complex_scripts',             tag: 'v2.2.7' #path: '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.1.3',        github: 'thl/dictionary_integration',      tag: 'v2.1.3' #path: '../engines/dictionary_integration'
 gem 'interface_utils',            '2.1.10',       github: 'thl/interface_utils',             tag: 'v2.1.10' #path: '../../../thl-legacy/thl/engines/interface_utils'
