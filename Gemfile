@@ -22,7 +22,9 @@ gem 'spring',        group: :development
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'hpricot'#, '>= 0.8.6'
 gem 'rack-openid', require: 'rack/openid'
+gem 'will_paginate' #, '~> 3.0'
 gem 'tinymce-rails' #, '3.5.9' # compatible with ruby 1.8.7
 gem 'open_id_authentication'
 gem 'acts_as_tree' #, '0.2.0' # compatible with ruby 1.8.7

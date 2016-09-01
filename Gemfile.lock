@@ -330,6 +330,7 @@ DEPENDENCIES
   dynamic_form
   flare (= 0.0.1)!
   globalize
+  hpricot
   interface_utils (= 2.1.10)!
   jquery-rails
   mms_engine (= 3.0.8)!
@@ -350,6 +351,7 @@ DEPENDENCIES
   thl_integration (= 2.2.4)!
   tinymce-rails
   universal_navigation (= 2.1.2)!
+  will_paginate
 
 BUNDLED WITH
    1.12.5
