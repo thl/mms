@@ -13,10 +13,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/flare.git
-  revision: c28d34623cfbb139dc8618a2ecc81cdbd67f444b
-  tag: v0.1.1
+  revision: 74b583884ae0dbe04d0c946d0f47e4102e263648
+  tag: v0.1.2
   specs:
-    flare (0.1.1)
+    flare (0.1.2)
       rails (~> 4.1.5)
       rsolr
 
@@ -83,10 +83,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: f7b05bce76d60d1c38121528a2cd5311bb2cdc29
-  tag: v3.0.8
+  revision: 0918f12936c656ee189b59a5b73cdd6e7338658b
+  tag: v3.0.9
   specs:
-    mms_engine (3.0.8)
+    mms_engine (3.0.9)
       acts_as_list
       acts_as_versioned
       annotate
@@ -328,12 +328,12 @@ DEPENDENCIES
   complex_scripts (= 2.2.7)!
   dictionary_integration (= 2.1.3)!
   dynamic_form
-  flare (= 0.1.1)!
+  flare (= 0.1.2)!
   globalize
   hpricot
   interface_utils (= 2.1.10)!
   jquery-rails
-  mms_engine (= 3.0.8)!
+  mms_engine (= 3.0.9)!
   mms_integration (= 2.2.7)!
   open_id_authentication
   passiverecord (= 0.2)!
