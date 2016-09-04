@@ -13,10 +13,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/flare.git
-  revision: eec0afe4886ee866254d65bc3ba18018ec993ae4
-  tag: v0.1.0
+  revision: c28d34623cfbb139dc8618a2ecc81cdbd67f444b
+  tag: v0.1.1
   specs:
-    flare (0.1.0)
+    flare (0.1.1)
       rails (~> 4.1.5)
       rsolr
 
@@ -328,7 +328,7 @@ DEPENDENCIES
   complex_scripts (= 2.2.7)!
   dictionary_integration (= 2.1.3)!
   dynamic_form
-  flare (= 0.1.0)!
+  flare (= 0.1.1)!
   globalize
   hpricot
   interface_utils (= 2.1.10)!
