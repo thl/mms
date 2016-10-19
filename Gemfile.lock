@@ -5,6 +5,12 @@ GIT
     passiverecord (0.2)
 
 GIT
+  remote: git://github.com/nexiahome/spawnling.git
+  revision: 422a0aadbc685c17962348468e22e69e18d94500
+  specs:
+    spawnling (2.1.6)
+
+GIT
   remote: git://github.com/raszi/restful-authentication.git
   revision: 0f7d50512bf47a63e53ea05cd5a7b2161732448f
   branch: rails4
@@ -282,7 +288,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
-    spawnling (2.1.6)
     spring (1.1.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -335,6 +340,7 @@ DEPENDENCIES
   jquery-rails
   mms_engine (= 3.1.0)!
   mms_integration (= 2.2.7)!
+  newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
   places_integration (= 2.1.5)!
@@ -345,6 +351,7 @@ DEPENDENCIES
   restful-authentication (= 2.0.0.beta1)!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  spawnling (= 2.1.6)!
   spring
   subjects_integration (= 0.1.6)!
   therubyracer

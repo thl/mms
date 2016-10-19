@@ -26,7 +26,9 @@ gem 'hpricot'#, '>= 0.8.6'
 gem 'rack-openid', require: 'rack/openid'
 gem 'will_paginate' #, '~> 3.0'
 gem 'tinymce-rails' #, '3.5.9' # compatible with ruby 1.8.7
+gem 'newrelic_rpm'
 gem 'open_id_authentication'
+gem 'spawnling', '2.1.6', github: 'nexiahome/spawnling'
 gem 'acts_as_tree' #, '0.2.0' # compatible with ruby 1.8.7
 gem 'dynamic_form'
 gem 'globalize'
