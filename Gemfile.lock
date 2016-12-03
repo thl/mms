@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/flare.git
-  revision: 0b96d0ec3149f0aa1738390b4d63762a2d7efe97
-  tag: v0.1.3
+  revision: 3bc723bac49d774cfada88dc636c43600b64e89e
+  tag: v1.0.0
   specs:
-    flare (0.1.3)
+    flare (1.0.0)
       rails (~> 4.1.5)
       rsolr
 
@@ -89,10 +89,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 3a3901455d21b6e46102c180b6437652e627e5d3
-  tag: v3.1.2
+  revision: 177f9aca3e6b1f942fc4e3aa4a87322d170f7430
+  tag: v3.1.3
   specs:
-    mms_engine (3.1.2)
+    mms_engine (3.1.3)
       acts_as_list
       acts_as_versioned
       annotate
@@ -313,7 +313,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.3)
+    uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     will_paginate (3.1.0)
 
@@ -332,12 +332,12 @@ DEPENDENCIES
   complex_scripts (= 2.2.7)!
   dictionary_integration (= 2.1.3)!
   dynamic_form
-  flare (= 0.1.3)!
+  flare (= 1.0.0)!
   globalize
   hpricot
   interface_utils (= 2.1.11)!
   jquery-rails
-  mms_engine (= 3.1.2)!
+  mms_engine (= 3.1.3)!
   mms_integration (= 2.2.7)!
   newrelic_rpm
   open_id_authentication
