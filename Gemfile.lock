@@ -113,10 +113,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_integration.git
-  revision: db9124bc13abbcba84e0a9196b9b81219c0dcd92
-  tag: v2.3.1
+  revision: 597dcd6bd723d0a03c617ee685be5b4ea711aa29
+  tag: v2.3.2
   specs:
-    mms_integration (2.3.1)
+    mms_integration (2.3.2)
       rails (~> 4.0)
 
 GIT
@@ -338,7 +338,7 @@ DEPENDENCIES
   interface_utils (= 2.1.11)!
   jquery-rails
   mms_engine (= 3.1.6)!
-  mms_integration (= 2.3.1)!
+  mms_integration (= 2.3.2)!
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
