@@ -89,10 +89,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 4276cd026aa7fe36c88333e3902925b22af109e8
-  tag: v3.1.5
+  revision: f8499e109d6da802747e64783e779060d4a5298e
+  tag: v3.1.6
   specs:
-    mms_engine (3.1.5)
+    mms_engine (3.1.6)
       acts_as_list
       acts_as_versioned
       annotate
@@ -211,7 +211,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.11.1)
+    coffee-script-source (1.12.2)
     columnize (0.8.9)
     debugger-linecache (1.2.0)
     dynamic_form (1.1.4)
@@ -337,7 +337,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.11)!
   jquery-rails
-  mms_engine (= 3.1.5)!
+  mms_engine (= 3.1.6)!
   mms_integration (= 2.3.1)!
   newrelic_rpm
   open_id_authentication
