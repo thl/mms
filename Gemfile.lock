@@ -89,10 +89,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 96a8eecfbabcebef98173221e1ec9fad39573224
-  tag: v3.1.8
+  revision: 2936f295a17af2136843281597a1f2683c3fd090
+  tag: v3.1.9
   specs:
-    mms_engine (3.1.8)
+    mms_engine (3.1.9)
       acts_as_list
       acts_as_versioned
       annotate
@@ -337,7 +337,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.11)!
   jquery-rails
-  mms_engine (= 3.1.8)!
+  mms_engine (= 3.1.9)!
   mms_integration (= 2.3.2)!
   newrelic_rpm
   open_id_authentication
