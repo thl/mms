@@ -89,10 +89,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 07af2f4fd00531020be1a53445ae5a5fce71cf26
-  tag: v3.1.7
+  revision: 96a8eecfbabcebef98173221e1ec9fad39573224
+  tag: v3.1.8
   specs:
-    mms_engine (3.1.7)
+    mms_engine (3.1.8)
       acts_as_list
       acts_as_versioned
       annotate
@@ -189,7 +189,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    acts_as_list (0.9.3)
+    acts_as_list (0.9.5)
       activerecord (>= 3.0)
     acts_as_tree (2.0.0)
       activerecord (>= 3.0.0)
@@ -310,10 +310,10 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
-    turbolinks-source (5.0.0)
+    turbolinks-source (5.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.7)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     will_paginate (3.1.0)
 
@@ -337,7 +337,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.11)!
   jquery-rails
-  mms_engine (= 3.1.7)!
+  mms_engine (= 3.1.8)!
   mms_integration (= 2.3.2)!
   newrelic_rpm
   open_id_authentication
