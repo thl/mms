@@ -81,10 +81,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 7621128b799f1f413d60ee3d80e78bac1ce4bf0a
-  tag: v2.1.11
+  revision: d3186e8a7cdda1f345f9da69f15cfe431ccb2130
+  tag: v2.1.12
   specs:
-    interface_utils (2.1.11)
+    interface_utils (2.1.12)
       rails (~> 4.0)
 
 GIT
@@ -231,7 +231,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    libv8 (3.16.14.7)
+    libv8 (3.16.14.19)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -272,7 +272,7 @@ GEM
     rake (11.3.0)
     rdoc (4.1.2)
       json (~> 1.4)
-    ref (1.0.5)
+    ref (2.0.0)
     rmagick (2.15.4)
     rsolr (1.1.2)
       builder (>= 2.1.2)
@@ -297,8 +297,8 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
       ref
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -335,7 +335,7 @@ DEPENDENCIES
   flare (= 1.0.1)!
   globalize
   hpricot
-  interface_utils (= 2.1.11)!
+  interface_utils (= 2.1.12)!
   jquery-rails
   mms_engine (= 3.1.9)!
   mms_integration (= 2.3.2)!
