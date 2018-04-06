@@ -19,30 +19,32 @@ GIT
 
 GIT
   remote: git://github.com/shanti-uva/flare.git
-  revision: 8519652ec2b109f926085f142a477f834954549c
-  tag: v1.0.1
+  revision: 6d6a7e117a176f8f5c743c65c15241b35547922e
+  tag: v1.2.1
   specs:
-    flare (1.0.1)
-      rails (~> 4.1.5)
-      rsolr
+    flare (1.2.1)
+      faraday (~> 0.11.0)
+      rails (>= 4.0)
+      rsolr (~> 2.0.0.pre3)
 
 GIT
   remote: git://github.com/shanti-uva/subjects_integration.git
-  revision: be82890eec0fd5d0f846bf68c2d148c21d200b35
-  tag: v0.1.6
+  revision: 80ec506bc1ecb74f22b85f8f06f4fdc48a3a36e3
+  tag: v0.2.2
   specs:
-    subjects_integration (0.1.6)
-      rails (~> 4.0)
+    subjects_integration (0.2.2)
+      pg (~> 0.15)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/active_resource_extensions.git
-  revision: a230f5f6654b0cdfa1a434498baf441b66805128
-  tag: v2.1.7
+  revision: ba098c7939d19c04bb8e4d5fe14610fe0bc76073
+  tag: v2.2.0
   specs:
-    active_resource_extensions (2.1.7)
+    active_resource_extensions (2.2.0)
       activeresource
       hpricot
-      rails (~> 4.0)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/attachment_fu_patch.git
@@ -55,21 +57,21 @@ GIT
 
 GIT
   remote: git://github.com/thl/authenticated_system.git
-  revision: ca2e653f1b017f5cc9a03c4acab027098422e8d0
-  tag: v2.3.4
+  revision: a2cf08808e67a71c8d53c6fc5ceca837936a620b
+  tag: v2.3.8
   specs:
-    authenticated_system (2.3.4)
-      rails (~> 4.0)
+    authenticated_system (2.3.8)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/complex_scripts.git
-  revision: f718b855966923a691bdd65984bdf36873ceebd2
-  tag: v2.2.7
+  revision: 2c6ceed8418f986f54533adda1e582b47fba6696
+  tag: v3.0.5
   specs:
-    complex_scripts (2.2.7)
+    complex_scripts (3.0.5)
       hpricot
       passiverecord (= 0.2)
-      rails (~> 4.0)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
@@ -89,10 +91,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 4b1696a61dfb0a599cb0cff138167a7a867afee7
-  tag: v3.2.0
+  revision: 1debd61c53cadb9b1517002ff6f66892a58d9cad
+  tag: v3.2.1
   specs:
-    mms_engine (3.2.0)
+    mms_engine (3.2.1)
       acts_as_list
       acts_as_versioned
       annotate
@@ -113,27 +115,27 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_integration.git
-  revision: 597dcd6bd723d0a03c617ee685be5b4ea711aa29
-  tag: v2.3.2
+  revision: e3a01cc96d606f568e587dbab71d1a5f91323b55
+  tag: v2.3.6
   specs:
-    mms_integration (2.3.2)
-      rails (~> 4.0)
+    mms_integration (2.3.6)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/places_integration.git
-  revision: 57abea4c5a72da487ff67319425023413f64cbb4
-  tag: v2.1.5
+  revision: e9305ee67301145dd5c08a033ffdd07458c8ec1c
+  tag: v2.1.9
   specs:
-    places_integration (2.1.5)
-      rails (~> 4.0)
+    places_integration (2.1.9)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/proxy_engine.git
-  revision: 49d536e60bdfa648edba75959c43c79cba70ecf9
-  tag: v2.1.2
+  revision: 7b032964ef34b578162210d352b197da86fb53cc
+  tag: v2.1.6
   specs:
-    proxy_engine (2.1.2)
-      rails (~> 4.0)
+    proxy_engine (2.1.6)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/thl/thl_integration.git
@@ -217,6 +219,8 @@ GEM
     dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
     globalize (4.0.2)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
@@ -239,11 +243,13 @@ GEM
     mime-types (1.25.1)
     minitest (5.9.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     mysql2 (0.3.18)
     newrelic_rpm (3.16.2.321)
     open_id_authentication (1.2.0)
       rack-openid (~> 1.3)
     permalink_fu (1.0.0)
+    pg (0.21.0)
     polyglot (0.3.5)
     pothoven-attachment_fu (3.2.13)
     rack (1.5.2)
@@ -274,8 +280,9 @@ GEM
       json (~> 1.4)
     ref (2.0.0)
     rmagick (2.15.4)
-    rsolr (1.1.2)
+    rsolr (2.0.2)
       builder (>= 2.1.2)
+      faraday
     ruby-openid (2.5.0)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -323,28 +330,28 @@ PLATFORMS
 DEPENDENCIES
   actionpack-action_caching
   actionpack-page_caching
-  active_resource_extensions (= 2.1.7)!
+  active_resource_extensions (= 2.2.0)!
   activeresource
   acts_as_tree
   attachment_fu_patch (= 2.1.3)!
-  authenticated_system (= 2.3.4)!
+  authenticated_system (= 2.3.8)!
   byebug
-  complex_scripts (= 2.2.7)!
+  complex_scripts (= 3.0.5)!
   dictionary_integration (= 2.1.3)!
   dynamic_form
-  flare (= 1.0.1)!
+  flare (= 1.2.1)!
   globalize
   hpricot
   interface_utils (= 2.1.12)!
   jquery-rails
-  mms_engine (= 3.2.0)!
-  mms_integration (= 2.3.2)!
+  mms_engine (= 3.2.1)!
+  mms_integration (= 2.3.6)!
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
-  places_integration (= 2.1.5)!
+  places_integration (= 2.1.9)!
   pothoven-attachment_fu
-  proxy_engine (= 2.1.2)!
+  proxy_engine (= 2.1.6)!
   rack-openid
   rails-observers
   restful-authentication (= 2.0.0.beta1)!
@@ -352,7 +359,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spawnling (= 2.1.6)!
   spring
-  subjects_integration (= 0.1.6)!
+  subjects_integration (= 0.2.2)!
   therubyracer
   thl_integration (= 2.2.4)!
   tinymce-rails
