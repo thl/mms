@@ -91,10 +91,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 908c1e1c028a3393751ce1d28ff39fb0d900fff2
-  tag: v3.2.3
+  revision: f365e2241b6e93ae3cf5e459c38296c2b3f31d16
+  tag: v3.2.4
   specs:
-    mms_engine (3.2.3)
+    mms_engine (3.2.4)
       acts_as_list
       acts_as_versioned
       annotate (= 2.7.2)
@@ -108,7 +108,7 @@ GIT
       newrelic_rpm
       permalink_fu
       rails (= 4.1.14)
-      rmagick (~> 2.16)
+      rmagick (= 2.15.4)
       turbolinks
       uglifier (>= 1.3.0)
       will_paginate
@@ -271,7 +271,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.3.3)
     rdoc (4.3.0)
-    rmagick (2.16.0)
+    rmagick (2.15.4)
     rsolr (2.0.2)
       builder (>= 2.1.2)
       faraday
@@ -329,7 +329,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.12)!
   jquery-rails
-  mms_engine (= 3.2.3)!
+  mms_engine (= 3.2.4)!
   mms_integration (= 2.3.6)!
   newrelic_rpm
   open_id_authentication
