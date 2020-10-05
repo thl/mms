@@ -50,9 +50,9 @@ gem 'flare',                      '1.2.3',        github: 'shanti-uva/flare',   
 #gem 'topical_map_integration',    '3.1.0',        :github: 'thl/topical_map_integration',    tag: 'v3.1.0' #path: '../engines/topical_map_integration'
 gem 'mms_engine',                 '3.2.4',        github: 'thl/mms_engine',                  tag: 'v3.2.4' #path: '../engines/mms_engine'
 gem 'mms_integration',            '2.3.6',        github: 'thl/mms_integration',             tag: 'v2.3.6' #path: '../../thl/engines/mms_integration'
-gem 'places_integration',         '2.1.9',        github: 'thl/places_integration',          tag: 'v2.1.9' #path: '../engines/places_integration'
+gem 'places_integration',         '2.2.5',        github: 'thl/places_integration',          tag: 'v2.2.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.6',        github: 'thl/proxy_engine',                tag: 'v2.1.6' #path: '../engines/proxy_engine'
-gem 'subjects_integration',       '0.2.2',        github: 'shanti-uva/subjects_integration', tag: 'v0.2.2' #path: '../../shanti/engines/subjects_integration'
+gem 'subjects_integration',       '0.2.9',        github: 'shanti-uva/subjects_integration', tag: 'v0.2.9' #path: '../../shanti/engines/subjects_integration'
 gem 'thl_integration',            '2.2.4',        github: 'thl/thl_integration',             tag: 'v2.2.4' #path: '../engines/thl_integration'
 gem 'universal_navigation',       '2.1.2',        github: 'thl/universal_navigation',        tag: 'v2.1.2' #path: '../engines/universal_navigation'
 
