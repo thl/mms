@@ -138,10 +138,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: eda7b5e2820a76d3958682b99a03f7b9919e3bd6
-  tag: v2.2.4
+  revision: b0600f3c2c30ba2a4ffccda7767802f79b5bef9b
+  tag: v2.2.6
   specs:
-    thl_integration (2.2.4)
+    thl_integration (2.2.6)
       hpricot
       rails (~> 4.0)
 
@@ -343,10 +343,10 @@ DEPENDENCIES
   spawnling (= 2.1.6)!
   spring
   subjects_integration (= 0.2.9)!
-  thl_integration (= 2.2.4)!
+  thl_integration (= 2.2.6)!
   tinymce-rails
   universal_navigation (= 2.1.2)!
   will_paginate
 
 BUNDLED WITH
-   1.13.3
+   1.17.3

@@ -53,7 +53,7 @@ gem 'mms_integration',            '2.4.2',        github: 'thl/mms_integration',
 gem 'places_integration',         '2.2.5',        github: 'thl/places_integration',          tag: 'v2.2.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.6',        github: 'thl/proxy_engine',                tag: 'v2.1.6' #path: '../engines/proxy_engine'
 gem 'subjects_integration',       '0.2.9',        github: 'shanti-uva/subjects_integration', tag: 'v0.2.9' #path: '../../shanti/engines/subjects_integration'
-gem 'thl_integration',            '2.2.4',        github: 'thl/thl_integration',             tag: 'v2.2.4' #path: '../engines/thl_integration'
+gem 'thl_integration',            '2.2.6',        github: 'thl/thl_integration',             tag: 'v2.2.6' #path: '../engines/thl_integration'
 gem 'universal_navigation',       '2.1.2',        github: 'thl/universal_navigation',        tag: 'v2.1.2' #path: '../engines/universal_navigation'
 
 # CHECK TO SEE IF I NEED TO DELETE LATER:
