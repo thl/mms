@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: d3186e8a7cdda1f345f9da69f15cfe431ccb2130
-  tag: v2.1.12
+  revision: 92582388007d6d58b649df07b3ea3a47781f0b60
+  tag: v2.1.13
   specs:
-    interface_utils (2.1.12)
+    interface_utils (2.1.13)
       rails (~> 4.0)
 
 GIT
@@ -114,10 +114,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_integration.git
-  revision: e3a01cc96d606f568e587dbab71d1a5f91323b55
-  tag: v2.3.6
+  revision: 143e158536934b12ac496f5bf1db8eefbdda3be3
+  tag: v2.4.2
   specs:
-    mms_integration (2.3.6)
+    mms_integration (2.4.2)
       rails (>= 4.0)
 
 GIT
@@ -325,10 +325,10 @@ DEPENDENCIES
   flare (= 1.2.3)!
   globalize
   hpricot
-  interface_utils (= 2.1.12)!
+  interface_utils (= 2.1.13)!
   jquery-rails
   mms_engine (= 3.2.4)!
-  mms_integration (= 2.3.6)!
+  mms_integration (= 2.4.2)!
   newrelic_rpm
   open_id_authentication
   passiverecord (= 0.2)!
