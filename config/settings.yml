@@ -1,1 +1,2 @@
-enable.localhost: 'no'
+enable.localhost: 'yes'
+server.environment: 'local'

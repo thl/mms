@@ -40,7 +40,7 @@ gem 'passiverecord',              '0.2',          github: 'ambethia/passiverecor
 gem 'restful-authentication',     '2.0.0.beta1',  github: 'raszi/restful-authentication', branch: 'rails4'
 #gem 'comatose',                   '2.0.9',        github: 'niciliketo/comatose'
 
-gem 'active_resource_extensions', '2.2.0',        github: 'thl/active_resource_extensions',  tag: 'v2.2.0' #path: '../engines/active_resource_extensions'
+gem 'active_resource_extensions', '2.2.4',        github: 'thl/active_resource_extensions',  tag: 'v2.2.4' #path: '../engines/active_resource_extensions'
 gem 'attachment_fu_patch',        '2.1.3',        github: 'thl/attachment_fu_patch',         tag: 'v2.1.3' #path: '../engines/attachment_fu_patch'
 gem 'authenticated_system',       '2.4.0',        github: 'thl/authenticated_system',        tag: 'v2.4.0' #path: '../engines/authenticated_system'
 gem 'complex_scripts',            '2.3.1',        github: 'thl/complex_scripts',             tag: 'v2.3.1' #path: '../engines/complex_scripts'
@@ -48,7 +48,7 @@ gem 'dictionary_integration',     '2.1.3',        github: 'thl/dictionary_integr
 gem 'interface_utils',            '2.1.13',       github: 'thl/interface_utils',             tag: 'v2.1.13' #path: '../../../thl-legacy/thl/engines/interface_utils'
 gem 'flare',                      '1.2.3',        github: 'shanti-uva/flare',                tag: 'v1.2.3' #path: '../../shanti/engines/flare'
 #gem 'topical_map_integration',    '3.1.0',        :github: 'thl/topical_map_integration',    tag: 'v3.1.0' #path: '../engines/topical_map_integration'
-gem 'mms_engine',                 '3.2.4',        github: 'thl/mms_engine',                  tag: 'v3.2.4' #path: '../engines/mms_engine'
+gem 'mms_engine',                 '3.2.5',        github: 'thl/mms_engine',                  tag: 'v3.2.5' #path: '../engines/mms_engine'
 gem 'mms_integration',            '2.4.2',        github: 'thl/mms_integration',             tag: 'v2.4.2' #path: '../../thl/engines/mms_integration'
 gem 'places_integration',         '2.2.5',        github: 'thl/places_integration',          tag: 'v2.2.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.6',        github: 'thl/proxy_engine',                tag: 'v2.1.6' #path: '../engines/proxy_engine'
