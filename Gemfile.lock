@@ -47,10 +47,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/attachment_fu_patch.git
-  revision: 67e9bab95eea8269c26b30ff44d9ce33b9d8d701
-  tag: v2.1.3
+  revision: e417b81f249520d3c7534d179b3f9c6bf29f47df
+  tag: v2.1.4
   specs:
-    attachment_fu_patch (2.1.3)
+    attachment_fu_patch (2.1.4)
       rails (~> 4.1.5)
       rmagick
 
@@ -74,10 +74,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/dictionary_integration.git
-  revision: 0eb3f7452455e1c4fcd835f7d888f5bb644d21b7
-  tag: v2.1.3
+  revision: 6aa44588bf78a2298c5f561e6a93a38cc722fd15
+  tag: v2.1.4
   specs:
-    dictionary_integration (2.1.3)
+    dictionary_integration (2.1.4)
       rails (~> 4.0)
 
 GIT
@@ -90,10 +90,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/mms_engine.git
-  revision: 6ac61daf083b53a7bcf715ca1e24be1e0a3bca1d
-  tag: v3.2.5
+  revision: ab6b3c0d7af9642e16564580ff71fca561a672a0
+  tag: v3.2.6
   specs:
-    mms_engine (3.2.5)
+    mms_engine (3.2.6)
       acts_as_list
       acts_as_versioned
       annotate (= 2.7.2)
@@ -138,10 +138,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/thl_integration.git
-  revision: b0600f3c2c30ba2a4ffccda7767802f79b5bef9b
-  tag: v2.2.6
+  revision: 80b3fe15551d04ba9b8df28c4b9343a628bcde06
+  tag: v2.2.7
   specs:
-    thl_integration (2.2.6)
+    thl_integration (2.2.7)
       hpricot
       rails (~> 4.0)
 
@@ -213,7 +213,7 @@ GEM
     concurrent-ruby (1.1.5)
     dynamic_form (1.1.4)
     erubis (2.7.0)
-    execjs (2.7.0)
+    execjs (2.8.1)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     globalize (4.0.3)
@@ -316,18 +316,18 @@ DEPENDENCIES
   active_resource_extensions (= 2.2.4)!
   activeresource
   acts_as_tree
-  attachment_fu_patch (= 2.1.3)!
+  attachment_fu_patch (= 2.1.4)!
   authenticated_system (= 2.4.0)!
   byebug
   complex_scripts (= 2.3.1)!
-  dictionary_integration (= 2.1.3)!
+  dictionary_integration (= 2.1.4)!
   dynamic_form
   flare (= 1.2.3)!
   globalize
   hpricot
   interface_utils (= 2.1.13)!
   jquery-rails
-  mms_engine (= 3.2.5)!
+  mms_engine (= 3.2.6)!
   mms_integration (= 2.4.2)!
   newrelic_rpm
   open_id_authentication
@@ -343,7 +343,7 @@ DEPENDENCIES
   spawnling (= 2.1.6)!
   spring
   subjects_integration (= 0.2.9)!
-  thl_integration (= 2.2.6)!
+  thl_integration (= 2.2.7)!
   tinymce-rails
   universal_navigation (= 2.1.2)!
   will_paginate
