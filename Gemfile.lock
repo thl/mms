@@ -82,10 +82,10 @@ GIT
 
 GIT
   remote: git://github.com/thl/interface_utils.git
-  revision: 92582388007d6d58b649df07b3ea3a47781f0b60
-  tag: v2.1.13
+  revision: c92c27faa31ea3d8ad169732a56cbc487996fcc5
+  tag: v2.1.14
   specs:
-    interface_utils (2.1.13)
+    interface_utils (2.1.14)
       rails (~> 4.0)
 
 GIT
@@ -325,7 +325,7 @@ DEPENDENCIES
   flare (= 1.2.3)!
   globalize
   hpricot
-  interface_utils (= 2.1.13)!
+  interface_utils (= 2.1.14)!
   jquery-rails
   mms_engine (= 3.2.7)!
   mms_integration (= 2.4.2)!
