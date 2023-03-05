@@ -15,9 +15,8 @@
 *.tmproj
 *.csv
 *.txt
-config/database.yml
+config/*.yml
 config/environments/quandu_*.rb
-config/flare.yml
 doc/plugins/*
 public/categories
 public/documents
