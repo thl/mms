@@ -46,15 +46,6 @@ GIT
       rails (>= 4.0)
 
 GIT
-  remote: git://github.com/thl/attachment_fu_patch.git
-  revision: e417b81f249520d3c7534d179b3f9c6bf29f47df
-  tag: v2.1.4
-  specs:
-    attachment_fu_patch (2.1.4)
-      rails (~> 4.1.5)
-      rmagick
-
-GIT
   remote: git://github.com/thl/authenticated_system.git
   revision: 00206c6cb528f1574234e6034cc1debc45ec58e7
   tag: v2.4.0
@@ -71,46 +62,6 @@ GIT
       hpricot
       passiverecord (= 0.2)
       rails (>= 4.0)
-
-GIT
-  remote: git://github.com/thl/dictionary_integration.git
-  revision: 6aa44588bf78a2298c5f561e6a93a38cc722fd15
-  tag: v2.1.4
-  specs:
-    dictionary_integration (2.1.4)
-      rails (~> 4.0)
-
-GIT
-  remote: git://github.com/thl/interface_utils.git
-  revision: c92c27faa31ea3d8ad169732a56cbc487996fcc5
-  tag: v2.1.14
-  specs:
-    interface_utils (2.1.14)
-      rails (~> 4.0)
-
-GIT
-  remote: git://github.com/thl/mms_engine.git
-  revision: 9afd3069cd5ec50abe8f7457fb74c700f6ae6cfd
-  tag: v3.2.7
-  specs:
-    mms_engine (3.2.7)
-      acts_as_list
-      acts_as_versioned
-      annotate (= 2.7.2)
-      coffee-rails (~> 4.0.0)
-      globalize
-      hpricot
-      in_place_editing
-      jbuilder (~> 2.0)
-      memcache-client
-      mysql2 (= 0.3.18)
-      newrelic_rpm
-      permalink_fu
-      rails (= 4.1.14)
-      rmagick (= 2.15.4)
-      turbolinks
-      uglifier (>= 1.3.0)
-      will_paginate
 
 GIT
   remote: git://github.com/thl/mms_integration.git
@@ -137,20 +88,69 @@ GIT
       rails (>= 4.0)
 
 GIT
-  remote: git://github.com/thl/thl_integration.git
-  revision: 80b3fe15551d04ba9b8df28c4b9343a628bcde06
-  tag: v2.2.7
-  specs:
-    thl_integration (2.2.7)
-      hpricot
-      rails (~> 4.0)
-
-GIT
   remote: git://github.com/thl/universal_navigation.git
   revision: d35f43d174d2dc7d9431d9dfe1f094086f738461
   tag: v2.1.2
   specs:
     universal_navigation (2.1.2)
+      rails (~> 4.0)
+
+GIT
+  remote: http://github.com/thl/attachment_fu_patch
+  revision: e417b81f249520d3c7534d179b3f9c6bf29f47df
+  tag: v2.1.4
+  specs:
+    attachment_fu_patch (2.1.4)
+      rails (~> 4.1.5)
+      rmagick
+
+GIT
+  remote: http://github.com/thl/dictionary_integration
+  revision: 6aa44588bf78a2298c5f561e6a93a38cc722fd15
+  tag: v2.1.4
+  specs:
+    dictionary_integration (2.1.4)
+      rails (~> 4.0)
+
+GIT
+  remote: http://github.com/thl/interface_utils
+  revision: c92c27faa31ea3d8ad169732a56cbc487996fcc5
+  tag: v2.1.14
+  specs:
+    interface_utils (2.1.14)
+      rails (~> 4.0)
+
+GIT
+  remote: http://github.com/thl/mms_engine
+  revision: 3314d7ead26fa64ed367008d55e673774bedd13d
+  tag: v3.2.8
+  specs:
+    mms_engine (3.2.8)
+      acts_as_list
+      acts_as_versioned
+      annotate (= 2.7.2)
+      coffee-rails (~> 4.0.0)
+      globalize
+      hpricot
+      in_place_editing
+      jbuilder (~> 2.0)
+      memcache-client
+      mysql2 (= 0.3.18)
+      newrelic_rpm
+      permalink_fu
+      rails (= 4.1.14)
+      rmagick (= 2.15.4)
+      turbolinks
+      uglifier (>= 1.3.0)
+      will_paginate
+
+GIT
+  remote: http://github.com/thl/thl_integration
+  revision: 80b3fe15551d04ba9b8df28c4b9343a628bcde06
+  tag: v2.2.7
+  specs:
+    thl_integration (2.2.7)
+      hpricot
       rails (~> 4.0)
 
 GEM
@@ -327,7 +327,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.14)!
   jquery-rails
-  mms_engine (= 3.2.7)!
+  mms_engine (= 3.2.8)!
   mms_integration (= 2.4.2)!
   newrelic_rpm (= 7.2.0)
   open_id_authentication
