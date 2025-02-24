@@ -122,10 +122,10 @@ GIT
 
 GIT
   remote: http://github.com/thl/mms_engine
-  revision: 813ffce60b260f37a393178eb94b0a55213f3408
-  tag: v3.2.9
+  revision: 8619b43bffc45dd4d764d839f43e56a0c476a09e
+  tag: v3.3.0
   specs:
-    mms_engine (3.2.9)
+    mms_engine (3.3.0)
       acts_as_list
       acts_as_versioned
       annotate (= 2.7.2)
@@ -322,12 +322,13 @@ DEPENDENCIES
   complex_scripts (= 2.3.1)!
   dictionary_integration (= 2.1.4)!
   dynamic_form
+  execjs (= 2.8.1)
   flare (= 1.2.3)!
   globalize
   hpricot
   interface_utils (= 2.1.14)!
   jquery-rails
-  mms_engine (= 3.2.9)!
+  mms_engine (= 3.3.0)!
   mms_integration (= 2.4.2)!
   newrelic_rpm (= 7.2.0)
   open_id_authentication
@@ -345,6 +346,7 @@ DEPENDENCIES
   subjects_integration (= 0.2.9)!
   thl_integration (= 2.2.8)!
   tinymce-rails
+  uglifier (= 4.2.0)
   universal_navigation (= 2.1.2)!
   will_paginate
 

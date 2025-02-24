@@ -12,6 +12,8 @@ gem 'sass-rails', '~> 4.0.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'execjs', '2.8.1'
+gem 'uglifier', '4.2.0'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -48,7 +50,7 @@ gem 'dictionary_integration',     '2.1.4',        git: 'http://github.com/thl/di
 gem 'interface_utils',            '2.1.14',       git: 'http://github.com/thl/interface_utils',             tag: 'v2.1.14' #path: '../../../thl-legacy/thl/engines/interface_utils'
 gem 'flare',                      '1.2.3',        github: 'shanti-uva/flare',                tag: 'v1.2.3' #path: '../../../thl-legacy/shanti/engines/flare'
 #gem 'topical_map_integration',    '3.1.0',        :github: 'thl/topical_map_integration',    tag: 'v3.1.0' #path: '../engines/tagopical_map_integration'
-gem 'mms_engine',                 '3.2.9',        git: 'http://github.com/thl/mms_engine', tag: 'v3.2.9' #path: '../engines/mms_engine'
+gem 'mms_engine',                 '3.3.0',        git: 'http://github.com/thl/mms_engine', tag: 'v3.3.0' #path: '../engines/mms_engine'
 gem 'mms_integration',            '2.4.2',        github: 'thl/mms_integration',             tag: 'v2.4.2' #path: '../../thl/engines/mms_integration'
 gem 'places_integration',         '2.2.5',        github: 'thl/places_integration',          tag: 'v2.2.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.6',        github: 'thl/proxy_engine',                tag: 'v2.1.6' #path: '../engines/proxy_engine'
