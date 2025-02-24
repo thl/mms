@@ -46,14 +46,14 @@ gem 'authenticated_system',       '2.4.0',        github: 'thl/authenticated_sys
 gem 'complex_scripts',            '2.3.1',        github: 'thl/complex_scripts',             tag: 'v2.3.1' #path: '../engines/complex_scripts'
 gem 'dictionary_integration',     '2.1.4',        git: 'http://github.com/thl/dictionary_integration',      tag: 'v2.1.4' #path: '../engines/dictionary_integration'
 gem 'interface_utils',            '2.1.14',       git: 'http://github.com/thl/interface_utils',             tag: 'v2.1.14' #path: '../../../thl-legacy/thl/engines/interface_utils'
-gem 'flare',                      '1.2.3',        github: 'shanti-uva/flare',                tag: 'v1.2.3' #path: '../../shanti/engines/flare'
+gem 'flare',                      '1.2.3',        github: 'shanti-uva/flare',                tag: 'v1.2.3' #path: '../../../thl-legacy/shanti/engines/flare'
 #gem 'topical_map_integration',    '3.1.0',        :github: 'thl/topical_map_integration',    tag: 'v3.1.0' #path: '../engines/tagopical_map_integration'
-gem 'mms_engine',                 '3.2.8',        git: 'http://github.com/thl/mms_engine', tag: 'v3.2.8' #path: '../engines/mms_engine'
+gem 'mms_engine',                 '3.2.9',        git: 'http://github.com/thl/mms_engine', tag: 'v3.2.9' #path: '../engines/mms_engine'
 gem 'mms_integration',            '2.4.2',        github: 'thl/mms_integration',             tag: 'v2.4.2' #path: '../../thl/engines/mms_integration'
 gem 'places_integration',         '2.2.5',        github: 'thl/places_integration',          tag: 'v2.2.5' #path: '../engines/places_integration'
 gem 'proxy_engine',               '2.1.6',        github: 'thl/proxy_engine',                tag: 'v2.1.6' #path: '../engines/proxy_engine'
 gem 'subjects_integration',       '0.2.9',        github: 'shanti-uva/subjects_integration', tag: 'v0.2.9' #path: '../../shanti/engines/subjects_integration'
-gem 'thl_integration',            '2.2.7',        git: 'http://github.com/thl/thl_integration',             tag: 'v2.2.7' #path: '../engines/thl_integration'
+gem 'thl_integration',            '2.2.8',        git: 'http://github.com/thl/thl_integration',             tag: 'v2.2.8' #path: '../engines/thl_integration'
 gem 'universal_navigation',       '2.1.2',        github: 'thl/universal_navigation',        tag: 'v2.1.2' #path: '../../../thl-legacy/thl/engines/universal_navigation'
 
 # CHECK TO SEE IF I NEED TO DELETE LATER:

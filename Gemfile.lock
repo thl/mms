@@ -122,10 +122,10 @@ GIT
 
 GIT
   remote: http://github.com/thl/mms_engine
-  revision: 3314d7ead26fa64ed367008d55e673774bedd13d
-  tag: v3.2.8
+  revision: 813ffce60b260f37a393178eb94b0a55213f3408
+  tag: v3.2.9
   specs:
-    mms_engine (3.2.8)
+    mms_engine (3.2.9)
       acts_as_list
       acts_as_versioned
       annotate (= 2.7.2)
@@ -146,10 +146,10 @@ GIT
 
 GIT
   remote: http://github.com/thl/thl_integration
-  revision: 80b3fe15551d04ba9b8df28c4b9343a628bcde06
-  tag: v2.2.7
+  revision: e003bc83215218f5917d26bedd8cb26d7f5af191
+  tag: v2.2.8
   specs:
-    thl_integration (2.2.7)
+    thl_integration (2.2.8)
       hpricot
       rails (~> 4.0)
 
@@ -327,7 +327,7 @@ DEPENDENCIES
   hpricot
   interface_utils (= 2.1.14)!
   jquery-rails
-  mms_engine (= 3.2.8)!
+  mms_engine (= 3.2.9)!
   mms_integration (= 2.4.2)!
   newrelic_rpm (= 7.2.0)
   open_id_authentication
@@ -343,7 +343,7 @@ DEPENDENCIES
   spawnling (= 2.1.6)!
   spring
   subjects_integration (= 0.2.9)!
-  thl_integration (= 2.2.7)!
+  thl_integration (= 2.2.8)!
   tinymce-rails
   universal_navigation (= 2.1.2)!
   will_paginate

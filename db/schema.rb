@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220902172437) do
+ActiveRecord::Schema.define(version: 20250224004250) do
 
   create_table "administrative_unit_translations", force: true do |t|
     t.integer  "administrative_unit_id", null: false
@@ -261,6 +261,17 @@ ActiveRecord::Schema.define(version: 20220902172437) do
   end
 
   add_index "grammatical_classes", ["title"], name: "index_grammatical_classes_on_title", unique: true, using: :btree
+
+  create_table "iiif_images", force: true do |t|
+    t.integer  "picture_id", null: false
+    t.text     "shanti_url", null: false
+    t.string   "api_url",    null: false
+    t.string   "uid",        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "iiif_images", ["picture_id"], name: "index_iiif_images_on_picture_id", using: :btree
 
   create_table "images", force: true do |t|
     t.string  "content_type"

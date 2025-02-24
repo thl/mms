@@ -12,6 +12,7 @@
 /tmp
 
 .DS_Store
+.byebug_history
 *.tmproj
 *.csv
 *.txt
