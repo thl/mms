@@ -106,18 +106,18 @@ GIT
 
 GIT
   remote: http://github.com/thl/dictionary_integration
-  revision: 6aa44588bf78a2298c5f561e6a93a38cc722fd15
-  tag: v2.1.4
+  revision: c5b1fdacdbf85ed19e095c076e94616a71e92b0b
+  tag: v2.1.5
   specs:
-    dictionary_integration (2.1.4)
+    dictionary_integration (2.1.5)
       rails (~> 4.0)
 
 GIT
   remote: http://github.com/thl/interface_utils
-  revision: c92c27faa31ea3d8ad169732a56cbc487996fcc5
-  tag: v2.1.14
+  revision: 19ee716f5fe591418ee461a361942b44825ea0a1
+  tag: v2.1.15
   specs:
-    interface_utils (2.1.14)
+    interface_utils (2.1.15)
       rails (~> 4.0)
 
 GIT
@@ -320,13 +320,13 @@ DEPENDENCIES
   authenticated_system (= 2.4.0)!
   byebug
   complex_scripts (= 2.3.1)!
-  dictionary_integration (= 2.1.4)!
+  dictionary_integration (= 2.1.5)!
   dynamic_form
   execjs (= 2.8.1)
   flare (= 1.2.3)!
   globalize
   hpricot
-  interface_utils (= 2.1.14)!
+  interface_utils (= 2.1.15)!
   jquery-rails
   mms_engine (= 3.3.0)!
   mms_integration (= 2.4.2)!
